@@ -1,3 +1,5 @@
+// const fs = require('fs')
+
 const cartBtn = document.querySelector('.cart-btn')
 const navBtn = document.querySelector('.nav-icon')
 const navSec = document.querySelector('.navsection-main')
