@@ -5,7 +5,7 @@ router.route("/").get((req, res, err) => {
         console.log(err)
     }
 
-    res.render('/var/app/current/views/index.html')
+    res.render('/var/app/current/views/index.ejs')
 })
 
 module.exports = router
