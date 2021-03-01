@@ -201,7 +201,7 @@ class UI {
                                 XL
                             </button>
                         </div>
-                        <h3>${product.title}</h3>
+                        <h3>${product.title} S - XL</h3>
                         <h4>${product.description}</h4>
                         <h3>${product.price}</h4>
                     </article>
