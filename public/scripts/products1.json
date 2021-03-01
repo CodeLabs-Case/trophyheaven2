@@ -61,6 +61,16 @@
             }
         },
         {
+            "sys": { "id": "11" },
+            "fields": {
+            "title": "#112P",
+            "description": "Green Camo/Black",
+            "price": 14.99,
+            "size": "",
+            "image": { "fields": { "file": { "url": "/static/images/product-23.jpeg" } } }
+            }
+        },
+        {
             "sys": { "id": "6" },
             "fields": {
             "title": "#TAC600",
