@@ -7,7 +7,7 @@
             "description": "Gildan 8oz (Red)",
             "price": 19.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-12.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-12.jpeg" } } }
             }
         },
         {
@@ -17,7 +17,7 @@
             "description": "Gildan 8oz (Red)",
             "price": 19.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-12.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-12.jpeg" } } }
             }
         },
         {
@@ -27,7 +27,7 @@
             "description": "Gildan 8oz (Red)",
             "price": 19.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-12.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-12.jpeg" } } }
             }
         },
         {
@@ -37,7 +37,7 @@
             "description": "Gildan 8oz (Red)",
             "price": 19.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-12.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-12.jpeg" } } }
             }
         },
         {
@@ -47,7 +47,7 @@
             "description": "Gildan 8oz (Red)",
             "price": 21.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-12.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-12.jpeg" } } }
             }
         },
         {
@@ -57,7 +57,7 @@
             "description": "Gildan 8oz (Red)",
             "price": 22.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-12.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-12.jpeg" } } }
             }
         },
         {
@@ -67,7 +67,7 @@
             "description": "Gildan 8oz (Black)",
             "price": 19.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-13.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-13.jpeg" } } }
             }
         },
         {
@@ -77,7 +77,7 @@
             "description": "Gildan 8oz (Black)",
             "price": 19.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-13.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-13.jpeg" } } }
             }
         },
         {
@@ -87,7 +87,7 @@
             "description": "Gildan 8oz (Black)",
             "price": 19.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-13.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-13.jpeg" } } }
             }
         },
         {
@@ -97,7 +97,7 @@
             "description": "Gildan 8oz (Black)",
             "price": 19.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-13.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-13.jpeg" } } }
             }
         },
         {
@@ -107,7 +107,7 @@
             "description": "Gildan 8oz (Black)",
             "price": 21.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-13.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-13.jpeg" } } }
             }
         },
         {
@@ -117,7 +117,7 @@
             "description": "Gildan 8oz (Black)",
             "price": 22.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-13.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-13.jpeg" } } }
             }
         },
         {
@@ -127,7 +127,7 @@
             "description": "Gildan 8oz (Royal)",
             "price": 19.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-14.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-14.jpeg" } } }
             }
         },
         {
@@ -137,7 +137,7 @@
             "description": "Gildan 8oz (Royal)",
             "price": 19.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-14.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-14.jpeg" } } }
             }
         },
         {
@@ -147,7 +147,7 @@
             "description": "Gildan 8oz (Royal)",
             "price": 19.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-14.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-14.jpeg" } } }
             }
         },
         {
@@ -157,7 +157,7 @@
             "description": "Gildan 8oz (Royal)",
             "price": 19.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-14.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-14.jpeg" } } }
             }
         },
         {
@@ -167,7 +167,7 @@
             "description": "Gildan 8oz (Royal)",
             "price": 21.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-14.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-14.jpeg" } } }
             }
         },
         {
@@ -177,7 +177,7 @@
             "description": "Gildan 8oz (Royal)",
             "price": 22.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-14.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-14.jpeg" } } }
             }
         },
         {
@@ -187,7 +187,7 @@
             "description": "Gildan 8oz (Gray)",
             "price": 19.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-15.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-15.jpeg" } } }
             }
         },
         {
@@ -197,7 +197,7 @@
             "description": "Gildan 8oz (Gray)",
             "price": 19.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-15.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-15.jpeg" } } }
             }
         },
         {
@@ -207,7 +207,7 @@
             "description": "Gildan 8oz (Gray)",
             "price": 19.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-15.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-15.jpeg" } } }
             }
         },
         {
@@ -217,7 +217,7 @@
             "description": "Gildan 8oz (Gray)",
             "price": 19.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-15.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-15.jpeg" } } }
             }
         },
         {
@@ -227,7 +227,7 @@
             "description": "Gildan 8oz (Gray)",
             "price": 21.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-15.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-15.jpeg" } } }
             }
         },
         {
@@ -237,7 +237,7 @@
             "description": "Gildan 8oz (Gray)",
             "price": 22.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-15.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-15.jpeg" } } }
             }
         },
         {
@@ -247,7 +247,7 @@
             "description": "Gildan 8oz (Pink)",
             "price": 19.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-16.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-16.jpeg" } } }
             }
         },
         {
@@ -257,7 +257,7 @@
             "description": "Gildan 8oz (Pink)",
             "price": 19.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-16.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-16.jpeg" } } }
             }
         },
         {
@@ -267,7 +267,7 @@
             "description": "Gildan 8oz (Pink)",
             "price": 19.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-16.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-16.jpeg" } } }
             }
         },
         {
@@ -277,7 +277,7 @@
             "description": "Gildan 8oz (Pink)",
             "price": 19.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-16.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-16.jpeg" } } }
             }
         },
         {
@@ -287,7 +287,7 @@
             "description": "Gildan 8oz (Pink)",
             "price": 21.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-16.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-16.jpeg" } } }
             }
         },
         {
@@ -297,7 +297,7 @@
             "description": "Gildan 8oz (Pink)",
             "price": 22.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-16.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-16.jpeg" } } }
             }
         },
         {
@@ -307,7 +307,7 @@
             "description": "Gildan 8oz (Military Camo)",
             "price": 19.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-17.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
         },
         {
@@ -317,7 +317,7 @@
             "description": "Gildan 8oz (Military Camo)",
             "price": 19.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-17.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
         },
         {
@@ -327,7 +327,7 @@
             "description": "Gildan 8oz (Military Camo)",
             "price": 19.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-17.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
         },
         {
@@ -337,7 +337,7 @@
             "description": "Gildan 8oz (Military Camo)",
             "price": 19.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-17.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
         },
         {
@@ -347,7 +347,7 @@
             "description": "Gildan 8oz (Military Camo)",
             "price": 21.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-17.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
         },
         {
@@ -357,7 +357,7 @@
             "description": "Gildan 8oz (Military Camo)",
             "price": 22.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-17.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
         }
     ]

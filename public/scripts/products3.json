@@ -7,7 +7,7 @@
             "description": "Gildan 50/50 T-Shirt (Gray)",
             "price": 9.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-18.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-18.jpeg" } } }
             }
         },
         {
@@ -17,7 +17,7 @@
             "description": "Gildan 50/50 T-Shirt (Gray)",
             "price": 9.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-18.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-18.jpeg" } } }
             }
         },
         {
@@ -27,7 +27,7 @@
             "description": "Gildan 50/50 T-Shirt (Gray)",
             "price": 9.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-18.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-18.jpeg" } } }
             }
         },
         {
@@ -37,7 +37,7 @@
             "description": "Gildan 50/50 T-Shirt (Gray)",
             "price": 9.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-18.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-18.jpeg" } } }
             }
         },
         {
@@ -47,7 +47,7 @@
             "description": "Gildan 50/50 T-Shirt (Gray)",
             "price": 11.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-18.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-18.jpeg" } } }
             }
         },
         {
@@ -57,7 +57,7 @@
             "description": "Gildan 50/50 T-Shirt (Gray)",
             "price": 12.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-18.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-18.jpeg" } } }
             }
         },
         {
@@ -67,7 +67,7 @@
             "description": "Gildan 50/50 T-Shirt (Black)",
             "price": 9.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-19.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-19.jpeg" } } }
             }
         },
         {
@@ -77,7 +77,7 @@
             "description": "Gildan 50/50 T-Shirt (Black)",
             "price": 9.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-19.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-19.jpeg" } } }
             }
         },
         {
@@ -87,7 +87,7 @@
             "description": "Gildan 50/50 T-Shirt (Black)",
             "price": 9.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-19.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-19.jpeg" } } }
             }
         },
         {
@@ -97,7 +97,7 @@
             "description": "Gildan 50/50 T-Shirt (Black)",
             "price": 9.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-19.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-19.jpeg" } } }
             }
         },
         {
@@ -107,7 +107,7 @@
             "description": "Gildan 50/50 T-Shirt (Black)",
             "price": 11.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-19.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-19.jpeg" } } }
             }
         },
         {
@@ -117,7 +117,7 @@
             "description": "Gildan 50/50 T-Shirt (Black)",
             "price": 12.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-19.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-19.jpeg" } } }
             }
         },
         {
@@ -127,7 +127,7 @@
             "description": "Gildan 50/50 T-Shirt (Red)",
             "price": 9.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-20.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-20.jpeg" } } }
             }
         },
         {
@@ -137,7 +137,7 @@
             "description": "Gildan 50/50 T-Shirt (Red)",
             "price": 9.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-20.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-20.jpeg" } } }
             }
         },
         {
@@ -147,7 +147,7 @@
             "description": "Gildan 50/50 T-Shirt (Red)",
             "price": 9.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-20.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-20.jpeg" } } }
             }
         },
         {
@@ -157,7 +157,7 @@
             "description": "Gildan 50/50 T-Shirt (Red)",
             "price": 9.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-20.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-20.jpeg" } } }
             }
         },
         {
@@ -167,7 +167,7 @@
             "description": "Gildan 50/50 T-Shirt (Red)",
             "price": 11.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-20.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-20.jpeg" } } }
             }
         },
         {
@@ -177,7 +177,7 @@
             "description": "Gildan 50/50 T-Shirt (Red)",
             "price": 12.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-20.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-20.jpeg" } } }
             }
         },
         {
@@ -187,7 +187,7 @@
             "description": "Dry-Fit Polo (Red)",
             "price": 21.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-21.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-21.jpeg" } } }
             }
         },
         {
@@ -197,7 +197,7 @@
             "description": "Dry-Fit Polo (Red)",
             "price": 21.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-21.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-21.jpeg" } } }
             }
         },
         {
@@ -207,7 +207,7 @@
             "description": "Dry-Fit Polo (Red)",
             "price": 21.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-21.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-21.jpeg" } } }
             }
         },
         {
@@ -217,7 +217,7 @@
             "description": "Dry-Fit Polo (Red)",
             "price": 21.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-21.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-21.jpeg" } } }
             }
         },
         {
@@ -227,7 +227,7 @@
             "description": "Dry-Fit Polo (Red)",
             "price": 23.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-21.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-21.jpeg" } } }
             }
         },
         {
@@ -237,7 +237,7 @@
             "description": "Dry-Fit Polo (Red)",
             "price": 24.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-21.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-21.jpeg" } } }
             }
         },
         {
@@ -247,7 +247,7 @@
             "description": "Dry-Fit Polo (Black)",
             "price": 21.99,
             "size": "Small",
-            "image": { "fields": { "file": { "url": "./images/product-22.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
         },
         {
@@ -257,7 +257,7 @@
             "description": "Dry-Fit Polo (Black)",
             "price": 21.99,
             "size": "Medium",
-            "image": { "fields": { "file": { "url": "./images/product-22.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
         },
         {
@@ -267,7 +267,7 @@
             "description": "Dry-Fit Polo (Black)",
             "price": 21.99,
             "size": "Large",
-            "image": { "fields": { "file": { "url": "./images/product-22.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
         },
         {
@@ -277,7 +277,7 @@
             "description": "Dry-Fit Polo (Black)",
             "price": 21.99,
             "size": "XL",
-            "image": { "fields": { "file": { "url": "./images/product-22.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
         },
         {
@@ -287,7 +287,7 @@
             "description": "Dry-Fit Polo (Black)",
             "price": 23.99,
             "size": "2XL",
-            "image": { "fields": { "file": { "url": "./images/product-22.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
         },
         {
@@ -297,7 +297,7 @@
             "description": "Dry-Fit Polo (Black)",
             "price": 24.99,
             "size": "3XL",
-            "image": { "fields": { "file": { "url": "./images/product-22.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
         }
     ]
