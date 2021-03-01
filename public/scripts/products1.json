@@ -7,7 +7,7 @@
             "description": "Black",
             "price": 9.99,
             "size": "",
-            "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-1.jpeg" } } }
             }
         },
         {
@@ -17,7 +17,7 @@
             "description": "Fuchia/Pink",
             "price": 12.49,
             "size": "",
-            "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
+            "image": { "fields": { "file": { "url": "/static/images/product-2.jpeg" } } }
             }
         },
         {
