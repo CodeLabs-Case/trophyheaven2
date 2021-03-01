@@ -305,7 +305,7 @@
             "fields": {
             "title": "#PC78HC",
             "description": "Gildan 8oz (Military Camo)",
-            "price": 19.99,
+            "price": 27.49,
             "size": "Small",
             "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
@@ -315,7 +315,7 @@
             "fields": {
             "title": "#PC78HC",
             "description": "Gildan 8oz (Military Camo)",
-            "price": 19.99,
+            "price": 27.49,
             "size": "Medium",
             "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
@@ -325,7 +325,7 @@
             "fields": {
             "title": "#PC78HC",
             "description": "Gildan 8oz (Military Camo)",
-            "price": 19.99,
+            "price": 27.49,
             "size": "Large",
             "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
@@ -335,7 +335,7 @@
             "fields": {
             "title": "#PC78HC",
             "description": "Gildan 8oz (Military Camo)",
-            "price": 19.99,
+            "price": 27.49,
             "size": "XL",
             "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
@@ -345,7 +345,7 @@
             "fields": {
             "title": "#PC78HC",
             "description": "Gildan 8oz (Military Camo)",
-            "price": 21.99,
+            "price": 29.49,
             "size": "2XL",
             "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
@@ -355,7 +355,7 @@
             "fields": {
             "title": "#PC78HC",
             "description": "Gildan 8oz (Military Camo)",
-            "price": 22.99,
+            "price": 30.49,
             "size": "3XL",
             "image": { "fields": { "file": { "url": "/static/images/product-17.jpeg" } } }
             }
