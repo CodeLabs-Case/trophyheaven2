@@ -261,6 +261,9 @@ body {
     letter-spacing: var(--mainSpacing);
     margin-bottom: 2rem;
 }
+.purchase {
+    margin-top: 1em;
+}
 /*---------- Cart Item -------------------- */
 .cart-item {
     display: grid;
