@@ -46,7 +46,7 @@ app.post('/payment', (req, res) => {
     })
     .then(cusomter => {
         return stripe.charges.create({
-            amount: 1000,
+            amount: purchaseClicked(),
             description: "",
             currency: 'USD',
             customer: cusomter.id

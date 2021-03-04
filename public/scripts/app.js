@@ -516,7 +516,5 @@ function purchaseClicked() {
 
     // Charge the card
     var price = parseFloat(cartTotal.innerText) * 100
-    stripeHandler.open({
-        amount: price
-    })
+    return price
 }
