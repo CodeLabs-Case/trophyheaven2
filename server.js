@@ -1,7 +1,5 @@
 // These will be set inside the hosting environment in Amazon Web Services in the production application
 require('dotenv')
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY
-const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 
 const express = require('express')
 
