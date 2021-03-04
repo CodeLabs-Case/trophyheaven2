@@ -53,6 +53,6 @@ app.post('/payment', (req, res) => {
         })
     })
     .then(charge => {
-        res.send('Success')
+        res.redirect('/')
     })
 })
