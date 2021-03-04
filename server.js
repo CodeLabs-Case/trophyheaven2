@@ -28,7 +28,7 @@ app.listen(port, (err) => {
 
 app.get('/', (req, res) => {
 
-    res.render('/var/app/current/views/index.ejs', {key, stripePublicKey})
+    res.render('/var/app/current/views/index.ejs', {key: stripePublicKey})
 })
 
 app.post('/payment', (req, res) => {
