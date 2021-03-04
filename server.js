@@ -2,12 +2,16 @@
 require('dotenv')
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
+const stripe = require('stripe')(stripeSecretKey)
 
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 
 const app = express()
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 app.use('/static', express.static('public'));
 
@@ -31,12 +35,13 @@ app.post('/payment', (req, res) => {
     stripe.customers.create({
         email: req.body.stripeEmail,
         source: req.body.stripeToken,
-        name: "",
+        name: " Buyer's Name",
         address: {
-            line1: "",
-            postal_code: "",
-            state: "",
-            country: ""
+            line1: " Buyer's Address",
+            postal_code: "Buyer's Zip Code",
+            city: "Buyer's City",
+            state: "Buyer's State",
+            country: "United States"
         }
     })
     .then(cusomter => {
