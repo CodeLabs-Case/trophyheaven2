@@ -32,7 +32,14 @@ app.get('/', (req, res) => {
 })
 
 app.post('/payment', (req, res) => {
-    testMe()
+
+    var cart = JSON.parse(localStorage.getItem('cart'))
+    var sum = 0
+    cart.forEach(element => {
+        sum += element.price
+    })
+    sum = sum * 100
+
     stripe.customers.create({
         email: "davis.architect99@gmail.com",//req.body.stripeEmail
         source: req.body.stripeToken,
@@ -47,7 +54,7 @@ app.post('/payment', (req, res) => {
     })
     .then(cusomter => {
         return stripe.charges.create({
-            amount: purchaseClicked(),
+            amount: sum,
             description: "",
             currency: 'USD',
             customer: cusomter.id
