@@ -33,9 +33,9 @@ app.get('/', (req, res) => {
 
 app.post('/payment', (req, res) => {
     stripe.customers.create({
-        email: req.body.stripeEmail,
+        email: "davis.architect99@gmail.com",//req.body.stripeEmail
         source: req.body.stripeToken,
-        name: " Buyer's Name",
+        name: "Andrew Davis",
         address: {
             line1: " Buyer's Address",
             postal_code: "Buyer's Zip Code",
