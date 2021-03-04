@@ -31,18 +31,11 @@ let sizeBtnsDOM = []
 class Products {
     async getProducts() {
         try {
-            // let result1 = await fetch("/static/scripts/products1.json")
-            // let data1 = await result1.json()
-            // let result2 = await fetch("/static/scripts/products2.json")
-            // let data2 = await result2.json()
-            // let result3 = await fetch("/static/scripts/products3.json")
-            // let data3 = await result3.json()
-
-            let result1 = await fetch(".../database/products1.json")
+            let result1 = await fetch("/static/scripts/products1.json")
             let data1 = await result1.json()
-            let result2 = await fetch(".../database/products2.json")
+            let result2 = await fetch("/static/scripts/products2.json")
             let data2 = await result2.json()
-            let result3 = await fetch(".../database/products3.json")
+            let result3 = await fetch("/static/scripts/products3.json")
             let data3 = await result3.json()
 
             let products = [...data1.items, ...data2.items, ...data3.items]
