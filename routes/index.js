@@ -5,7 +5,7 @@ router.route("/").get((req, res, err) => {
         console.log(err)
     }
 
-    res.render('/var/app/current/views/index.ejs')
+    res.render('/var/app/current/views/index.ejs', { stripePublicKey: stripePublicKey })
 })
 
 module.exports = router

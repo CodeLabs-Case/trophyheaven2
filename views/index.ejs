@@ -16,10 +16,15 @@
     <link rel="stylesheet" href="/static/styles/main.css">
 
     <!-- JS Files -->
+    <!-- paypal script -->
+    <script src="https://www.paypalobjects.com/api/checkout.js" defer></script>
+    <!-- stripe script -->
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+        var stripePublicKey = '<%= stripePublicKey %>'
+    </script>
     <!-- main script -->
     <script src="/static/scripts/app.js" defer></script>
-    <!-- paypal script -->
-    <!-- <script src="https://www.paypalobjects.com/api/checkout.js" defer></script> -->
 </head>
 <body>
     <!-- navbar -->
@@ -124,7 +129,7 @@
             <div class="cart-footer">
                 <h3>subtotal : $ <span class="cart-total">0</span></h3>
                 <button class="clear-cart banner-btn">clear cart</button>
-                <div id="paypal-button"></div>
+                <button class="purchase banner-btn">purchase</button>
             </div>
         </div>
     </div>

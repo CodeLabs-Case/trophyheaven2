@@ -10,6 +10,7 @@ const jump3 = document.querySelector('.tees')
 const bannerBtn = document.querySelector('.banner-btn')
 const closeCartBtn = document.querySelector('.close-cart')
 const clearCartBtn = document.querySelector('.clear-cart')
+const purchaseBtn = document.querySelector('.purchase')
 const cartDOM = document.querySelector('.cart')
 const cartOverlay = document.querySelector('.cart-overlay')
 const cartItems = document.querySelector('.cart-items')
@@ -375,6 +376,10 @@ class UI {
                 addAmount.nextElementSibling.innerText = tempItem.amount
             }
         })
+
+        purchaseBtn.addEventListener('click', () => {
+            purchaseClicked()
+        })
     }
 
     clearCart() {
@@ -539,3 +544,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }, '#paypal-button');
     */
 })
+
+// Payment Sections
+// Stripe
+var stripeHandler = StripeCheckout.configure({
+    key: stripePublicKey,
+    local: 'en',
+    token: function(token) {
+
+    }
+})
+function purchaseClicked() {
+    // Clear the cart
+
+    // Charge the card
+    var price = parseFloat(cartTotal.innerText) * 100
+    stripeHandler.open({
+        amount: price
+    })
+}
