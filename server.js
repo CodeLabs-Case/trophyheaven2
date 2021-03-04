@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/payment', (req, res) => {
+    testMe()
     stripe.customers.create({
         email: "davis.architect99@gmail.com",//req.body.stripeEmail
         source: req.body.stripeToken,
@@ -53,6 +54,6 @@ app.post('/payment', (req, res) => {
         })
     })
     .then(charge => {
-        res.redirect('/')
+        res.send('Success')
     })
 })

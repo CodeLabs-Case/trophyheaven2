@@ -511,6 +511,9 @@ var stripeHandler = StripeCheckout.configure({
 
     }
 })
+function testMe(){
+    alert("Test")
+}
 function purchaseClicked() {
     // Clear the cart
 
