@@ -17,9 +17,9 @@
 
     <!-- JS Files -->
     <!-- paypal script -->
-    <script src="https://www.paypalobjects.com/api/checkout.js" defer></script>
+    <!-- <script src="https://www.paypalobjects.com/api/checkout.js" defer></script> -->
     <!-- stripe script -->
-    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <!-- <script src="https://checkout.stripe.com/checkout.js" defer></script> -->
     <script>
         var stripePublicKey = '<%= stripePublicKey %>'
     </script>
@@ -129,7 +129,18 @@
             <div class="cart-footer">
                 <h3>subtotal : $ <span class="cart-total">0</span></h3>
                 <button class="clear-cart banner-btn">clear cart</button>
-                <button class="purchase banner-btn">purchase</button>
+                <form action="payment" method="POST">
+                    <script
+                        src="//checkout.stripe.com/v2/checkout.js"
+                        class="stripe-button"
+                        data-key= "<% = key %>"
+                        data-amount="1000"
+                        data-currency="usd"
+                        data-name=""
+                        data-description=""
+                        data-locale="auto" >   
+                    </script>
+                </form>
             </div>
         </div>
     </div>
