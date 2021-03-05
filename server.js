@@ -1,6 +1,6 @@
 // These will be set inside the hosting environment in Amazon Web Services in the production application
 require('dotenv')
-const stripeSecretKey = "sk_test_51HXS4rK5Vrvx7bpuohfQCnByA2rkb3eBKNt30HqkFpv2rdaLjnbBnIe1zGfwxH34WleQQvqnKpsZ8ZgfkOYYzF8x00wDFHqxyx"
+const stripeSecretKey = "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"
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 const stripe = require('stripe')(stripeSecretKey)
 
