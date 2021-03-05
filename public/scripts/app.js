@@ -398,13 +398,6 @@ class UI {
         })
     }
 
-    checkoutLogic() {
-        // show the checkout when button is pressed
-        checkoutBtn.addEventListener('click', () => {
-            
-        })
-    }
-
     clearCart() {
         let cartItems = cart.map(item => item.id)
         cartItems.forEach(id => this.removeItem(id))
