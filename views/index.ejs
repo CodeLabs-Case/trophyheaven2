@@ -127,6 +127,7 @@
                 <h3>subtotal : $ <span class="cart-total">0</span></h3>
                 <button class="clear-cart banner-btn">clear cart</button>
                 <form action='/checkout' method="GET">
+                    <input type="text" class='hidden-subtotal' name="subtotal">
                     <button type="submit" class="checkout banner-btn">checkout</button>
                 </form>
             </div>
