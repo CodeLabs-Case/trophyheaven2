@@ -47,7 +47,7 @@ app.get('/checkout', (req, res) => {
     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey})
 })
 
-app.post('payment', (req, res) => {
+app.post('/payment', (req, res) => {
 
     // Create and send the payment
     stripe.customers.create({
