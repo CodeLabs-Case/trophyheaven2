@@ -177,7 +177,7 @@ body {
     transition: var(--mainTransition);
     transform: translateX(101%);
 }
-.bad-btn label:hover {
+.bag-btn label:hover {
     cursor: pointer;
 }
 .bag-btn:hover {
