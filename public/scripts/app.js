@@ -19,8 +19,9 @@ const cartContent = document.querySelector('.cart-content')
 const productsDOM1 = document.querySelector('.products-center1')
 const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
-// Testing
+// for checkout
 const hiddenTotal = document.querySelector('.hidden-subtotal')
+
 
 
 

@@ -126,22 +126,43 @@
             <div class="cart-footer">
                 <h3>subtotal : $ <span class="cart-total">0</span></h3>
                 <button class="clear-cart banner-btn">clear cart</button>
-                <form action="payment" method="POST">
-                    <input type="text" class="hidden-subtotal" name="subtotal">
-                    <script
-                        src="//checkout.stripe.com/v2/checkout.js"
-                        class="stripe-button"
-                        data-key="<%= key %>" 
-                        data-amount="7000" 
-                        data-currency="usd" 
-                        data-name="Gautam Sharma" 
-                        data-description="Buy React.js Complete Course" 
-                        data-locale="auto" > 
-                    </script> 
-                </form> 
+                <button class="checkoutbtn banner-btn">clear cart</button>
             </div>
         </div>
     </div>
     <!-- /cart -->
+
+
+
+    <!-- checkout -->
+    <div class="checkout">
+        <span class="close-checkout">
+            <i class="fas fa-window-close"></i>
+        </span>
+        <h2>your cart</h2>
+        <div class="cart-content">
+
+
+            
+        </div>
+        <div class="cart-footer">
+            <h3>subtotal : $ <span class="cart-total">0</span></h3>
+            <button class="clear-cart banner-btn">clear cart</button>
+            <form action="payment" method="POST">
+                <input type="text" class="hidden-subtotal" name="subtotal">
+                <script
+                    src="//checkout.stripe.com/v2/checkout.js"
+                    class="stripe-button"
+                    data-key="<%= key %>" 
+                    data-amount="7000" 
+                    data-currency="usd" 
+                    data-name="Gautam Sharma" 
+                    data-description="Buy React.js Complete Course" 
+                    data-locale="auto" > 
+                </script> 
+            </form> 
+        </div>
+    </div>
+    <!-- /checkout -->
 </body>
 </html>

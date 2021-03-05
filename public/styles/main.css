@@ -241,6 +241,22 @@ body {
 .showCart {
     transform: translateX(0);
 }
+.checkout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 4;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+.showCheckout {
+    transform: translateX(0);
+}
 .transparentBcg {
     visibility: visible;
 }
@@ -264,12 +280,12 @@ body {
 .clear-cart {
     width: 14em;
 }
-.checkout {
+.checkout-btn {
     margin-top: 1em;
     width: 14em;
 }
 .hidden-subtotal {
-    /* display: none; */
+    display: none;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
