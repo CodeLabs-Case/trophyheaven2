@@ -64,7 +64,7 @@ app.post('/payment', (req, res) => {
     })
     .then(customer => {
         return stripe.charges.create({
-            amount: req.body.subtotal,
+            amount: "1000",
             description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
