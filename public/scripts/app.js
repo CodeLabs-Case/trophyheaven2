@@ -500,7 +500,3 @@ document.addEventListener("DOMContentLoaded", () => {
         navState = false
     })
 })
-
-// Payment Sections
-// Stripe
-

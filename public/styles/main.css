@@ -264,12 +264,9 @@ body {
 .clear-cart {
     width: 14em;
 }
-.payment {
+.checkout {
     margin-top: 1em;
     width: 14em;
-}
-.hidden-total {
-    /* display: none; */
 }
 /*---------- Cart Item -------------------- */
 .cart-item {

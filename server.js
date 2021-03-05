@@ -38,7 +38,7 @@ app.listen(port, (err) => {
 
 app.get('/', (req, res) => {
 
-    res.render('/var/app/current/views/index.ejs', {key: stripePublicKey})
+    res.render('/var/app/current/views/index.ejs')
 })
 
 app.get('/checkout', (req, res) => {
@@ -48,11 +48,6 @@ app.get('/checkout', (req, res) => {
 })
 
 app.post('/payment', (req, res) => {
-
-    var subtotal = req.body.subtotal
-    subtotal = parseFloat(subtotal)
-    subtotal = subtotal * 100
-    const fin = parseInt(subtotal)
 
     // Create and send the payment
     stripe.customers.create({
@@ -69,7 +64,7 @@ app.post('/payment', (req, res) => {
     })
     .then(customer => {
         return stripe.charges.create({
-            amount: fin,
+            amount: 1000,
             description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
