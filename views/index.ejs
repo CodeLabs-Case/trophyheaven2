@@ -58,6 +58,7 @@
     <header class="hero">
         <div class="banner">
             <h1 class="banner-title">Clothing Collection</h1>
+            <span></span>
             <button class="banner-btn">shop now</button>
         </div>
     </header>
@@ -143,28 +144,40 @@
         <div class="checkout-content">
             <form class="checkout-form" action="payment" method="POST">
                 <input type="text" class="hidden-subtotal" name="subtotal">
-                
-                <label for="email">Email:</label><br>
-                <input type="text" class="buyer-email" name="email"><br><br>
-                
-                <label for="fname">First Name:</label><br>
-                <input type="text" class="buyer-fname" name="fname"><br><br>
-                
-                <label for="lname">Last Name:</label><br>
-                <input type="text" class="buyer-lname" name="lname"><br><br>
-                
-                <label for="shippingAddress">Shipping Address:</label><br>
-                <input type="text" class="buyer-shippinAddress" name="shippingAddress"><br><br>
-                
-                <label for="city">City:</label><br>
-                <input type="text" class="buyer-city" name="city"><br><br>
-                
-                <label for="state">State:</label><br>
-                <input type="text" class="buyer-state" name="state"><br><br>
 
-                <label for="zip">Zipcode:</label><br>
-                <input type="text" class="buyer-zip" name="zip"><br><br>
+
                 
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="text" class="buyer-email" name="email"><br><br>
+                </div>
+                <div>
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" class="buyer-fname" name="fname"><br><br>
+                </div>
+                <div>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" class="buyer-lname" name="lname"><br><br>
+                </div>
+                <div>
+                    <label for="shippingAddress">Shipping Address:</label><br>
+                    <input type="text" class="buyer-shippinAddress" name="shippingAddress"><br><br>
+                </div>
+                <div>
+                    <label for="city">City:</label><br>
+                    <input type="text" class="buyer-city" name="city"><br><br>
+                </div>
+                <div>
+                    <label for="state">State:</label><br>
+                <input type="text" class="buyer-state" name="state"><br><br>
+                </div>
+                <div>
+                    <label for="zip">Zipcode:</label><br>
+                <input type="text" class="buyer-zip" name="zip"><br><br>
+                </div>
+                
+                
+
                 <script
                     src="//checkout.stripe.com/v2/checkout.js"
                     class="stripe-button"

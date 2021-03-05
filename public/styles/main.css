@@ -310,7 +310,7 @@ body {
     display: none;
 }
 .checkout-form {
-    display: block;
+    display: grid;
 }
 .checkout-form input{
     justify-self: center;
