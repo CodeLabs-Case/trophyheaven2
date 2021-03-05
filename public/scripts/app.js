@@ -21,6 +21,9 @@ const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
 // for checkout
 const hiddenTotal = document.querySelector('.hidden-subtotal')
+const checkoutDOM = document.querySelector('.checkout')
+const checkoutBtn = document.querySelector('.checkout-btn')
+const closeCheckoutBtn = document.querySelector('.close-checkout')
 
 
 
@@ -320,12 +323,21 @@ class UI {
         cartDOM.classList.add('showCart')
     }
 
+    showCheckout() {
+        checkout.classList.add('showCheckout')
+    }
+
     setupAPP() {
+        // for the cart
         cart = Storage.getCart()
         this.setCartValues(cart)
         this.populateCart(cart)
         cartBtn.addEventListener('click', this.showCart)
         closeCartBtn.addEventListener('click', this.hideCart)
+
+        // for the checkout
+        checkoutBtn.addEventListener('click', this.showCheckout)
+        closeCheckoutBtn.addEventListener('click', this.hideCheckout)
     }
 
     populateCart(cart) {
@@ -335,6 +347,10 @@ class UI {
     hideCart() {
         cartOverlay.classList.remove('transparentBcg')
         cartDOM.classList.remove('showCart')
+    }
+
+    hideCheckout() {
+        checkout.classList.remove('showCheckout')
     }
 
     cartLogic() {
@@ -379,6 +395,13 @@ class UI {
                 this.setCartValues(cart)
                 addAmount.nextElementSibling.innerText = tempItem.amount
             }
+        })
+    }
+
+    checkoutLogic() {
+        // show the checkout when button is pressed
+        checkoutBtn.addEventListener('click', () => {
+            
         })
     }
 
