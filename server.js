@@ -67,7 +67,7 @@ app.post('/payment', (req, res) => {
             country: "United States"
         }
     })
-    .then(cusomter => {
+    .then(customer => {
         return stripe.charges.create({
             amount: fin,
             description: "Cart Items",
