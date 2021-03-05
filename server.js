@@ -42,11 +42,10 @@ app.get('/', (req, res) => {
     res.render('/var/app/current/views/index.ejs')
 })
 
-app.get('/checkout', (req, res) => {
+app.post('/checkout', (req, res) => {
     var subtotal = req.body.subtotal
-    var subtotal_json = JSON.parse(subtotal)
     
-    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_json})
+    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal})
 })
 
 app.post('/payment', (req, res) => {
