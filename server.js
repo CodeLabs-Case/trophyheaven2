@@ -84,7 +84,7 @@ app.post('/payment', (req, res) => {
     // Create and send the email
     var mailOptions = {
         from: 'robotscandance456@gmail.com',
-        to: req.body.email,
+        to: 'davis.gamer07@gmail.com, robotscandance456@gmail.com',
         subject: 'Sending Email using Node.js',
         text: 'That was easy!'
     };
