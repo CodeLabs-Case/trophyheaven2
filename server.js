@@ -20,8 +20,8 @@ var transporter = nodemailer.createTransport({
 
 const app = express()
 
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/static', express.static('public'));
 
@@ -48,7 +48,7 @@ app.get('/checkout', (req, res) => {
     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_int})
 })
 
-app.post('/checkout/payment', (req, res) => {
+app.post('/payment', (req, res) => {
     // var subtotal = req.body.subtotal
     // var subtotal_int = parseInt(subtotal, 10)
     // console.log(subtotal_int)
@@ -57,7 +57,7 @@ app.post('/checkout/payment', (req, res) => {
 
     // Create and send the payment
     stripe.customers.create({
-        email: "davis.architect99@gmail.com",//req.body.stripeEmail
+        email: req.body.stripeEmail,
         source: req.body.stripeToken,
         name: "Andrew Davis",
         address: {
