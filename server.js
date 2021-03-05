@@ -47,6 +47,9 @@ app.post('/payment', function(req, res){
     subtotal = parseFloat(subtotal).toFixed(2)
     subtotal = parseInt(subtotal, 10)
 
+    var email = req.body.email
+    email = email.toString()
+
     // Moreover you can take more details from user 
     // like Address, Name, etc from form 
     stripe.customers.create({ 
@@ -83,7 +86,7 @@ app.post('/payment', function(req, res){
 
     var mailOptions = {
         from: 'robotscandance456@gmail.com',
-        to: 'davis.gamer07@gmail.com, robotscandance456@gmail.com',
+        to: `${email}, robotscandance456@gmail.com`,
         subject: 'Sending Email using Node.js',
         text: 'That was easy!'
     };
