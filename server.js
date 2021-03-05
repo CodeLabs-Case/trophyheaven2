@@ -55,7 +55,7 @@ app.post('/payment', (req, res) => {
 
     // Create and send the payment
     stripe.customers.create({
-        email: req.body.stripeEmail,
+        email: "davis.architect99@gmail.com",
         source: req.body.stripeToken,
         name: "Andrew Davis",
         address: {
