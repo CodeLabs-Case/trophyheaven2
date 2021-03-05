@@ -8,6 +8,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
+const { raw } = require('body-parser')
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -46,7 +47,7 @@ app.get('/checkout', (req, res) => {
     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey})
 })
 
-app.post('/payment', (req, res) => {
+app.post('payment', (req, res) => {
 
     // Create and send the payment
     stripe.customers.create({
@@ -63,7 +64,7 @@ app.post('/payment', (req, res) => {
     })
     .then(cusomter => {
         return stripe.charges.create({
-            amount: 1000,
+            amount: req.body.subtotal * 100,
             description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
