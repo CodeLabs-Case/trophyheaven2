@@ -37,7 +37,11 @@ app.listen(port, (err) => {
 
 app.get('/', (req, res) => {
 
-    res.render('/var/app/current/views/index.ejs', {key: stripePublicKey})
+    res.render('/var/app/current/views/index.ejs')
+})
+
+app.get('/checkout', (req, res) => {
+    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey})
 })
 
 app.post('/payment', (req, res) => {
