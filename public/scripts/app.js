@@ -156,7 +156,7 @@ class UI {
                                 <label data-id="${product.id}">add to cart</label>
                             </button>
                         </div>
-                        <h3>${product.title} ${product.size}</h3>
+                        <h3>${product.title} (${product.size})</h3>
                         <h4>${product.description}</h4>
                         <h3>${product.price}</h4>
                     </article>
@@ -228,7 +228,7 @@ class UI {
                                 <label data-id="${product.id}">add to cart</label>
                             </button>
                         </div>
-                        <h3>${product.title} ${product.size}</h3>
+                        <h3>${product.title} (${product.size})</h3>
                         <h4>${product.description}</h4>
                         <h3>${product.price}</h4>
                     </article>
