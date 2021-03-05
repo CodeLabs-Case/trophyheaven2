@@ -324,7 +324,7 @@ class UI {
     }
 
     showCheckout() {
-        checkout.classList.add('showCheckout')
+        checkoutDOM.classList.add('showCheckout')
     }
 
     setupAPP() {
@@ -350,7 +350,7 @@ class UI {
     }
 
     hideCheckout() {
-        checkout.classList.remove('showCheckout')
+        checkoutDOM.classList.remove('showCheckout')
     }
 
     cartLogic() {
