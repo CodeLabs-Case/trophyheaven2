@@ -2,13 +2,14 @@
 require('dotenv')
 const stripeSecretKey = "sk_test_51HXS4rK5Vrvx7bpuohfQCnByA2rkb3eBKNt30HqkFpv2rdaLjnbBnIe1zGfwxH34WleQQvqnKpsZ8ZgfkOYYzF8x00wDFHqxyx"
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
-const stripe = require('stripe')(stripeSecretKey)
+// const stripe = require('stripe')(stripeSecretKey)
+const Stripe = require('./stripe.js')
+
 
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
-const { raw } = require('body-parser')
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -20,8 +21,8 @@ var transporter = nodemailer.createTransport({
 
 const app = express()
 
-app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/static', express.static('public'));
 
@@ -44,7 +45,7 @@ app.get('/', (req, res) => {
 app.get('/checkout', (req, res) => {
     const subtotal = req.body.subtotal
     
-    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal, subtotal})
+    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal})
 })
 
 app.post('/payment', (req, res) => {
@@ -90,6 +91,32 @@ app.post('/payment', (req, res) => {
           console.log(error);
         } else {
           console.log('Email sent: ' + info.response);
+        }
+    })
+})
+
+app.post('/create-token', (req, res) => {
+    Stripe.__createToken(req.body, function(err, result){
+        if(err){
+            res.send(err)
+        } else {
+            res.send({
+                "message": "Token Generated",
+                "data": result
+            })
+        }
+    })
+})
+
+app.post('/create-charge', (req, res) => {
+    Stripe.__createCharge(req.body, function(err, result){
+        if(err) {
+            res.send(err)
+        } else {
+            res.send({
+                "message": "Charged",
+                "data": result
+            })
         }
     })
 })

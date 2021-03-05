@@ -7,18 +7,5 @@
         <title>Document</title>
     </head>
     <body>
-        Checkout Subtotal: <%= {subtotal} %>
-
-        <form action="payment" method="POST">
-            <script
-                src="//checkout.stripe.com/v2/checkout.js"
-                class="stripe-button"
-                data-key= "<%= key %>"
-                data-currency="usd"
-                data-name=""
-                data-description=""
-                data-locale="auto" >
-            </script>
-        </form>
     </body>
 </html>
