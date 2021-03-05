@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 
 app.post('/payment', (req, res) => {
     var subtotal = req.body.subtotal
-    subtotal = parseFloat(subtotal.toFixed(2))
+    subtotal = parseFloat(subtotal).toFixed(2)
     subtotal = parseInt(subtotal, 10)
 
     // Create and send the payment
