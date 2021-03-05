@@ -110,7 +110,7 @@ body {
     padding: 2rem;
 }
 .banner-title {
-    font-size: 3.4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
     margin-bottom: 3rem;
