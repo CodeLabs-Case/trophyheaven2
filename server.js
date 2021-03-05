@@ -103,7 +103,10 @@ app.post('/payment', (req, res) => {
 
 
 
-app.post('/payment', function(req, res){ 
+app.post('/payment', function(req, res){
+    var subtotal = req.body.subtotal
+    subtotal = parseFloat(subtotal).toFixed(2)
+    subtotal = parseInt(subtotal, 10)
 
     // Moreover you can take more details from user 
     // like Address, Name, etc from form 
