@@ -128,7 +128,16 @@
                 <button class="clear-cart banner-btn">clear cart</button>
                 <form action="payment" method="POST">
                     <input type="text" class="hidden-total" name="subtotal">
-                    <button class="payment banner-btn" type="submit">checkout</button>
+                    
+                    <script
+                        src="//checkout.stripe.com/v2/checkout.js"
+                        class="stripe-button"
+                        data-key= "<%= key %>"
+                        data-currency="usd"
+                        data-name=""
+                        data-description=""
+                        data-locale="auto" >
+                    </script>
                 </form>
             </div>
         </div>
