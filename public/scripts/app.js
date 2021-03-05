@@ -290,7 +290,7 @@ class UI {
             itemsTotal += item.amount
         })
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
-        hiddenTotal.value = parseFloat(tempTotal).toFixed(2)
+        hiddenTotal.value = (parseFloat(tempTotal).toFixed(2)) * 100
         cartItems.innerText = itemsTotal
     }
 
