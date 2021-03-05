@@ -41,19 +41,17 @@ app.get('/', (req, res) => {
     res.render('/var/app/current/views/index.ejs')
 })
 
-app.get('/checkout', (req, res) => {
-    var subtotal = req.body.subtotal
-    var subtotal_int = parseInt(subtotal, 10)
-    console.log(subtotal)    
-    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_int})
-})
+// app.get('/checkout', (req, res) => {
+//     var subtotal = req.body.subtotal
+//     var subtotal_int = parseInt(subtotal, 10)
+//     console.log(subtotal)    
+//     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_int})
+// })
 
 app.post('/payment', (req, res) => {
-    // var subtotal = req.body.subtotal
-    // var subtotal_int = parseInt(subtotal, 10)
-    // console.log(subtotal_int)
-
-
+    var subtotal = req.body.subtotal
+    subtotal = parseFloat(subtotal.toFixed(2))
+    subtotal = parseInt(subtotal, 10)
 
     // Create and send the payment
     stripe.customers.create({
