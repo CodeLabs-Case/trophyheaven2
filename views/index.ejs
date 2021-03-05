@@ -142,9 +142,29 @@
         <h2>Checkout</h2>
         <div class="checkout-content">
             <form action="payment" method="POST">
-                <label for="email">Email:</label>
-                <input type="text" class="buyer-email" name="email">
                 <input type="text" class="hidden-subtotal" name="subtotal">
+                
+                <label for="email">Email:</label><br>
+                <input type="text" class="buyer-email" name="email">
+                
+                <label for="fname">First Name:</label><br>
+                <input type="text" class="buyer-fname" name="fname">
+                
+                <label for="lname">Last Name:</label><br>
+                <input type="text" class="buyer-lname" name="lname">
+                
+                <label for="shippingAddress">Shipping Address:</label><br>
+                <input type="text" class="buyer-shippinAddress" name="shippingAddress">
+                
+                <label for="city">City:</label><br>
+                <input type="text" class="buyer-city" name="city">
+                
+                <label for="state">State:</label><br>
+                <input type="text" class="buyer-state" name="state">
+
+                <label for="zip">Zipcode:</label><br>
+                <input type="text" class="buyer-zip" name="zip">
+                
 
                 <script
                     src="//checkout.stripe.com/v2/checkout.js"
