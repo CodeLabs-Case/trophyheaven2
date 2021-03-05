@@ -2,8 +2,7 @@
 require('dotenv')
 const stripeSecretKey = "sk_test_51HXS4rK5Vrvx7bpuohfQCnByA2rkb3eBKNt30HqkFpv2rdaLjnbBnIe1zGfwxH34WleQQvqnKpsZ8ZgfkOYYzF8x00wDFHqxyx"
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
-// const stripe = require('stripe')(stripeSecretKey)
-const Stripe = require('./stripe.js')
+const stripe = require('stripe')(stripeSecretKey)
 
 
 const express = require('express')
