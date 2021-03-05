@@ -261,8 +261,12 @@ body {
     letter-spacing: var(--mainSpacing);
     margin-bottom: 2rem;
 }
+.clear-cart {
+    width: 12em;
+}
 .purchase {
     margin-top: 1em;
+    width: 12em;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
