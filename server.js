@@ -48,11 +48,13 @@ app.get('/checkout', (req, res) => {
     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_int})
 })
 
-app.post('/payment', (req, res) => {
-
+app.post('/checkout/payment', (req, res) => {
     // var subtotal = req.body.subtotal
     // var subtotal_int = parseInt(subtotal, 10)
     // console.log(subtotal_int)
+
+
+
     // Create and send the payment
     stripe.customers.create({
         email: "davis.architect99@gmail.com",//req.body.stripeEmail
@@ -77,6 +79,7 @@ app.post('/payment', (req, res) => {
     .then(charge => {
         res.send('Success')
     })
+
 
 
 
