@@ -48,6 +48,10 @@ app.get('/checkout', (req, res) => {
 
 app.post('/payment', (req, res) => {
 
+    const subtotal = req.body.subtotal
+    subtotal = parseFloat(subtotal.toFixed(2))
+    subtotal = subtotal * 100
+
     // Create and send the payment
     stripe.customers.create({
         email: "davis.architect99@gmail.com",//req.body.stripeEmail
@@ -63,7 +67,7 @@ app.post('/payment', (req, res) => {
     })
     .then(cusomter => {
         return stripe.charges.create({
-            amount: 1000,
+            amount: subtotal,
             description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
