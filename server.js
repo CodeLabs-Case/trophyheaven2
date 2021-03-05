@@ -7,6 +7,15 @@ const stripe = require('stripe')(stripeSecretKey)
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
+
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'davis.architect99@gmail.com',
+      pass: process.env.EMAIL_PASSWORD
+    }
+})
 
 const app = express()
 
@@ -33,13 +42,7 @@ app.get('/', (req, res) => {
 
 app.post('/payment', (req, res) => {
 
-    var cart = JSON.parse(localStorage.getItem('cart'))
-    var sum = 0
-    cart.forEach(element => {
-        sum += element.price
-    })
-    sum = sum * 100
-
+    // Create and send the payment
     stripe.customers.create({
         email: "davis.architect99@gmail.com",//req.body.stripeEmail
         source: req.body.stripeToken,
@@ -54,13 +57,32 @@ app.post('/payment', (req, res) => {
     })
     .then(cusomter => {
         return stripe.charges.create({
-            amount: sum,
-            description: "",
+            amount: 1000,
+            description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
         })
     })
     .then(charge => {
         res.send('Success')
+    })
+
+
+
+
+    // Create and send the email
+    var mailOptions = {
+        from: 'davis.architect99@gmail.com',
+        to: 'davis.gamer07@gmail.com, davis.architect99@gmail.com',
+        subject: 'Sending Email using Node.js',
+        text: 'That was easy!'
+    };
+      
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
     })
 })

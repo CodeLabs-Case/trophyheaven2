@@ -504,20 +504,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Payment Sections
 // Stripe
-var stripeHandler = StripeCheckout.configure({
-    key: stripePublicKey,
-    local: 'en',
-    token: function(token) {
 
-    }
-})
-function testMe(){
-    alert("Test")
-}
-function purchaseClicked() {
-    // Clear the cart
-
-    // Charge the card
-    var price = parseFloat(cartTotal.innerText) * 100
-    return price
-}
