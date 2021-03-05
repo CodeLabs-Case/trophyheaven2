@@ -176,10 +176,15 @@ body {
     font-weight: bold;
     transition: var(--mainTransition);
     transform: translateX(101%);
+}
+.bad-btn label:hover {
     cursor: pointer;
 }
 .bag-btn:hover {
     color: var(--mainWhite);
+}
+.bad-btn i {
+    pointer-events: none;
 }
 .fa-shopping-cart {
     margin-right: 0.5rem;

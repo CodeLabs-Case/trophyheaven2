@@ -153,7 +153,7 @@ class UI {
                             />
                             <button class="bag-btn" data-id="${product.id}">
                                 <i class="fas fa-shopping-cart"></i>
-                                add to cart
+                                <label>add to cart</label>
                             </button>
                         </div>
                         <h3>${product.title} ${product.size}</h3>
