@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 app.post('/checkout', (req, res) => {
     var subtotal = req.body.subtotal
     console.log(subtotal)    
-    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, s: subtotal})
+    res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal})
 })
 
 app.post('/payment', (req, res) => {
@@ -65,7 +65,7 @@ app.post('/payment', (req, res) => {
     })
     .then(customer => {
         return stripe.charges.create({
-            amount: 1000,
+            amount: req.body.subtotal,
             description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
