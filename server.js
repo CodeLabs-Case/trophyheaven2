@@ -41,6 +41,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/checkout', (req, res) => {
+    const subtotal = req.body.subtotal
+    
     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey})
 })
 
