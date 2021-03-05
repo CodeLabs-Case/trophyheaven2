@@ -19,7 +19,7 @@
     <!-- paypal script -->
     <!-- <script src="https://www.paypalobjects.com/api/checkout.js" defer></script> -->
     <!-- stripe script -->
-    <!-- <script src="https://checkout.stripe.com/checkout.js" defer></script> -->
+    <script src="https://js.stripe.com/v3/" defer></script>
     <!-- main script -->
     <script src="/static/scripts/app.js" defer></script>
 </head>
@@ -128,16 +128,7 @@
                 <button class="clear-cart banner-btn">clear cart</button>
                 <form action="payment" method="POST">
                     <input type="text" class="hidden-total" name="subtotal">
-
-                    <script
-                        src="//checkout.stripe.com/v2/checkout.js"
-                        class="stripe-button"
-                        data-key= "<%= key %>"
-                        data-currency="usd"
-                        data-name=""
-                        data-description=""
-                        data-locale="auto" >
-                    </script>
+                    <button class="payment banner-btn" type="submit">checkout</button>
                 </form>
             </div>
         </div>
