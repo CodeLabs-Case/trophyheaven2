@@ -125,7 +125,7 @@ app.post('/payment', function(req, res){
     .then((customer) => { 
 
         return stripe.charges.create({ 
-            amount: 7000,    // Charing Rs 25 
+            amount: subtotal,    // Charing Rs 25 
             description: 'Web Development Product', 
             currency: 'USD', 
             customer: customer.id 
