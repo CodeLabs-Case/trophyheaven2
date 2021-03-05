@@ -309,6 +309,9 @@ body {
 .hidden-subtotal {
     display: none;
 }
+.checkout-form {
+    display: grid;
+}
 .checkout-form input{
     justify-self: center;
 }
