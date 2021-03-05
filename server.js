@@ -59,7 +59,7 @@ app.post('/payment', (req, res) => {
         source: req.body.stripeToken,
         name: "Andrew Davis",
         address: {
-            line1: " Buyer's Address",
+            line1: "Buyer's Address",
             postal_code: "Buyer's Zip Code",
             city: "Buyer's City",
             state: "Buyer's State",
@@ -68,7 +68,7 @@ app.post('/payment', (req, res) => {
     })
     .then(customer => {
         return stripe.charges.create({
-            amount: subtotal_int,
+            amount: 1000,
             description: "Cart Items",
             currency: 'USD',
             customer: cusomter.id
