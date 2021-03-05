@@ -85,9 +85,9 @@ class UI {
                             alt="product"
                             class="product-img"
                         />
-                        <button class="bag-btn" data-id="${product.id}">
+                        <button class="bag-btn">
                             <i class="fas fa-shopping-cart"></i>
-                            <label>add to cart</label>
+                            <label data-id="${product.id}">add to cart</label>
                         </button>
                     </div>
                     <h3>${product.title}</h3>
@@ -110,28 +110,28 @@ class UI {
                             />
                             <button class="bag-btn" data-id="${product.id}" style="top: 15%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                <label>S</label>
+                                <label data-id="${product.id}">S</label>
                             </button>
                     `
                 } else if(hoodyCnt == 1) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 35%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                <label>M</label>
+                                <label data-id="${product.id}">M</label>
                             </button>
                     `
                 } else if(hoodyCnt == 2) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 55%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                <label>L</label>
+                                <label data-id="${product.id}">L</label>
                             </button>
                     `
                 } else if(hoodyCnt == 3) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 75%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                <label>XL</label>
+                                <label data-id="${product.id}">XL</label>
                             </button>
                         </div>
                         <h3>${product.title} S - XL</h3>
@@ -153,7 +153,7 @@ class UI {
                             />
                             <button class="bag-btn" data-id="${product.id}">
                                 <i class="fas fa-shopping-cart"></i>
-                                <label>add to cart</label>
+                                <label data-id="${product.id}">add to cart</label>
                             </button>
                         </div>
                         <h3>${product.title} ${product.size}</h3>
@@ -182,28 +182,28 @@ class UI {
                             />
                             <button class="bag-btn" data-id="${product.id}" style="top: 15%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                S
+                                <label data-id="${product.id}">S</label>
                             </button>
                     `
                 } else if(teesCnt == 1) {
                         result3 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 35%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                M
+                                <label data-id="${product.id}">M</label>
                             </button>
                     `
                 } else if(teesCnt == 2) {
                         result3 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 55%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                L
+                                <label data-id="${product.id}">L</label>
                             </button>
                     `
                 } else if(teesCnt == 3) {
                         result3 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 75%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                XL
+                                <label data-id="${product.id}">XL</label>
                             </button>
                         </div>
                         <h3>${product.title} S - XL</h3>
@@ -225,7 +225,7 @@ class UI {
                             />
                             <button class="bag-btn" data-id="${product.id}">
                                 <i class="fas fa-shopping-cart"></i>
-                                add to cart
+                                <label data-id="${product.id}">add to cart</label>
                             </button>
                         </div>
                         <h3>${product.title} ${product.size}</h3>
