@@ -312,10 +312,7 @@ body {
 .checkout-form {
     display: grid;
 }
-.checkout-form input{
-    justify-self: center;
-}
-.checkout-form label{
+.checkout-form div{
     justify-self: center;
 }
 /*---------- Cart Item -------------------- */
