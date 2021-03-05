@@ -379,9 +379,9 @@ class UI {
             }
         })
 
-        purchaseBtn.addEventListener('click', () => {
-            purchaseClicked()
-        })
+        // purchaseBtn.addEventListener('click', () => {
+        //     purchaseClicked()
+        // })
     }
 
     clearCart() {
