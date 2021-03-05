@@ -309,8 +309,11 @@ body {
 .hidden-subtotal {
     display: none;
 }
-.checkout-form {
-    align-self: center;
+.checkout-form input{
+    justify-self: center;
+}
+.checkout-form label{
+    justify-self: center;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
