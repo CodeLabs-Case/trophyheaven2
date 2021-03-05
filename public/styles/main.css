@@ -166,6 +166,7 @@ body {
 }
 .bag-btn {
     position: absolute;
+    height: 46px;
     top: 70%;
     right: 0;
     background: var(--primaryColor);
