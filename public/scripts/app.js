@@ -19,6 +19,8 @@ const cartContent = document.querySelector('.cart-content')
 const productsDOM1 = document.querySelector('.products-center1')
 const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
+// Testing
+const hiddenTotal = document.querySelector('.hidden-total')
 
 
 
@@ -288,6 +290,7 @@ class UI {
             itemsTotal += item.amount
         })
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2))
+        hiddenTotal.value = parseFloat(tempTotal.toFixed(2)) * 100
         cartItems.innerText = itemsTotal
     }
 
