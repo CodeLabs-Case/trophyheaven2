@@ -310,7 +310,7 @@ body {
     display: none;
 }
 .checkout-form {
-    display: grid;
+    display: flex;
 }
 .checkout-form input{
     justify-self: center;
