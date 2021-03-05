@@ -52,7 +52,7 @@ app.post('/payment', (req, res) => {
     var subtotal = req.body.subtotal
     subtotal = parseFloat(subtotal)
     subtotal = subtotal * 100
-    subtotal = parseInt(subtotal)
+    const fin = parseInt(subtotal)
 
     // Create and send the payment
     stripe.customers.create({
