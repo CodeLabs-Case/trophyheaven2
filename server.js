@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/checkout', (req, res) => {
-    var subtotal = req.body.subtotal
+    var subtotal = req.body
     
     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal})
 })
