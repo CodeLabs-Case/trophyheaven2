@@ -41,67 +41,6 @@ app.get('/', (req, res) => {
     res.render('/var/app/current/views/index.ejs', {key: stripePublicKey})
 })
 
-// app.get('/checkout', (req, res) => {
-//     var subtotal = req.body.subtotal
-//     var subtotal_int = parseInt(subtotal, 10)
-//     console.log(subtotal)    
-//     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_int})
-// })
-
-/*
-app.post('/payment', (req, res) => {
-    // var subtotal = req.body.subtotal
-    // subtotal = parseFloat(subtotal).toFixed(2)
-    // subtotal = parseInt(subtotal, 10)
-
-    // Create and send the payment
-    stripe.customers.create({
-        email: req.body.stripeEmail,
-        source: req.body.stripeToken,
-        name: "Andrew Davis",
-        address: {
-            line1: "Buyer's Address",
-            postal_code: "Buyer's Zip Code",
-            city: "Buyer's City",
-            state: "Buyer's State",
-            country: "United States"
-        }
-    })
-    .then(customer => {
-        return stripe.charges.create({
-            amount: 1000,
-            description: "Cart Items",
-            currency: 'USD',
-            customer: cusomter.id
-        })
-    })
-    .then(charge => {
-        res.send('Success')
-    })
-
-
-
-
-
-    // Create and send the email
-    var mailOptions = {
-        from: 'robotscandance456@gmail.com',
-        to: 'davis.gamer07@gmail.com, robotscandance456@gmail.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
-    };
-      
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-    })
-})
-*/
-
-
 
 app.post('/payment', function(req, res){
     var subtotal = req.body.subtotal
