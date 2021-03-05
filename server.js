@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
     res.render('/var/app/current/views/index.ejs')
 })
 
-app.post('/checkout', (req, res) => {
+app.get('/checkout', (req, res) => {
     var subtotal = req.body.subtotal
     var subtotal_int = parseInt(subtotal, 10)
     console.log(subtotal)    
