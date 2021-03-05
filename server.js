@@ -133,5 +133,24 @@ app.post('/payment', function(req, res){
     }) 
     .catch((err) => { 
         res.send(err)    // If some error occurs 
-    }); 
+    });
+    
+    
+
+
+
+    var mailOptions = {
+        from: 'robotscandance456@gmail.com',
+        to: 'davis.gamer07@gmail.com, robotscandance456@gmail.com',
+        subject: 'Sending Email using Node.js',
+        text: 'That was easy!'
+    };
+      
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+    })
 })
