@@ -20,9 +20,6 @@ var transporter = nodemailer.createTransport({
 
 const app = express()
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
-
 app.use('/static', express.static('public'));
 
 app.set("viewengine", "ejs")
