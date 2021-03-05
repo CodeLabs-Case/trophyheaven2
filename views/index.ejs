@@ -14,14 +14,12 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="/static/styles/main.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- JS Files -->
     <!-- paypal script -->
     <!-- <script src="https://www.paypalobjects.com/api/checkout.js" defer></script> -->
     <!-- stripe script -->
-    <script src="https://js.stripe.com/v3/" defer></script>
-    <script src="card.js" defer></script>
+    <!-- <script src="https://checkout.stripe.com/checkout.js" defer></script> -->
     <!-- main script -->
     <script src="/static/scripts/app.js" defer></script>
 </head>
@@ -130,9 +128,16 @@
                 <button class="clear-cart banner-btn">clear cart</button>
                 <form action="payment" method="POST">
                     <input type="text" class="hidden-total" name="subtotal">
-                    <div id="card-element" class="bg-transparent text-white p-2 h-10 mb-4"></div>
-                    <div id="card-errors" role="alert"></div>
-                    <button class="text-white bg-purple-900 p-4 rounded">Submit Payment</button>
+
+                    <script
+                        src="//checkout.stripe.com/v2/checkout.js"
+                        class="stripe-button"
+                        data-key= "<%= key %>"
+                        data-currency="usd"
+                        data-name=""
+                        data-description=""
+                        data-locale="auto" >
+                    </script>
                 </form>
             </div>
         </div>

@@ -290,6 +290,7 @@ class UI {
             itemsTotal += item.amount
         })
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2))
+        hiddenTotal.value = parseFloat(tempTotal.toFixed(2)) * 100
         cartItems.innerText = itemsTotal
     }
 
@@ -378,10 +379,6 @@ class UI {
                 addAmount.nextElementSibling.innerText = tempItem.amount
             }
         })
-
-        // purchaseBtn.addEventListener('click', () => {
-        //     purchaseClicked()
-        // })
     }
 
     clearCart() {
