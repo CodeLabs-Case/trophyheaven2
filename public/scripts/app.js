@@ -304,7 +304,7 @@ class UI {
         div.innerHTML = `
             <img src="${item.image}" alt="product">
             <div>
-                <h4>${item.title} (${item.size})</h4>
+                <h4>${item.title} ${item.size}</h4>
                 <h4>${item.description}</h4>
                 <h5>$${item.price}</h5>
                 <span class="remove-item" data-id=${item.id}>remove</span>
