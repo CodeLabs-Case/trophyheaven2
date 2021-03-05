@@ -87,7 +87,7 @@ class UI {
                         />
                         <button class="bag-btn" data-id="${product.id}">
                             <i class="fas fa-shopping-cart"></i>
-                            add to cart
+                            <label>add to cart</label>
                         </button>
                     </div>
                     <h3>${product.title}</h3>
@@ -110,28 +110,28 @@ class UI {
                             />
                             <button class="bag-btn" data-id="${product.id}" style="top: 15%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                S
+                                <label>S</label>
                             </button>
                     `
                 } else if(hoodyCnt == 1) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 35%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                M
+                                <label>M</label>
                             </button>
                     `
                 } else if(hoodyCnt == 2) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 55%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                L
+                                <label>L</label>
                             </button>
                     `
                 } else if(hoodyCnt == 3) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 75%; width: 8em">
                                 <i class="fas fa-shopping-cart"></i>
-                                XL
+                                <label>XL</label>
                             </button>
                         </div>
                         <h3>${product.title} S - XL</h3>
@@ -252,7 +252,7 @@ class UI {
 
 
     getBagButtons() {
-        const buttons = [...document.querySelectorAll('.bag-btn')]
+        const buttons = [...document.querySelectorAll('.bag-btn label')]
 
         // save the buttons to a structure outside of the scope of this method
         buttonsDOM = buttons
