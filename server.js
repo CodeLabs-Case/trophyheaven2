@@ -93,29 +93,3 @@ app.post('/payment', (req, res) => {
         }
     })
 })
-
-app.post('/create-token', (req, res) => {
-    Stripe.__createToken(req.body, function(err, result){
-        if(err){
-            res.send(err)
-        } else {
-            res.send({
-                "message": "Token Generated",
-                "data": result
-            })
-        }
-    })
-})
-
-app.post('/create-charge', (req, res) => {
-    Stripe.__createCharge(req.body, function(err, result){
-        if(err) {
-            res.send(err)
-        } else {
-            res.send({
-                "message": "Charged",
-                "data": result
-            })
-        }
-    })
-})

@@ -269,7 +269,7 @@ body {
     width: 14em;
 }
 .hidden-subtotal {
-    /* display: none; */
+    display: none;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
