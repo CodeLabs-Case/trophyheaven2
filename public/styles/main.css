@@ -265,6 +265,10 @@ body {
         width: 30vw;
         min-width: 450px;
     }
+    .checkout {
+        width: 30vw;
+        min-width: 450px;
+    }
 }
 
 .close-cart {
