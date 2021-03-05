@@ -48,6 +48,7 @@ app.get('/', (req, res) => {
 //     res.render('/var/app/current/views/checkout.ejs', {key: stripePublicKey, subtotal: subtotal_int})
 // })
 
+/*
 app.post('/payment', (req, res) => {
     // var subtotal = req.body.subtotal
     // subtotal = parseFloat(subtotal).toFixed(2)
@@ -97,4 +98,40 @@ app.post('/payment', (req, res) => {
           console.log('Email sent: ' + info.response);
         }
     })
+})
+*/
+
+
+
+app.post('/payment', function(req, res){ 
+
+    // Moreover you can take more details from user 
+    // like Address, Name, etc from form 
+    stripe.customers.create({ 
+        email: req.body.stripeEmail, 
+        source: req.body.stripeToken, 
+        name: 'Gautam Sharma', 
+        address: { 
+            line1: 'TC 9/4 Old MES colony', 
+            postal_code: '110092', 
+            city: 'New Delhi', 
+            state: 'Delhi', 
+            country: 'India', 
+        } 
+    }) 
+    .then((customer) => { 
+
+        return stripe.charges.create({ 
+            amount: 7000,    // Charing Rs 25 
+            description: 'Web Development Product', 
+            currency: 'USD', 
+            customer: customer.id 
+        }); 
+    }) 
+    .then((charge) => { 
+        res.send("Success") // If no error occurs 
+    }) 
+    .catch((err) => { 
+        res.send(err)    // If some error occurs 
+    }); 
 })
