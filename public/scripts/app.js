@@ -350,7 +350,7 @@ class UI {
             this.disableCheckout()
         }
 
-        hiddenCart.value = cart
+        // hiddenCart.value = cart
     }
 
     disableCheckout() {
