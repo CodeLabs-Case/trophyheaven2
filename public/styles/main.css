@@ -193,6 +193,7 @@ body {
 }
 .bag-btn:hover {
     color: var(--mainWhite);
+    cursor: pointer;
 }
 .bad-btn i {
     pointer-events: none;
