@@ -55,13 +55,13 @@ app.post('/payment', function(req, res){
     stripe.customers.create({ 
         email: req.body.stripeEmail, 
         source: req.body.stripeToken, 
-        name: 'Gautam Sharma', 
+        name: '', 
         address: { 
-            line1: 'TC 9/4 Old MES colony', 
-            postal_code: '110092', 
-            city: 'New Delhi', 
-            state: 'Delhi', 
-            country: 'India', 
+            line1: '', 
+            postal_code: '', 
+            city: '', 
+            state: '', 
+            country: '', 
         } 
     }) 
     .then((customer) => { 

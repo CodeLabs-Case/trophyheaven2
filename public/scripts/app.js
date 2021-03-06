@@ -29,6 +29,8 @@ const closeCheckoutBtn = document.querySelector('.close-checkout')
 
 
 
+
+
 let cart = []
 let buttonsDOM = []
 let sizeBtnsDOM = []
