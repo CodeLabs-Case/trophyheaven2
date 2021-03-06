@@ -324,6 +324,9 @@ body {
     font-family: "Lato", sans-serif;
     justify-self: center;
 }
+.form-wrapper {
+    background-color: #aaa;
+}
 .hidden-total {
     display: none;
 }
