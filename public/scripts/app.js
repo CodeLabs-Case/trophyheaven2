@@ -306,7 +306,7 @@ class UI {
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
             
-            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
+            hiddenTotal.value = hiddenTotalTemp + tax
 
             
             
@@ -324,7 +324,7 @@ class UI {
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
 
-            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
+            hiddenTotal.value = hiddenTotalTemp + tax
 
             
             
