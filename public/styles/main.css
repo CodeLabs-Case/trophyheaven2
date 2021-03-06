@@ -327,7 +327,7 @@ body {
 }
 .form-wrapper {
     width: 100%;
-    background-color: #aaa;
+    background-color: #ccc;
     display: grid;
     border: solid 1px var(--primaryColor)
 }
