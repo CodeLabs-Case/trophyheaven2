@@ -118,7 +118,7 @@ body {
     letter-spacing: var(--mainSpacing);
     margin-bottom: 1rem;
 }
-.banner-title h3{
+.banner span h3{
     color: var(--primaryColor);
 }
 .banner span {
