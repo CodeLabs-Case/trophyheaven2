@@ -311,6 +311,7 @@ body {
     display: grid;
 }
 .checkout-form div{
+    font-family: "Lato", sans-serif;
     justify-self: center;
 }
 .hidden-subtotal {
