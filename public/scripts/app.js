@@ -344,13 +344,13 @@ class UI {
         closeCartBtn.addEventListener('click', this.hideCart)
 
         // for the checkout
-        if(Storage.getLength > 0) {
+        if(Storage.getLength() > 0) {
             this.enableCheckout()
         } else {
             this.disableCheckout()
         }
 
-        // hiddenCart.value = cart
+        hiddenCart.value = cart
     }
 
     disableCheckout() {
