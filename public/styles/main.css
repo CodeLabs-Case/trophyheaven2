@@ -317,7 +317,7 @@ body {
     display: none;
 }
 .hidden-cart {
-    /* display: none; */
+    display: none;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
