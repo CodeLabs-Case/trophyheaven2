@@ -43,9 +43,8 @@ app.get('/', (req, res) => {
 
 
 app.post('/payment', function(req, res){
-    var subtotal = req.body.subtotal
-    subtotal = parseFloat(subtotal).toFixed(2)
-    subtotal = parseInt(subtotal, 10)
+    var total = req.body.total
+    total = parseInt(total, 10)
 
     // var email = req.body.email
     // email = email.toString()
@@ -67,8 +66,8 @@ app.post('/payment', function(req, res){
     .then((customer) => { 
 
         return stripe.charges.create({ 
-            amount: subtotal,    // Charing Rs 25 
-            description: 'Web Development Product', 
+            amount: total,
+            description: '', 
             currency: 'USD', 
             customer: customer.id 
         }); 
