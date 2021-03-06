@@ -96,12 +96,6 @@ body {
 }
 /* --------------- End of Navbar Section ---------------- */
 /* --------------- Main ---------------- */
-.covid-banner {
-    align-self: flex-start;
-    height: 2em;
-    width: 100%;
-    background-color: #f00;
-}
 .main {
     min-height: calc(100vh - 60px);
     background: url("../images/main.png") center/cover no-repeat;
