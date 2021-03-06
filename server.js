@@ -87,7 +87,7 @@ app.post('/payment', function(req, res){
         from: 'davis.architect99@gmail.com',
         to: `${req.body.stripeEmail}`,
         subject: 'Sending Email using Node.js',
-        text: `This is a confirmation of your order totaling: ${total}!`
+        text: `This is a confirmation of your order totaling: ${total / 100}!`
     };
       
     transporter.sendMail(mailOptionsBuyer, function(error, info){
@@ -103,7 +103,7 @@ app.post('/payment', function(req, res){
         from: 'davis.architect99@gmail.com',
         to: `davis.architect99@gmail.com`,
         subject: 'Sending Email using Node.js',
-        text: `A checkout is being processed totaling: ${total}!`
+        text: `A checkout is being processed totaling: ${total / 100}!`
     };
     
     transporter.sendMail(mailOptionsSeller, function(error, info){
