@@ -111,7 +111,7 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id="${product.id}" style="top: 15%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fas fa-shopping-cart">SMALL</i>
                                 SMALL
                             </button>
                     `
