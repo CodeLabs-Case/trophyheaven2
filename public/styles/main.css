@@ -307,14 +307,17 @@ body {
     margin-top: 1em;
     width: 14em;
 }
-.hidden-subtotal {
-    display: none;
-}
 .checkout-form {
     display: grid;
 }
 .checkout-form div{
     justify-self: center;
+}
+.hidden-subtotal {
+    display: none;
+}
+.hidden-cart {
+    /* display: none; */
 }
 /*---------- Cart Item -------------------- */
 .cart-item {

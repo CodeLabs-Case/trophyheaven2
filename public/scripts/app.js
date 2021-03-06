@@ -21,6 +21,7 @@ const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
 // for checkout
 const hiddenTotal = document.querySelector('.hidden-subtotal')
+const hiddenCart = document.querySelector('.hidden-cart')
 const checkoutDOM = document.querySelector('.checkout')
 const checkoutBtn = document.querySelector('.checkout-btn')
 const closeCheckoutBtn = document.querySelector('.close-checkout')
@@ -348,6 +349,8 @@ class UI {
         } else {
             this.disableCheckout()
         }
+
+        hiddenCart.value = cart
     }
 
     disableCheckout() {
