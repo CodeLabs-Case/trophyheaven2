@@ -23,7 +23,7 @@ const productsDOM3 = document.querySelector('.products-center3')
 document.getElementsByClassName('.fname').required = true
 document.getElementsByClassName('.lname').required = true
 document.getElementsByClassName('.shippingAddress').required = true
-document.getElementsByClassName('.citt').required = true
+document.getElementsByClassName('.city').required = true
 document.getElementsByClassName('.state').required = true
 document.getElementsByClassName('.zip').required = true
 // for checkout
