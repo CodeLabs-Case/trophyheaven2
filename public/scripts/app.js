@@ -300,12 +300,12 @@ class UI {
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
 
         // add shipping + tax
-        if(cartTotal < 45) {
+        if(cartTotal < 45.00) {
             let temp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = .0475 * temp
             
             shippingCostDOM.innerText = "5.95"
-            taxDOM.innerText = Math.round(parseFloat(tax).toFixed(2))
+            taxDOM.innerText = parseFloat(tax).toFixed(2)
             totalDOM.innerText = Math.round(parseFloat(temp + tax).toFixed(2))
 
             hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
@@ -314,9 +314,9 @@ class UI {
             let tax = .0475 * temp
 
             shippingCostDOM.innerText = "0.00"
-            taxDOM.innerText = Math.round(parseFloat(tax).toFixed(2))
+            taxDOM.innerText = parseFloat(tax).toFixed(2)
             totalDOM.innerText = Math.round(parseFloat(temp + tax).toFixed(2))
-            
+
             hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
         }
         
