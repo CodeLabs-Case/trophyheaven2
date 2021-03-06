@@ -77,21 +77,37 @@ app.post('/payment', function(req, res){
         res.send("Success") // If no error occurs 
     }) 
     .catch((err) => { 
-        res.send(err)    // If some error occurs 
+        res.send(err)    // If some error occurs
     });
     
     
 
 
-
-    var mailOptions = {
+    // email sent to buyer
+    var mailOptionsBuyer = {
         from: 'robotscandance456@gmail.com',
-        to: `${req.body.stripeEmail}, robotscandance456@gmail.com`,
+        to: `${req.body.stripeEmail}`,
         subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        text: 'This is a confirmation of your order!'
     };
       
-    transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptionsBuyer, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+    })
+
+    // email sent to seller
+    var mailOptionsSeller = {
+        from: 'robotscandance456@gmail.com',
+        to: `robotscandance456@gmail.com`,
+        subject: 'Sending Email using Node.js',
+        text: 'A checkout is being processed!'
+    };
+      
+    transporter.sendMail(mailOptionsSeller, function(error, info){
         if (error) {
           console.log(error);
         } else {
