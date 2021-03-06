@@ -300,7 +300,7 @@ class UI {
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
 
         // add shipping + tax
-        if(cartTotal < 45.00) {
+        if(parseFloat(tempTotal).toFixed(2) < 45.00) {
             let temp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = .0475 * temp
             
