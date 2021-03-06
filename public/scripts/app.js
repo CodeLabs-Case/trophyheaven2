@@ -317,7 +317,7 @@ class UI {
             shippingCostDOM.innerText = "5.95"
             taxDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = displayTotalTemp + displayTax
-            totalDOM.innerText = parseFloat(displayTotal).toFixed(2)
+            totalDOM.innerText = parseFloat(hiddenTotalTemp + tax).toFixed(2)
         } else {
 
             // actual amount in pennies
