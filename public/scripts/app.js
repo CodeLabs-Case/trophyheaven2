@@ -301,23 +301,33 @@ class UI {
 
         // add shipping + tax
         if(parseFloat(tempTotal).toFixed(2) < 45.00) {
-            let temp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
-            let tax = .0475 * temp
+            // actual amount in pennies
+            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
+            let tax = Math.round(.0475 * hiddenTotalTemp)
+
+            // display amount in dollars
+            let displayTotalTemp = parseFloat(tempTotal + 5.95).toFixed(2)
+            let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
             shippingCostDOM.innerText = "5.95"
-            taxDOM.innerText = parseFloat(tax).toFixed(2)
-            totalDOM.innerText = Math.round(parseFloat(temp + tax).toFixed(2))
+            taxDOM.innerText = parseFloat(displayTax).toFixed(2)
+            totalDOM.innerText = parseFloat(displayTotalTemp + displayTax).toFixed(2)
 
-            hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
+            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
         } else {
-            let temp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
-            let tax = .0475 * temp
+            // actual amount in pennies
+            let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
+            let tax = Math.round(.0475 * hiddenTotalTemp)
 
+            // display amount in dollars
+            let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
+            let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
+            
             shippingCostDOM.innerText = "0.00"
-            taxDOM.innerText = parseFloat(tax).toFixed(2)
-            totalDOM.innerText = Math.round(parseFloat(temp + tax).toFixed(2))
+            taxDOM.innerText = parseFloat(displayTax).toFixed(2)
+            totalDOM.innerText = parseFloat(displayTotalTemp + displayTax).toFixed(2)
 
-            hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
+            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
         }
         
         cartItems.innerText = itemsTotal
