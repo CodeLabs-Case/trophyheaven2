@@ -107,7 +107,10 @@ body {
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     display: inline-block;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 .banner-title {
     font-size: 3rem;
