@@ -291,7 +291,7 @@ class UI {
                 }
 
                 // update the hidden cart
-                hiddenCart.value = cart
+                hiddenCart.value = JSON.stringify(cart)
             })
         })
     }
@@ -354,7 +354,7 @@ class UI {
         }
 
         // set the hidden cart
-        hiddenCart.value = cart
+        hiddenCart.value = JSON.stringify(cart)
     }
 
     disableCheckout() {
@@ -462,7 +462,7 @@ class UI {
         }
 
         // update the hidden cart
-        hiddenCart.value = cart
+        hiddenCart.value = JSON.stringify(cart)
     }
     
     getSingleButton(id, btn) {
