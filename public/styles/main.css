@@ -113,7 +113,7 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .banner span {
     display: block;
