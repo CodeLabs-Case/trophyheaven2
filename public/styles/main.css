@@ -329,6 +329,7 @@ body {
     width: 100%;
     background-color: #aaa;
     display: grid;
+    border: solid 1px var(--primaryColor)
 }
 .hidden-total {
     display: none;

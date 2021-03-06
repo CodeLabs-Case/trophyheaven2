@@ -19,13 +19,6 @@ const cartContent = document.querySelector('.cart-content')
 const productsDOM1 = document.querySelector('.products-center1')
 const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
-// for checkout form
-document.getElementsByClassName('.fname').required = true
-document.getElementsByClassName('.lname').required = true
-document.getElementsByClassName('.shippingAddress').required = true
-document.getElementsByClassName('.city').required = true
-document.getElementsByClassName('.state').required = true
-document.getElementsByClassName('.zip').required = true
 // for checkout
 const hiddenTotal = document.querySelector('.hidden-total')
 const hiddenCart = document.querySelector('.hidden-cart')
