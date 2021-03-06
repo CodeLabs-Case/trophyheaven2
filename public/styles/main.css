@@ -117,6 +117,8 @@ body {
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
     margin-bottom: 1rem;
+}
+.banner-title h3{
     color: var(--primaryColor);
 }
 .banner span {
