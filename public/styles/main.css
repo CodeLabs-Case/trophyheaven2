@@ -101,7 +101,6 @@ body {
     height: 2em;
     width: 100%;
     background-color: #f00;
-    z-index: 2;
 }
 .main {
     min-height: calc(100vh - 60px);
@@ -109,7 +108,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
 }
 .banner {
     text-align: center;
