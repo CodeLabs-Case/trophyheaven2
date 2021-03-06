@@ -451,6 +451,10 @@ class Storage {
     static getCart() {
         return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
     }
+    static getLength() {
+        let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+        return cart.length
+    }
 }
 
 
@@ -516,4 +520,6 @@ document.addEventListener("DOMContentLoaded", () => {
         navSec.classList.remove("showNav")
         navState = false
     })
+
+    alert(Storage.getLength())
 })
