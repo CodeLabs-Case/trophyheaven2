@@ -270,7 +270,6 @@ class UI {
             button.addEventListener('click', event => {
                 const amountBeforeAdd = Storage.getLength()
                 event.target.innerText = "In Cart"
-                event.target.removeEventListener('click')
     
                 // get product from local storage and use the spread operator to add a quatity field
                 let cartItem = {...Storage.getProduct(id), amount: 1}
@@ -293,6 +292,8 @@ class UI {
 
                 // update the hidden cart
                 hiddenCart.value = JSON.stringify(cart)
+
+                event.target.removeEventListener('click')
             })
         })
     }
