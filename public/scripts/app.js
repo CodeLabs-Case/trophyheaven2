@@ -289,6 +289,9 @@ class UI {
                 if(amountBeforeAdd == 0) {
                     this.enableCheckout()
                 }
+
+                // update the hidden cart
+                hiddenCart.value = cart
             })
         })
     }
@@ -350,6 +353,7 @@ class UI {
             this.disableCheckout()
         }
 
+        // set the hidden cart
         hiddenCart.value = cart
     }
 
@@ -452,9 +456,13 @@ class UI {
             button.innerHTML = `add to cart`
         }
 
+        // update the checkout button
         if(Storage.getLength() == 0) {
             this.disableCheckout()
         }
+
+        // update the hidden cart
+        hiddenCart.value = cart
     }
     
     getSingleButton(id, btn) {
