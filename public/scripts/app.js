@@ -88,7 +88,6 @@ class UI {
                             class="product-img"
                         />
                         <button class="bag-btn" data-id="${product.id}">
-                            <i class="fas fa-shopping-cart"></i>
                             add to cart
                         </button>
                     </div>
@@ -111,27 +110,24 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id="${product.id}" style="top: 15%; width: 8em">
-                                <i class="fas fa-shopping-cart">SMALL</i>
+                                SMALL
                             </button>
                     `
                 } else if(hoodyCnt == 1) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 35%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 MEDIUM
                             </button>
                     `
                 } else if(hoodyCnt == 2) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 55%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 LARGE
                             </button>
                     `
                 } else if(hoodyCnt == 3) {
                         result2 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 75%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 XLARGE
                             </button>
                         </div>
@@ -153,7 +149,6 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id="${product.id}">
-                                <i class="fas fa-shopping-cart"></i>
                                 add to cart
                             </button>
                         </div>
@@ -182,28 +177,24 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id="${product.id}" style="top: 15%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 SMALL
                             </button>
                     `
                 } else if(teesCnt == 1) {
                         result3 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 35%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 MEDIUM
                             </button>
                     `
                 } else if(teesCnt == 2) {
                         result3 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 55%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 LARGE
                             </button>
                     `
                 } else if(teesCnt == 3) {
                         result3 += `
                             <button class="bag-btn" data-id="${product.id}" style="top: 75%; width: 8em">
-                                <i class="fas fa-shopping-cart"></i>
                                 XLARGE
                             </button>
                         </div>
@@ -225,7 +216,6 @@ class UI {
                                 class="product-img"
                             />
                             <button class="bag-btn" data-id="${product.id}">
-                                <i class="fas fa-shopping-cart"></i>
                                 add to cart
                             </button>
                         </div>
@@ -445,19 +435,15 @@ class UI {
         // set the text depending on what the id is for the size
         let product = Storage.getProduct(id)
         if(product.size == "Small") {
-            button.innerHTML = `<i class="fas fa-shopping-cart"></i>
-            SMALL`
+            button.innerHTML = `SMALL`
         } else if(product.size == "Medium") {
-            button.innerHTML = `<i class="fas fa-shopping-cart"></i>
-            MEDIUM`
+            button.innerHTML = `MEDIUM`
         } else if(product.size == "Large") {
-            button.innerHTML = `<i class="fas fa-shopping-cart"></i>
-            LARGE`
+            button.innerHTML = `LARGE`
         } else if(product.size == "XL") {
-            button.innerHTML = `<i class="fas fa-shopping-cart"></i>
-            XLARGE`
+            button.innerHTML = `XLARGE`
         } else {
-            button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to cart`
+            button.innerHTML = `add to cart`
         }
 
         // update the checkout button
