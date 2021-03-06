@@ -317,6 +317,9 @@ body {
     margin-top: 1em;
     width: 14em;
 }
+.checkout-form {
+    display: grid;
+}
 .form-wrapper div{
     font-family: "Lato", sans-serif;
     justify-self: center;
