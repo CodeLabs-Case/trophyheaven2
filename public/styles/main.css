@@ -117,6 +117,7 @@ body {
 }
 .banner span {
     display: block;
+    margin-bottom: 1rem;
 }
 .banner-btn {
     padding: 1rem 3rem;
