@@ -266,6 +266,7 @@ class UI {
             // defines what will happen when it is in the cart
             // set eventlisteners for the unsized items (headwear)
             button.addEventListener('click', event => {
+                const amountBeforeAdd = Storage.getLength()
                 event.target.innerText = "In Cart"
                 event.target.disabled = true
     
@@ -281,6 +282,12 @@ class UI {
                 this.addCartItem(cartItem)
                 // wait until you load the next products to show the cart
                 // this.showCart()
+
+                // you only have to enable the checkout if it was 0 before adding this item ...
+                // ... otherwise you are doing unnecessary computation
+                if(amountBeforeAdd == 0) {
+                    this.enableCheckout()
+                }
             })
         })
     }
@@ -336,6 +343,19 @@ class UI {
         closeCartBtn.addEventListener('click', this.hideCart)
 
         // for the checkout
+        if(Storage.getLength > 0) {
+            this.enableCheckout()
+        } else {
+            this.disableCheckout()
+        }
+    }
+
+    disableCheckout() {
+        checkoutBtn.removeEventListener('click', this.showCheckout)
+        closeCheckoutBtn.removeEventListener('click', this.hideCheckout)
+    }
+
+    enableCheckout() {
         checkoutBtn.addEventListener('click', this.showCheckout)
         closeCheckoutBtn.addEventListener('click', this.hideCheckout)
     }
@@ -405,6 +425,7 @@ class UI {
             cartContent.removeChild(cartContent.children[0])
         }
         this.hideCart()
+        this.disableCheckout()
     }
 
     removeItem(id) {
@@ -426,6 +447,10 @@ class UI {
             button.innerHTML = `XLARGE`
         } else {
             button.innerHTML = `add to cart`
+        }
+
+        if(Storage.getLength() == 0) {
+            this.disableCheckout()
         }
     }
     
@@ -520,6 +545,4 @@ document.addEventListener("DOMContentLoaded", () => {
         navSec.classList.remove("showNav")
         navState = false
     })
-
-    alert(Storage.getLength())
 })
