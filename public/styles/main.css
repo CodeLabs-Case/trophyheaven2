@@ -317,16 +317,14 @@ body {
     margin-top: 1em;
     width: 14em;
 }
-.checkout-form {
-    display: grid;
-}
-.checkout-form div{
+.form-wrapper div{
     font-family: "Lato", sans-serif;
     justify-self: center;
 }
 .form-wrapper {
     width: 100%;
     background-color: #aaa;
+    display: grid;
 }
 .hidden-total {
     display: none;
