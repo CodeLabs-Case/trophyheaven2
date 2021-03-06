@@ -20,7 +20,7 @@ const productsDOM1 = document.querySelector('.products-center1')
 const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
 // for checkout
-const hiddenTotal = document.querySelector('.hidden-subtotal')
+const hiddenTotal = document.querySelector('.hidden-total')
 const hiddenCart = document.querySelector('.hidden-cart')
 const checkoutDOM = document.querySelector('.checkout')
 const checkoutBtn = document.querySelector('.checkout-btn')
@@ -295,7 +295,18 @@ class UI {
             itemsTotal += item.amount
         })
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
-        hiddenTotal.value = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
+
+        // add shipping + tax
+        if(cartTotal < 45) {
+            let temp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
+            let tax = .0475 * temp
+            hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
+        } else {
+            let temp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
+            let tax = .0475 * temp
+            hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
+        }
+        
         cartItems.innerText = itemsTotal
     }
 

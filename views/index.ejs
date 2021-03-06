@@ -148,7 +148,7 @@
         <div class="checkout-content">
             <form class="checkout-form" action="payment" method="POST">
                 <!-- hack solution to passing data to server -->
-                <input type="text" class="hidden-subtotal" name="subtotal">
+                <input type="text" class="hidden-total" name="total">
                 <input type="text" class="hidden-cart" name="cart">
 
 
@@ -182,6 +182,15 @@
                 <input type="text" class="buyer-zip" name="zip"><br><br>
                 </div>
                 <br><br>
+
+
+                <div class="checkout-footer">
+                    <h3>Shipping : $ <span class="shipping">0</span></h3>
+                    <h3>Tax : $ <span class="tax">0</span></h3>
+                    <h3>Total : $ <span class="total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                    <button class="checkout-btn banner-btn">checkout</button>
+                </div>
                 
                 
                 <script

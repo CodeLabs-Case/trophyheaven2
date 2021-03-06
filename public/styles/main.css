@@ -321,7 +321,7 @@ body {
     font-family: "Lato", sans-serif;
     justify-self: center;
 }
-.hidden-subtotal {
+.hidden-total {
     display: none;
 }
 .hidden-cart {
