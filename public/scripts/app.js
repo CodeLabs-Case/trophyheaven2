@@ -446,15 +446,15 @@ class UI {
         // set the text depending on what the id is for the size
         let product = Storage.getProduct(id)
         if(product.size == "Small") {
-            button.innerHTML = `SMALL`
+            button.innerHTML = `<i class="fas fa-shopping-cart"></i>SMALL`
         } else if(product.size == "Medium") {
-            button.innerHTML = `MEDIUM`
+            button.innerHTML = `<i class="fas fa-shopping-cart"></i>MEDIUM`
         } else if(product.size == "Large") {
-            button.innerHTML = `LARGE`
+            button.innerHTML = `<i class="fas fa-shopping-cart"></i>LARGE`
         } else if(product.size == "XL") {
-            button.innerHTML = `XLARGE`
+            button.innerHTML = `<i class="fas fa-shopping-cart"></i>XLARGE`
         } else {
-            button.innerHTML = `add to cart`
+            button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to cart`
         }
 
         // update the checkout button
