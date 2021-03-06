@@ -317,7 +317,7 @@ class UI {
             shippingCostDOM.innerText = "5.95"
             taxDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-            totalDOM.innerText = hiddenTotalTemp + tax
+            totalDOM.innerText = displayTotal
         } else {
 
             // actual amount in pennies
@@ -335,7 +335,7 @@ class UI {
             shippingCostDOM.innerText = "0.00"
             taxDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-            totalDOM.innerText = hiddenTotalTemp + tax
+            totalDOM.innerText = displayTotal
         }
         
         cartItems.innerText = itemsTotal
