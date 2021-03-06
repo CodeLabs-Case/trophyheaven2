@@ -301,33 +301,41 @@ class UI {
 
         // add shipping + tax
         if(parseFloat(tempTotal).toFixed(2) < 45.00) {
+
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
+            
+            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
 
+            
+            
             // display amount in dollars
             let displayTotalTemp = parseFloat(tempTotal + 5.95).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
             shippingCostDOM.innerText = "5.95"
             taxDOM.innerText = parseFloat(displayTax).toFixed(2)
-            totalDOM.innerText = parseFloat(displayTotalTemp + displayTax).toFixed(2)
-
-            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
+            let displayTotal = displayTotalTemp + displayTax
+            totalDOM.innerText = parseFloat(displayTotal).toFixed(2)
         } else {
+
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
 
+            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
+
+            
+            
             // display amount in dollars
             let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
             shippingCostDOM.innerText = "0.00"
             taxDOM.innerText = parseFloat(displayTax).toFixed(2)
-            totalDOM.innerText = parseFloat(displayTotalTemp + displayTax).toFixed(2)
-
-            hiddenTotal.value = Math.round((parseFloat(hiddenTotalTemp + tax).toFixed(2)) * 100)
+            let displayTotal = displayTotalTemp + displayTax
+            totalDOM.innerText = parseFloat(displayTotal).toFixed(2)
         }
         
         cartItems.innerText = itemsTotal
