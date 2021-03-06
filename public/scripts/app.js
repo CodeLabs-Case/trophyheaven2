@@ -25,9 +25,9 @@ const hiddenCart = document.querySelector('.hidden-cart')
 const checkoutDOM = document.querySelector('.checkout')
 const checkoutBtn = document.querySelector('.checkout-btn')
 const closeCheckoutBtn = document.querySelector('.close-checkout')
-const shippingCost = document.querySelector('.shipping')
-const tax = document.querySelector('.tax')
-const total = document.querySelector('.total')
+const shippingCostDOM = document.querySelector('.shipping')
+const taxDOM = document.querySelector('.tax')
+const totalDOM = document.querySelector('.total')
 
 
 
@@ -304,15 +304,19 @@ class UI {
             let temp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = .0475 * temp
             
-            shippingCost.innerText = "5.95"
-            tax.innerText = Math.round(parseFloat(tax).toFixed(2))
+            shippingCostDOM.innerText = "5.95"
+            taxDOM.innerText = Math.round(parseFloat(tax).toFixed(2))
+            totalDOM.innerText = Math.round(parseFloat(temp + tax).toFixed(2))
+
             hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
         } else {
             let temp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
             let tax = .0475 * temp
 
-            shippingCost.innerText = "0.00"
-            tax.innerText = Math.round(parseFloat(tax).toFixed(2))
+            shippingCostDOM.innerText = "0.00"
+            taxDOM.innerText = Math.round(parseFloat(tax).toFixed(2))
+            totalDOM.innerText = Math.round(parseFloat(temp + tax).toFixed(2))
+            
             hiddenTotal.value = Math.round((parseFloat(temp + tax).toFixed(2)) * 100)
         }
         
