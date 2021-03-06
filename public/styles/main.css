@@ -97,6 +97,7 @@ body {
 /* --------------- End of Navbar Section ---------------- */
 /* --------------- Main ---------------- */
 .covid-banner {
+    top: 0;
     height: 2em;
     width: 100%;
     background-color: #f00;
