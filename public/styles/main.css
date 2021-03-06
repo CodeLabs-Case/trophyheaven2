@@ -325,6 +325,7 @@ body {
     justify-self: center;
 }
 .form-wrapper {
+    width: 100%;
     background-color: #aaa;
 }
 .hidden-total {
