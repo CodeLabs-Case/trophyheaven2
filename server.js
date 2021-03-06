@@ -85,7 +85,7 @@ app.post('/payment', function(req, res){
 
     // email sent to buyer
     var mailOptionsBuyer = {
-        from: 'robotscandance456@gmail.com',
+        from: 'davis.architect99@gmail.com',
         to: `${req.body.stripeEmail}`,
         subject: 'Sending Email using Node.js',
         text: 'This is a confirmation of your order!'
@@ -101,8 +101,8 @@ app.post('/payment', function(req, res){
 
     // email sent to seller
     var mailOptionsSeller = {
-        from: 'robotscandance456@gmail.com',
-        to: `robotscandance456@gmail.com`,
+        from: 'davis.architect99@gmail.com',
+        to: `davis.architect99@gmail.com`,
         subject: 'Sending Email using Node.js',
         text: 'A checkout is being processed!'
     };
