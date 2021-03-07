@@ -43,24 +43,44 @@ app.get('/', (req, res) => {
 
 
 app.post('/payment', function(req, res){
+    
+    // Transaction information
     var total = req.body.total
     total = parseInt(total, 10)
+    
+    // Buyer information
+    var fname = req.body.fname
+    fname = fname.toString()
+    
+    var lname = req.body.lname
+    lname = lname.toString()
+    
+    var shippingAddress = req.body.shippingAddress
+    shippingAddress = shippingAddress.toString()
+    
+    var city = req.body.city
+    city = city.toString()
+    
+    var state = req.body.state
+    state = state.toString()
+    
+    var zip = req.body.zip
+    zip = zip.toString()
 
-    // var email = req.body.email
-    // email = email.toString()
+
 
     // Moreover you can take more details from user 
     // like Address, Name, etc from form 
     stripe.customers.create({ 
         email: req.body.stripeEmail, 
         source: req.body.stripeToken, 
-        name: '', 
+        name: `${fname} ${lname}`, 
         address: { 
-            line1: '', 
-            postal_code: '', 
-            city: '', 
-            state: '', 
-            country: '',
+            line1: `${shippingAddress}`, 
+            postal_code: `${zip}`, 
+            city: `${city}`, 
+            state: `${state}`, 
+            country: `United States`,
         } 
     }) 
     .then((customer) => { 
@@ -81,13 +101,17 @@ app.post('/payment', function(req, res){
     
     
 
+    
 
     // email sent to buyer
     var mailOptionsBuyer = {
         from: 'davis.architect99@gmail.com',
         to: `${req.body.stripeEmail}`,
-        subject: 'Sending Email using Node.js',
-        text: `This is a confirmation of your order totaling: $${total / 100}!`
+        subject: 'Order Confirmation and Receipt',
+        text: `
+            <h1> Thank you for your purchase! </h1>
+            This is a confirmation of your order totaling: $${total / 100}!
+            `
     };
       
     transporter.sendMail(mailOptionsBuyer, function(error, info){
@@ -102,8 +126,16 @@ app.post('/payment', function(req, res){
     var mailOptionsSeller = {
         from: 'davis.architect99@gmail.com',
         to: `davis.architect99@gmail.com`,
-        subject: 'Sending Email using Node.js',
-        text: `A checkout is being processed totaling: $${total / 100}!`
+        subject: 'Order Confirmation',
+        text: `
+            <h1> Order from ${req.body.stripeEmail} placed! </h1>    
+            <br>
+            Name: ${lname}, ${fname}
+            <br>
+            Shipping Address: ${shippingAddress}, ${city}, ${state} ${zip}
+            <br>
+            The checkout is being processed totaling: $${total / 100}!
+            `
     };
     
     transporter.sendMail(mailOptionsSeller, function(error, info){
