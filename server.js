@@ -84,6 +84,11 @@ app.post('/payment', function(req, res){
     zip = zip.toString()
 
     var worksAtIngersoll = req.body.checkbox
+    if(worksAtIngersoll == "on"){
+        worksAtIngersoll = "Yes"
+    } else {
+        worksAtIngersoll = "No"
+    }
 
 
 
