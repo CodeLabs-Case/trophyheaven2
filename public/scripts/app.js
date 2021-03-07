@@ -540,7 +540,7 @@ var checkout = [0,0,0,0,0,0]
 function updateCheckout(index) {
     checkout[index] = 1
 
-    if(checkout[0] == 1) {
+    if(fname.value) {
         statusDiv.style.pointerEvents = "all"
         statusDiv.style.opacity = "1"
     }
