@@ -124,7 +124,6 @@ app.post('/payment', function(req, res){
                     <span style="">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
-
             `
     };
       
