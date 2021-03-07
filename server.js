@@ -131,7 +131,7 @@ app.post('/payment', function(req, res){
         html: `
             <div style="">
                 <h1 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
-                <span style=">This is a confirmation of your order totaling: $${total / 100}!</span>
+                <span style=">This is a confirmation of your order totaling: $${parseFloat(total / 100).toFixed(2)}!</span>
 
                 <div style="">
                     <span style="">Trophy Heaven</span>
@@ -166,7 +166,7 @@ app.post('/payment', function(req, res){
                 <br>
                 Shipping Address: ${shippingAddress}, ${city}, ${state} ${zip}
                 <br>
-                The checkout is being processed totaling: $${total / 100}!
+                The checkout is being processed totaling: $${parseFloat(total / 100).toFixed(2)}!
             </div>
             `
     };
