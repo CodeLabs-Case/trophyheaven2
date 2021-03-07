@@ -14,8 +14,8 @@ const nodemailer = require('nodemailer')
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'robotscandance456@gmail.com',
-      pass: 'tyghbnrufjvm07!'
+      user: 'trophyheavenllc@gmail.com',
+      pass: (process.env.EMAIL_PASSWORD).toString()
     }
 })
 
@@ -123,7 +123,7 @@ app.post('/payment', function(req, res){
     var confirmationNumber = confirmationJSON.confirmationNumber
     // email sent to buyer
     var mailOptionsBuyer = {
-        from: 'davis.architect99@gmail.com',
+        from: 'trophyheavenllc@gmail.com',
         to: `${req.body.stripeEmail}`,
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
@@ -163,8 +163,8 @@ app.post('/payment', function(req, res){
 
     // email sent to seller
     var mailOptionsSeller = {
-        from: 'davis.architect99@gmail.com',
-        to: `davis.architect99@gmail.com`,
+        from: 'trophyheavenllc@gmail.com',
+        to: `trophyheavenllc@gmail.com`,
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div>
