@@ -139,13 +139,12 @@ app.post('/payment', function(req, res){
                 <br>
                 <h3>Order Details:</h3>
                 <br>
-                <br>
                 <strong>Name: </strong>${fname} ${lname}
                 <br>
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
                 <br>
                 <br>
-                <h4>Products:</h4>${cartFormatted} 
+                <h3>Products:</h3>${cartFormatted} 
                 <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>
@@ -179,7 +178,6 @@ app.post('/payment', function(req, res){
                 <br>
                 <h3>Order Details:</h3>
                 <br>
-                <br>
                 <strong>Name: </strong>${lname}, ${fname}
                 <br>
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
@@ -188,7 +186,7 @@ app.post('/payment', function(req, res){
                 <strong>Ingersoll Employee (Charlotte)? </strong>${worksAtIngersoll}
                 <br>
                 <br>
-                <h4>Products:</h4>${cartFormatted}
+                <h3>Products:</h3>${cartFormatted}
                 <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>
