@@ -518,10 +518,11 @@ class Checkout {
     }
     setUp() {
         fname.addEventListener('change', (event) => {
-            if(fname.value != "") {
-                checks[0] = 1
-                alert("First Name Changed")
-            }
+            // if(fname.value != "") {
+            //     checks[0] = 1
+                
+            // }
+            alert("First Name Changed")
         })
     }
 }
