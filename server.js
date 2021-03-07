@@ -115,8 +115,16 @@ app.post('/payment', function(req, res){
         to: `${req.body.stripeEmail}`,
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
-            <h1 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
-            This is a confirmation of your order totaling: $${total / 100}!
+            <div style="display: block;">
+                <h1 style="justify-self: center; color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
+                <span style="justify-self: center;>This is a confirmation of your order totaling: $${total / 100}!</span>
+
+                <div style="display: block; background-color: #ececec;">
+                    <h6 style="color: #f09d51; justify-self: center;">Trophy Heaven</h6>
+                    <span style="justify-self: center;">200 West Stanly Street, Stanfield, NC 28163</span>
+                </div>
+            </div>
+
             `
     };
       
