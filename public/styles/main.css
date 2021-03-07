@@ -415,6 +415,9 @@ body {
 
 /* --------------- End of Cart ---------------- */
 
+.checkbox-span {
+    font-size: 8px;
+}
 .status-div {
     pointer-events: none;
     opacity: 0.5;
