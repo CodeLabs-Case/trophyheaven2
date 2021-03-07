@@ -83,6 +83,8 @@ app.post('/payment', function(req, res){
     var zip = req.body.zip
     zip = zip.toString()
 
+    var worksAtIngersoll = req.body.checkbox
+
 
 
     // Moreover you can take more details from user 
@@ -176,6 +178,9 @@ app.post('/payment', function(req, res){
                 <strong>Name: </strong>${lname}, ${fname}
                 <br>
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
+                <br>
+                <br>
+                <stong>Ingersoll Employee? </strong>${worksAtIngersoll}
                 <br>
                 <br>
                 <strong>Products:</strong>${cartFormatted}
