@@ -139,13 +139,15 @@ app.post('/payment', function(req, res){
                 <br>
                 <br>
                 <strong>Products:</strong>${cartFormatted} 
-                <strong>Total: <strong>$${parseFloat(total / 100).toFixed(2)}
+                <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>
                 <br>
-                <div style="">
-                    <span style="">Trophy Heaven</span><br>
-                    <span style="">200 West Stanly Street, Stanfield, NC 28163</span>
+                <br>
+                <br>
+                <div style="background-color: #eee">
+                    <span style="color: #f09d51;">Trophy Heaven</span><br>
+                    <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
             `
@@ -179,7 +181,16 @@ app.post('/payment', function(req, res){
                 <br>
                 <br>
                 <strong>Products:</strong>${cartFormatted} 
-                <strong>Total: <strong>$${parseFloat(total / 100).toFixed(2)}
+                <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <div style="background-color: #eee">
+                    <span style="color: #f09d51;">Trophy Heaven</span><br>
+                    <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
+                </div>
             </div>
             `
     };
