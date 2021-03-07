@@ -47,6 +47,8 @@ app.post('/payment', function(req, res){
     // Transaction information
     var total = req.body.total
     total = parseInt(total, 10)
+    var cart = req.body.cart
+    var cartjson = JSON.parse(cart)
     
     // Buyer information
     var fname = req.body.fname
