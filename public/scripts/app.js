@@ -542,6 +542,7 @@ function updateCheckout(index) {
 
     if(checkout[0] == 1) {
         statusDiv.style.pointerEvents = "all"
+        statusDiv.style.opacity = "1"
     }
 }
 
