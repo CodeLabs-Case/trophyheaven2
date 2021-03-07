@@ -61,8 +61,6 @@ app.post('/payment', function(req, res){
                 <strong>Price: </strong> ${element.price}<br>
                 <strong>Quantity: </strong> ${element.amount}<br>
             </div>
-            <br>
-            <br>
         `
     });
       
@@ -134,7 +132,7 @@ app.post('/payment', function(req, res){
                 <span style=">This is a confirmation of your order totaling: $${parseFloat(total / 100).toFixed(2)}!</span>
 
                 <div style="">
-                    <span style="">Trophy Heaven</span>
+                    <span style="">Trophy Heaven</span><br>
                     <span style="">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
@@ -160,13 +158,13 @@ app.post('/payment', function(req, res){
                     Order from ${req.body.stripeEmail} placed!
                 </h1>
                 <br>
-                Order Details: ${cartFormatted}
+                Order Details:
                 <br>
-                Name: ${lname}, ${fname}
+                <strong>Name: </strong>${lname}, ${fname}
                 <br>
-                Shipping Address: ${shippingAddress}, ${city}, ${state} ${zip}
-                <br>
-                The checkout is being processed totaling: $${parseFloat(total / 100).toFixed(2)}!
+                <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
+                <strong>Products: ${cartFormatted} </strong>
+                <strong>Total: <strong>$${parseFloat(total / 100).toFixed(2)}
             </div>
             `
     };
