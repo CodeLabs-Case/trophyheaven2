@@ -36,5 +36,6 @@ body {
     box-shadow: 0px 0px 10px;
 }
 .main-card h1 {
-    color: var(--primaryColor)
+    color: var(--primaryColor);
+    margin: 2rem;
 }
