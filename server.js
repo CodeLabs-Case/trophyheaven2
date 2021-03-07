@@ -136,7 +136,6 @@ app.post('/payment', function(req, res){
         html: `
             <div style="">
                 <h2 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h2>
-                <br>
                 <h3>Order Details:</h3>
                 <br>
                 <strong>Name: </strong>${fname} ${lname}
@@ -175,7 +174,6 @@ app.post('/payment', function(req, res){
         html: `
             <div>
                 <h2 style="color: #f09d51;">Order from ${req.body.stripeEmail} placed!</h2>
-                <br>
                 <h3>Order Details:</h3>
                 <br>
                 <strong>Name: </strong>${lname}, ${fname}
