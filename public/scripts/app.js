@@ -536,11 +536,8 @@ class Storage {
 }
 
 
-var checkout = [0,0,0,0,0,0]
-function updateCheckout(index) {
-    checkout[index] = 1
-
-    if(fname.value != "") {
+function updateCheckout() {
+    if(fname.value != "" && lname.value != "" && shippingAddress.value != "" && city.value != "" && state.value != "" && zip.value != "") {
         statusDiv.style.pointerEvents = "all"
         statusDiv.style.opacity = "1"
     }
