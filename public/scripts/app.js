@@ -28,6 +28,14 @@ const closeCheckoutBtn = document.querySelector('.close-checkout')
 const shippingCostDOM = document.querySelector('.shipping')
 const taxDOM = document.querySelector('.tax')
 const totalDOM = document.querySelector('.total')
+// for checkout form
+const fname = document.getElementsByClassName(".buyer-fname")
+const lname = document.getElementsByClassName(".buyer-lname")
+const shippingAddress = document.getElementsByClassName(".buyer-shippingAddress")
+const city = document.getElementsByClassName(".buyer-city")
+const state = document.getElementsByClassName(".buyer-state")
+const zip = document.getElementsByClassName(".buyer-zip")
+const statusDiv = document.querySelector('.status-div')
 
 
 
@@ -67,7 +75,7 @@ class Products {
         }
     }
 }
-// display products
+// display things
 class UI {
     displayProducts(products, type) {
         let result1 = ''
@@ -502,6 +510,22 @@ class UI {
         return buttonsDOM.find(button => button.dataset.id === id)
     }
 }
+
+// logic for the checkout
+class Checkout {
+    constructor() {
+        this.checks = [0, 0, 0, 0, 0, 0]
+    }
+    setUp() {
+        fname.addEventListener('onchange', () => {
+            if(fname.value != "") {
+                checks[0] = 1
+                alert("First Name Changed")
+            }
+        })
+    }
+}
+
 // local storage
 class Storage {
     static saveProducts(products) {
@@ -532,6 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
     const ui = new UI()
     const products = new Products()
+    const checkout = new Checkout()
 
     // setup application by ...
     // getting the cart from the localsession into memory
@@ -552,6 +577,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // get bag buttons into an object array so you can attach eventlisteners to them
         ui.getBagButtons()
         ui.cartLogic()
+        checkout.setUp()
     })
     
     // Make the SHOP NOW button jump the page
