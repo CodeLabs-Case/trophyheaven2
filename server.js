@@ -180,7 +180,7 @@ app.post('/payment', function(req, res){
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
                 <br>
                 <br>
-                <strong>Products:</strong>${cartFormatted} 
+                <strong>Products:</strong>${cartFormatted}
                 <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>

@@ -571,6 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // get bag buttons into an object array so you can attach eventlisteners to them
         ui.getBagButtons()
         ui.cartLogic()
+        checkoutBox.checked = false
     })
     
     // Make the SHOP NOW button jump the page
