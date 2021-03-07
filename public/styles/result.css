@@ -37,5 +37,5 @@ body {
 }
 .main-card h1 {
     color: var(--primaryColor);
-    margin: 2rem;
+    margin: 1rem;
 }
