@@ -146,7 +146,7 @@ app.post('/payment', function(req, res){
                 <br>
                 <br>
                 <div style="">
-                    <h4 style="color: #f09d51;">Trophy Heaven</h4>
+                    <span style="color: #f09d51; font-size: 14px;">Trophy Heaven</span>
                     <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
@@ -188,7 +188,7 @@ app.post('/payment', function(req, res){
                 <br>
                 <br>
                 <div style="">
-                    <h4 style="color: #f09d51;">Trophy Heaven</h4>
+                    <span style="color: #f09d51; font-size: 14px;">Trophy Heaven</span>
                     <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
