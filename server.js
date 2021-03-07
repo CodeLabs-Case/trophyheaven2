@@ -51,6 +51,20 @@ app.post('/payment', function(req, res){
 
     var cart = req.body.cart
     var cartjson = JSON.parse(cart)
+    var cartFormatted = ""
+
+    cartJSON.forEach(element => {
+        cartFormatted += `
+            <div style="margin-top: 1rem; margin-bottom: 1rem;">
+                <strong>Item: </strong> ${element.title}<br>
+                <strong>Description: </strong> ${element.description} ${element.size}<br>
+                <strong>Price: </strong> ${element.price}<br>
+                <strong>Quantity: </strong> ${element.amount}<br>
+            </div>
+            <br>
+            <br>
+        `
+    });
       
     // Buyer information
     var fname = req.body.fname
@@ -116,7 +130,7 @@ app.post('/payment', function(req, res){
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div style="">
-                <h1 style="color: ##f09d51;"> Thank you for your purchase ${fname}! </h1>
+                <h1 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
                 <span style=">This is a confirmation of your order totaling: $${total / 100}!</span>
 
                 <div style="">
@@ -142,12 +156,11 @@ app.post('/payment', function(req, res){
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div>
-                <h1 style="color: ##f09d51;">
+                <h1 style="color: #f09d51;">
                     Order from ${req.body.stripeEmail} placed!
                 </h1>
                 <br>
-                Order Details:
-                ${cart}
+                Order Details: ${cartFormatted}
                 <br>
                 Name: ${lname}, ${fname}
                 <br>

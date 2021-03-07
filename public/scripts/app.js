@@ -428,7 +428,7 @@ class UI {
             this.clearCart()
         })
 
-        // remove a selected item from the cart
+        // increase amount of or remove a selected item from the cart
         cartContent.addEventListener('click', event => {
             if(event.target.classList.contains('remove-item')){
                 let removeItem = event.target
@@ -608,9 +608,4 @@ document.addEventListener("DOMContentLoaded", () => {
         navSec.classList.remove("showNav")
         navState = false
     })
-
-
-
-    // section for the checkout submission logic
-
 })
