@@ -158,7 +158,8 @@ app.post('/payment', function(req, res){
                     Order from ${req.body.stripeEmail} placed!
                 </h1>
                 <br>
-                Order Details:
+                <stron><Order Details:</strong>
+                <br>
                 <br>
                 <strong>Name: </strong>${lname}, ${fname}
                 <br>
