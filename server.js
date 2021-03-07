@@ -115,13 +115,13 @@ app.post('/payment', function(req, res){
         to: `${req.body.stripeEmail}`,
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
-            <div style="display: block;">
-                <h1 style="justify-self: center; color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
-                <span style="justify-self: center;>This is a confirmation of your order totaling: $${total / 100}!</span>
+            <div style="">
+                <h1 style="color: ##f09d51;"> Thank you for your purchase ${fname}! </h1>
+                <span style=">This is a confirmation of your order totaling: $${total / 100}!</span>
 
-                <div style="display: block; background-color: #ececec;">
-                    <h6 style="color: #f09d51; justify-self: center;">Trophy Heaven</h6>
-                    <span style="justify-self: center;">200 West Stanly Street, Stanfield, NC 28163</span>
+                <div style="">
+                    <span style="">Trophy Heaven</span>
+                    <span style="">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
 
@@ -142,13 +142,22 @@ app.post('/payment', function(req, res){
         to: `davis.architect99@gmail.com`,
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
-            <h1> Order from ${req.body.stripeEmail} placed! </h1>    
-            <br>
-            Name: ${lname}, ${fname}
-            <br>
-            Shipping Address: ${shippingAddress}, ${city}, ${state} ${zip}
-            <br>
-            The checkout is being processed totaling: $${total / 100}!
+            <div>
+                <h1 style="color: ##f09d51;">
+                    Order from ${req.body.stripeEmail} placed!
+                </h1>
+                <br>
+                Order Details:
+                ${cart}
+                <br>
+                ${cartJSON}
+                <br>
+                Name: ${lname}, ${fname}
+                <br>
+                Shipping Address: ${shippingAddress}, ${city}, ${state} ${zip}
+                <br>
+                The checkout is being processed totaling: $${total / 100}!
+            </div>
             `
     };
     
