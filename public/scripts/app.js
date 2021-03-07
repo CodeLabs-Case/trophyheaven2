@@ -29,12 +29,13 @@ const shippingCostDOM = document.querySelector('.shipping')
 const taxDOM = document.querySelector('.tax')
 const totalDOM = document.querySelector('.total')
 // for checkout form
-const fname = document.getElementsByClassName(".buyer-fname")
-const lname = document.getElementsByClassName(".buyer-lname")
-const shippingAddress = document.getElementsByClassName(".buyer-shippingAddress")
-const city = document.getElementsByClassName(".buyer-city")
-const state = document.getElementsByClassName(".buyer-state")
-const zip = document.getElementsByClassName(".buyer-zip")
+// const fname = document.getElementsByClassName(".buyer-fname")
+// const lname = document.getElementsByClassName(".buyer-lname")
+// const shippingAddress = document.getElementsByClassName(".buyer-shippingAddress")
+// const city = document.getElementsByClassName(".buyer-city")
+// const state = document.getElementsByClassName(".buyer-state")
+// const zip = document.getElementsByClassName(".buyer-zip")
+const checkoutBox = document.querySelector(".checkout-box")
 const statusDiv = document.querySelector('.status-div')
 
 
@@ -535,17 +536,16 @@ class Storage {
     }
 }
 
-
+// other functions
 function updateCheckout() {
-    if(lname.value === "") {
-        statusDiv.style.pointerEvents = "none"
-        statusDiv.style.opacity = "0.5"
-    } else {
+    if(checkoutBox.checked){
         statusDiv.style.pointerEvents = "all"
         statusDiv.style.opacity = "1"
+    } else {
+        statusDiv.style.pointerEvents = "none"
+        statusDiv.style.opacity = "0.5"
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
