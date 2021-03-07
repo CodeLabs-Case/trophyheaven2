@@ -109,7 +109,7 @@ app.post('/payment', function(req, res){
         }); 
     }) 
     .then((charge) => { 
-        res.render('/var/app/current/views/error.ejs') // If no error occurs 
+        res.render('/var/app/current/views/success.ejs') // If no error occurs 
     }) 
     .catch((err) => { 
         res.render('/var/app/current/views/error.ejs') // If some error occurs
