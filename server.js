@@ -137,7 +137,7 @@ app.post('/payment', function(req, res){
             <div style="">
                 <h2 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h2>
                 <br>
-                <strong>Order Details:</strong>
+                <h3>Order Details:</h3>
                 <br>
                 <br>
                 <strong>Name: </strong>${fname} ${lname}
@@ -145,7 +145,7 @@ app.post('/payment', function(req, res){
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
                 <br>
                 <br>
-                <strong>Products:</strong>${cartFormatted} 
+                <h4>Products:</h4>${cartFormatted} 
                 <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>
@@ -177,7 +177,7 @@ app.post('/payment', function(req, res){
             <div>
                 <h2 style="color: #f09d51;">Order from ${req.body.stripeEmail} placed!</h2>
                 <br>
-                <strong>Order Details:</strong>
+                <h3>Order Details:</h3>
                 <br>
                 <br>
                 <strong>Name: </strong>${lname}, ${fname}
@@ -188,7 +188,7 @@ app.post('/payment', function(req, res){
                 <strong>Ingersoll Employee (Charlotte)? </strong>${worksAtIngersoll}
                 <br>
                 <br>
-                <strong>Products:</strong>${cartFormatted}
+                <h4>Products:</h4>${cartFormatted}
                 <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>
