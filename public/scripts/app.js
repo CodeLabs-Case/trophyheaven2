@@ -511,19 +511,6 @@ class UI {
     }
 }
 
-// logic for the checkout
-class Checkout {
-    setUp() {
-        fname.addEventListener('change', (event) => {
-            // if(fname.value != "") {
-            //     checks[0] = 1
-                
-            // }
-            alert("First Name Changed")
-        })
-    }
-}
-
 // local storage
 class Storage {
     static saveProducts(products) {
@@ -549,12 +536,20 @@ class Storage {
 }
 
 
+var checkout = [0,0,0,0,0,0]
+function updateCheckout(index) {
+    checkout[index] = 1
+
+    if(checkout[0] == 1) {
+        statusDiv.style.pointerEvents = "all"
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
     const ui = new UI()
     const products = new Products()
-    const checkout = new Checkout()
 
     // setup application by ...
     // getting the cart from the localsession into memory
@@ -575,7 +570,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // get bag buttons into an object array so you can attach eventlisteners to them
         ui.getBagButtons()
         ui.cartLogic()
-        checkout.setUp()
     })
     
     // Make the SHOP NOW button jump the page
@@ -613,4 +607,9 @@ document.addEventListener("DOMContentLoaded", () => {
         navSec.classList.remove("showNav")
         navState = false
     })
+
+
+
+    // section for the checkout submission logic
+
 })
