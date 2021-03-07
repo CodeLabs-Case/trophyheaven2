@@ -415,8 +415,8 @@ body {
 
 /* --------------- End of Cart ---------------- */
 .div-checkbox {
-    padding: 1rem;
-    margin: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 .checkbox-span {
     font-size: 12px;
