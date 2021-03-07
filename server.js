@@ -154,5 +154,5 @@ app.post('/payment', function(req, res){
 
     // Update the confirmation number
     confirmationJSON.confirmationNumber = confirmationJSON.confirmationNumber + 1
-    fs.writeFileSync(JSON.stringify(confirmationJSON))
+    fs.writeFileSync(JSON.stringify(confirmationJSON), '/var/app/current/public/scripts/confirmation.json')
 })
