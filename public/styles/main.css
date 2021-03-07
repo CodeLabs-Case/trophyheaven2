@@ -411,4 +411,5 @@ body {
 
 .status-div {
     pointer-events: none;
+    display: grid;
 }
