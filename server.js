@@ -8,6 +8,7 @@ const stripe = require('stripe')(stripeSecretKey)
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
+const fs = require('fs')
 const nodemailer = require('nodemailer')
 
 var transporter = nodemailer.createTransport({
@@ -47,9 +48,10 @@ app.post('/payment', function(req, res){
     // Transaction information
     var total = req.body.total
     total = parseInt(total, 10)
+
     var cart = req.body.cart
     var cartjson = JSON.parse(cart)
-    
+      
     // Buyer information
     var fname = req.body.fname
     fname = fname.toString()
@@ -104,13 +106,15 @@ app.post('/payment', function(req, res){
     
 
 
-
+    var content = fs.readFileSync('/static/scripts/confirmation.json')
+    var confirmationJSON = JSON.parse(contents)
+    var confirmationNumber = confirmationJSON.confirmationNumber
     // email sent to buyer
     var mailOptionsBuyer = {
         from: 'davis.architect99@gmail.com',
         to: `${req.body.stripeEmail}`,
-        subject: 'Order Confirmation and Receipt',
-        text: `
+        subject: `Order Confirmation Number #${confirmationNumber}`,
+        html: `
             <h1> Thank you for your purchase! </h1>
             This is a confirmation of your order totaling: $${total / 100}!
             `
@@ -128,7 +132,7 @@ app.post('/payment', function(req, res){
     var mailOptionsSeller = {
         from: 'davis.architect99@gmail.com',
         to: `davis.architect99@gmail.com`,
-        subject: 'Order Confirmation',
+        subject: `Order Confirmation Number #${confirmationNumber}`,
         html: `
             <h1> Order from ${req.body.stripeEmail} placed! </h1>    
             <br>
@@ -147,4 +151,8 @@ app.post('/payment', function(req, res){
           console.log('Email sent: ' + info.response);
         }
     })
+
+    // Update the confirmation number
+    confirmationJSON.confirmationNumber = confirmationJSON.confirmationNumber + 1
+    fs.writeFileSync(JSON.stringify(confirmationJSON))
 })
