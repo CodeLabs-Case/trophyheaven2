@@ -546,7 +546,7 @@ class Storage {
 
 // other functions
 function updateCheckout() {
-    if(checkoutBox1.checked && checkoutBox2.checked){
+    if(checkoutBox2.checked){
         statusDiv.style.pointerEvents = "all"
         statusDiv.style.opacity = "1"
     } else {
