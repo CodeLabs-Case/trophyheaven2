@@ -537,7 +537,10 @@ class Storage {
 
 
 function updateCheckout() {
-    if(fname.value != null && lname.value != null && shippingAddress.value != null && city.value != null && state.value != null && zip.value != null) {
+    if(fname.value === "" && lname.value === "" && shippingAddress.value === "" && city.value === "" && state.value === "" && zip.value === "") {
+        statusDiv.style.pointerEvents = "none"
+        statusDiv.style.opacity = "0.5"
+    } else {
         statusDiv.style.pointerEvents = "all"
         statusDiv.style.opacity = "1"
     }
