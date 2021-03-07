@@ -183,6 +183,7 @@ app.post('/payment', function(req, res){
 
                 <br>
                 <br>
+                ${cart}
                 <br>
                 <br>
                 <div style="">
