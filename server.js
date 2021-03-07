@@ -128,7 +128,7 @@ app.post('/payment', function(req, res){
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div style="">
-                <h1 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
+                <h2 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h2>
                 <br>
                 <strong>Order Details:</strong>
                 <br>
@@ -168,9 +168,7 @@ app.post('/payment', function(req, res){
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div>
-                <h1 style="color: #f09d51;">
-                    Order from ${req.body.stripeEmail} placed!
-                </h1>
+                <h2 style="color: #f09d51;">Order from ${req.body.stripeEmail} placed!</h2>
                 <br>
                 <strong>Order Details:</strong>
                 <br>
