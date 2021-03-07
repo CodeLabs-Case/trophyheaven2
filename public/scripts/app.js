@@ -513,9 +513,6 @@ class UI {
 
 // logic for the checkout
 class Checkout {
-    constructor() {
-        this.checks = [0, 0, 0, 0, 0, 0]
-    }
     setUp() {
         fname.addEventListener('change', (event) => {
             // if(fname.value != "") {
