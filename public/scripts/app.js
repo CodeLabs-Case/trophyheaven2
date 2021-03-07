@@ -517,7 +517,7 @@ class Checkout {
         this.checks = [0, 0, 0, 0, 0, 0]
     }
     setUp() {
-        fname.addEventListener('onchange', () => {
+        fname.addEventListener('change', (event) => {
             if(fname.value != "") {
                 checks[0] = 1
                 alert("First Name Changed")
