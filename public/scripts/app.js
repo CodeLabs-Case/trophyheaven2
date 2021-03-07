@@ -445,6 +445,9 @@ class UI {
                 Storage.saveCart(cart)
                 this.setCartValues(cart)
                 addAmount.nextElementSibling.innerText = tempItem.amount
+
+                // update the hidden cart
+                hiddenCart.value = JSON.stringify(cart)
             }
             else if(event.target.classList.contains('fa-chevron-down')) {
                 let lowerAmount = event.target
@@ -464,6 +467,9 @@ class UI {
                 Storage.saveCart(cart)
                 this.setCartValues(cart)
                 addAmount.nextElementSibling.innerText = tempItem.amount
+
+                // update the hidden cart
+                hiddenCart.value = JSON.stringify(cart)
             }
         })
     }
