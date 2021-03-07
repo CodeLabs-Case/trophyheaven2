@@ -113,9 +113,9 @@ app.post('/payment', function(req, res){
     var mailOptionsBuyer = {
         from: 'davis.architect99@gmail.com',
         to: `${req.body.stripeEmail}`,
-        subject: `Order Confirmation Number #${confirmationNumber}`,
+        subject: `Order Confirmation #${confirmationNumber}`,
         html: `
-            <h1> Thank you for your purchase! </h1>
+            <h1 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
             This is a confirmation of your order totaling: $${total / 100}!
             `
     };
@@ -132,7 +132,7 @@ app.post('/payment', function(req, res){
     var mailOptionsSeller = {
         from: 'davis.architect99@gmail.com',
         to: `davis.architect99@gmail.com`,
-        subject: `Order Confirmation Number #${confirmationNumber}`,
+        subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <h1> Order from ${req.body.stripeEmail} placed! </h1>    
             <br>
