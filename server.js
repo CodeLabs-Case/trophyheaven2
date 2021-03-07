@@ -150,8 +150,6 @@ app.post('/payment', function(req, res){
                 Order Details:
                 ${cart}
                 <br>
-                ${cartjson}
-                <br>
                 Name: ${lname}, ${fname}
                 <br>
                 Shipping Address: ${shippingAddress}, ${city}, ${state} ${zip}
