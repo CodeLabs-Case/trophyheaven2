@@ -53,7 +53,7 @@ app.post('/payment', function(req, res){
     var cartjson = JSON.parse(cart)
     var cartFormatted = ""
 
-    cartJSON.forEach(element => {
+    cartjson.forEach(element => {
         cartFormatted += `
             <div style="margin-top: 1rem; margin-bottom: 1rem;">
                 <strong>Item: </strong> ${element.title}<br>
