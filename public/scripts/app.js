@@ -50,6 +50,7 @@ class Products {
             let result3 = await fetch("/static/scripts/products3.json")
             let data3 = await result3.json()
 
+            // use the spread operator to combine them into one array
             let products = [...data1.items, ...data2.items, ...data3.items]
 
             // destructuring the products, that is, pull out the fields you are interested in
@@ -370,6 +371,15 @@ class UI {
         checkoutDOM.classList.add('showCheckout')
     }
 
+    hideCart() {
+        cartOverlay.classList.remove('transparentBcg')
+        cartDOM.classList.remove('showCart')
+    }
+
+    hideCheckout() {
+        checkoutDOM.classList.remove('showCheckout')
+    }
+
     setupAPP() {
         // for the cart
         cart = Storage.getCart()
@@ -389,27 +399,18 @@ class UI {
         hiddenCart.value = JSON.stringify(cart)
     }
 
-    disableCheckout() {
-        checkoutBtn.removeEventListener('click', this.showCheckout)
-        closeCheckoutBtn.removeEventListener('click', this.hideCheckout)
-    }
-
     enableCheckout() {
         checkoutBtn.addEventListener('click', this.showCheckout)
         closeCheckoutBtn.addEventListener('click', this.hideCheckout)
     }
 
+    disableCheckout() {
+        checkoutBtn.removeEventListener('click', this.showCheckout)
+        closeCheckoutBtn.removeEventListener('click', this.hideCheckout)
+    }
+
     populateCart(cart) {
         cart.forEach(item => this.addCartItem(item))
-    }
-
-    hideCart() {
-        cartOverlay.classList.remove('transparentBcg')
-        cartDOM.classList.remove('showCart')
-    }
-
-    hideCheckout() {
-        checkoutDOM.classList.remove('showCheckout')
     }
 
     cartLogic() {

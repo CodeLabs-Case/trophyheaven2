@@ -18,6 +18,9 @@ body {
     background: var(--mainWhite);
     font-family: "Lato", sans-serif;
 }
+
+
+
 /* --------------- Navbar ---------------- */
 .navbar {
     position: sticky;
@@ -61,6 +64,9 @@ body {
     color: var(--mainWhite);
 }
 /* --------------- End of Navbar ---------------- */
+
+
+
 /* --------------- Navbar Section ---------------- */
 .navsection-main {
     width: 20em;
@@ -95,6 +101,9 @@ body {
     transform: translateX(0);
 }
 /* --------------- End of Navbar Section ---------------- */
+
+
+
 /* --------------- Main ---------------- */
 .main {
     min-height: calc(100vh - 60px);
@@ -138,6 +147,9 @@ body {
     color: var(--primaryColor);
 }
 /* --------------- End of Main ---------------- */
+
+
+
 /* --------------- Products ---------------- */
 
 .products {
@@ -230,6 +242,9 @@ body {
 }
 
 /* ---------------End of Products ---------------- */
+
+
+
 /* --------------- Cart ---------------- */
 .cart-overlay {
     position: fixed;
@@ -334,6 +349,9 @@ body {
 .hidden-cart {
     display: none;
 }
+
+
+
 /*---------- Cart Item -------------------- */
 .cart-item {
     display: grid;
@@ -367,7 +385,7 @@ body {
     color: var(--primaryColor);
     cursor: pointer;
 }
-/*---------- End of Cart Item -------------------- */
+/*---------- /Cart Item -------------------- */
 
 .cart-footer {
     margin-top: 2rem;
@@ -390,3 +408,7 @@ body {
 }
 
 /* --------------- End of Cart ---------------- */
+
+.status-div {
+    pointer-events: none;
+}
