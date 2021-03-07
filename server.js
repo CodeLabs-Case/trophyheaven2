@@ -133,7 +133,7 @@ app.post('/payment', function(req, res){
                 <strong>Order Details:</strong>
                 <br>
                 <br>
-                <strong>Name: </strong>${lname}, ${fname}
+                <strong>Name: </strong>${fname} ${lname}
                 <br>
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
                 <br>
