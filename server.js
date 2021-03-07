@@ -145,9 +145,9 @@ app.post('/payment', function(req, res){
                 <br>
                 <br>
                 <br>
-                <div style="background-color: #eee">
-                    <span style="color: #f09d51;">Trophy Heaven</span><br>
-                    <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
+                <div style="background-color: #eee; display: block;">
+                    <h4 style="color: #f09d51; justify-self: center;">Trophy Heaven</h4><br>
+                    <span style="color: #f09d51; justify-self: center;">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
             `
@@ -187,9 +187,9 @@ app.post('/payment', function(req, res){
                 <br>
                 <br>
                 <br>
-                <div style="background-color: #eee; display: grid;">
-                    <span style="color: #f09d51; align-self: center;">Trophy Heaven</span><br>
-                    <span style="color: #f09d51; align-self: center;">200 West Stanly Street, Stanfield, NC 28163</span>
+                <div style="background-color: #eee; display: block;">
+                    <h4 style="color: #f09d51; justify-self: center;">Trophy Heaven</h4><br>
+                    <span style="color: #f09d51; justify-self: center;">200 West Stanly Street, Stanfield, NC 28163</span>
                 </div>
             </div>
             `
