@@ -106,7 +106,7 @@ app.post('/payment', function(req, res){
     
 
 
-    var content = fs.readFileSync('/static/scripts/confirmation.json')
+    var contents = fs.readFileSync('/var/app/current/public/scripts/confirmation.json')
     var confirmationJSON = JSON.parse(contents)
     var confirmationNumber = confirmationJSON.confirmationNumber
     // email sent to buyer
