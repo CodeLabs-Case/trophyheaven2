@@ -129,8 +129,18 @@ app.post('/payment', function(req, res){
         html: `
             <div style="">
                 <h1 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h1>
-                <span style=">This is a confirmation of your order totaling: $${parseFloat(total / 100).toFixed(2)}!</span>
+                <br>
+                <strong>Order Details:</strong>
+                <br>
+                <br>
+                <strong>Name: </strong>${lname}, ${fname}
+                <br>
+                <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
+                <strong>Products: ${cartFormatted} </strong>
+                <strong>Total: <strong>$${parseFloat(total / 100).toFixed(2)}
 
+                <br>
+                <br>
                 <div style="">
                     <span style="">Trophy Heaven</span><br>
                     <span style="">200 West Stanly Street, Stanfield, NC 28163</span>
