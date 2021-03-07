@@ -150,7 +150,7 @@ app.post('/payment', function(req, res){
                 Order Details:
                 ${cart}
                 <br>
-                ${cartJSON}
+                ${cartjson}
                 <br>
                 Name: ${lname}, ${fname}
                 <br>
