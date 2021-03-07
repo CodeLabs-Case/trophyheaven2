@@ -58,7 +58,7 @@ app.post('/payment', function(req, res){
             <div style="margin-top: 1rem; margin-bottom: 1rem;">
                 <strong>Item: </strong> ${element.title}<br>
                 <strong>Description: </strong> ${element.description} ${element.size}<br>
-                <strong>Price: </strong> ${element.price}<br>
+                <strong>Price: </strong> $${element.price}<br>
                 <strong>Quantity: </strong> ${element.amount}<br>
             </div>
         `
