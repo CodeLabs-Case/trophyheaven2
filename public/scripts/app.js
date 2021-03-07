@@ -35,7 +35,8 @@ const totalDOM = document.querySelector('.total')
 // const city = document.getElementsByClassName(".buyer-city")
 // const state = document.getElementsByClassName(".buyer-state")
 // const zip = document.getElementsByClassName(".buyer-zip")
-const checkoutBox = document.querySelector(".checkout-box")
+const checkoutBox1 = document.querySelector(".checkout-box1")
+const checkoutBox2 = document.querySelector(".checkout-box2")
 const statusDiv = document.querySelector('.status-div')
 
 
@@ -545,7 +546,7 @@ class Storage {
 
 // other functions
 function updateCheckout() {
-    if(checkoutBox.checked){
+    if(checkoutBox1.checked && checkoutBox2.checked){
         statusDiv.style.pointerEvents = "all"
         statusDiv.style.opacity = "1"
     } else {
@@ -578,7 +579,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // get bag buttons into an object array so you can attach eventlisteners to them
         ui.getBagButtons()
         ui.cartLogic()
-        checkoutBox.checked = false
+        checkoutBox1.checked = false
+        checkoutBox2.checked = false
     })
     
     // Make the SHOP NOW button jump the page
