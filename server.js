@@ -185,7 +185,7 @@ app.post('/payment', function(req, res){
                 <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
                 <br>
                 <br>
-                <stong>Ingersoll Employee? </strong>${worksAtIngersoll}
+                <strong>Ingersoll Employee? </strong>${worksAtIngersoll}
                 <br>
                 <br>
                 <strong>Products:</strong>${cartFormatted}
