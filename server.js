@@ -101,7 +101,7 @@ app.post('/payment', function(req, res){
     
     
 
-    
+
 
     // email sent to buyer
     var mailOptionsBuyer = {
@@ -127,7 +127,7 @@ app.post('/payment', function(req, res){
         from: 'davis.architect99@gmail.com',
         to: `davis.architect99@gmail.com`,
         subject: 'Order Confirmation',
-        text: `
+        html: `
             <h1> Order from ${req.body.stripeEmail} placed! </h1>    
             <br>
             Name: ${lname}, ${fname}
