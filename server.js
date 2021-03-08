@@ -39,9 +39,6 @@ app.listen(port, (err) => {
 
 app.get('/', (req, res) => {
 
-    process.env.STRIPE_PUBLIC_KEY = 
-    process.env.STRIPE_SECRET_KEY = 
-
     res.render('/var/app/current/views/index.ejs', {key: stripePublicKey})
 })
 
