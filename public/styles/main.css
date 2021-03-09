@@ -433,3 +433,6 @@ body {
     display: flex;
     justify-content: center;
 }
+.div-promo div{
+    display: block;
+}
