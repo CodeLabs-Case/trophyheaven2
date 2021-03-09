@@ -427,12 +427,3 @@ body {
     text-transform: capitalize;
     margin-bottom: 1rem;
 }
-
-
-.div-promo {
-    display: flex;
-    justify-content: center;
-}
-.div-promo div{
-    display: block;
-}
