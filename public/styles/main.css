@@ -427,9 +427,15 @@ body {
     text-transform: capitalize;
     margin-bottom: 1rem;
 }
-/* .promocode-text {
-    justify-self: center;
+
+
+.div-promo {
+    display: flex;
+    justify-content: center;
+}
+.promocode-text {
+    
 }
 .promocode-btn {
-    justify-self: center;
-} */
+    
+}
