@@ -397,8 +397,6 @@ body {
 .div-checkbox {
     padding: 0.5rem;
     margin: 0.5rem;
-    display: flex;
-    justify-content: center;
 }
 .checkbox-span {
     font-size: 12px;
