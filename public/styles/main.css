@@ -374,7 +374,7 @@ body {
     display: inline;
     margin: 1rem;
     transition: var(--mainTransition);
-    font-size: 1rem;
+    font-size: 18px;
 }
 .ul-payment ul li:hover {
     color: var(--mainWhite);
