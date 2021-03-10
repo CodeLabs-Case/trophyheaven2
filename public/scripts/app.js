@@ -695,7 +695,7 @@ function initPayPalButton() {
 
     createOrder: function(data, actions) {
         return actions.order.create({
-        purchase_units: [{"amount":{"currency_code":"USD","value":parseFloat(totalDOM.innerText).toFixed(2)}}]
+        purchase_units: [{"amount":{"currency_code":"USD","value":parseFloat(totalPaypalDOM.innerText).toFixed(2)}}]
         });
     },
 
