@@ -270,16 +270,6 @@ body {
 .transparentBcg {
     visibility: visible;
 }
-@media screen and (min-width: 768px) {
-    .cart {
-        width: 30vw;
-        min-width: 450px;
-    }
-    .checkout {
-        width: 30vw;
-        min-width: 450px;
-    }
-}
 .close-cart {
     font-size: 1.7rem;
     cursor: pointer;
@@ -424,4 +414,14 @@ body {
 .checkout-footer h3 {
     text-transform: capitalize;
     margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+    .cart {
+        width: 30vw;
+        min-width: 450px;
+    }
+    .checkout {
+        width: 30vw;
+        min-width: 450px;
+    }
 }
