@@ -605,7 +605,7 @@ function showHideCardPromoText(){
 }
 function applyPromo(){
     let code = checkoutCardPromoText.value
-    if(code === "FREESHIP"){
+    if(code == "FREESHIP"){
 
         // actual amount in pennies
         let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
