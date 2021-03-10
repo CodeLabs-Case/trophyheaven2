@@ -569,16 +569,6 @@ function updateCheckout() {
     }
 }
 
-function toggleCheckout(content){
-    if(content === 1) {
-        checkoutCardDOM.style.display = "unset"
-        checkoutPaypalDOM.style.display = "none"
-    } else if (content === 2){
-        checkoutCardDOM.style.display = "none"
-        checkoutPaypalDOM.style.display = "unset"
-    }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
     const ui = new UI()
@@ -646,6 +636,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navState = false
     })
 
+    
 
     // setup checkout toggle
     checkoutCardBtn.addEventListener('click', () => {
