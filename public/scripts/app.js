@@ -343,7 +343,7 @@ class UI {
             // for paypal
             shippingCostPaypalDOM.innerText = "5.95"
             taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
-            let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+            displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalPaypalDOM.innerText = displayTotal.toFixed(2)
         } else {
 
@@ -359,14 +359,16 @@ class UI {
             let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
+            // card
             shippingCostCardDOM.innerText = "0.00"
             taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalCardDOM.innerText = displayTotal.toFixed(2)
 
+            // paypal
             shippingCostPaypalDOM.innerText = "0.00"
             taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
-            let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+            displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalPaypalDOM.innerText = displayTotal.toFixed(2)
         }
         
