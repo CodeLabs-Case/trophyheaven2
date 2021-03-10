@@ -366,7 +366,7 @@ body {
 .ul-payment {
     display: block;
 }
-.ul-payment li {
+.ul-payment ul li {
     float: left;
 }
 .checkout-content-card {
