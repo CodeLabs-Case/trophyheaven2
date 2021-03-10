@@ -47,7 +47,6 @@ const checkoutPaypalBtn = document.querySelector('.ul-payment-paypal')
 
 
 
-
 let cart = []
 let buttonsDOM = []
 let sizeBtnsDOM = []
