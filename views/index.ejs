@@ -146,14 +146,14 @@
             <i class="fas fa-window-close"></i>
         </span>
         <h2>Checkout</h2>
-        <div class="checkout-content">
+        <div class="checkout-content-card">
             <form class="checkout-form" action="payment" method="POST">
                 <!-- hack solution to passing data to server -->
                 <input type="text" class="hidden-total" name="total">
                 <input type="text" class="hidden-cart" name="cart">
 
 
-                <div class='form-wrapper'>
+                <div class='form-wrapper-card'>
                     <br><br>
                     <div>
                         <label for="fname">First Name</label><br>
@@ -181,17 +181,17 @@
                     </div>
                     <br><br>
 
-                    <div class="div-checkbox">
+                    <div class="div-checkbox-card">
                         <input 
                         type="checkbox" 
-                        class="checkout-box1"
+                        class="checkout-card-box1"
                         name="checkbox"
                         onchange="updateCheckout()">
                         <span class="checkbox-span">This order is for the Charlotte Ingersoll Rand Branch</span>
                         <br>
                         <input 
                         type="checkbox" 
-                        class="checkout-box2"
+                        class="checkout-card-box2"
                         onchange="updateCheckout()">
                         <span class="checkbox-span">I have verified that all of the above information is correct</span>
                         
@@ -241,9 +241,94 @@
                     </script>
                 </div>
             </form>
+            
 
-            <div style="margin-top: 1em; display: flex; align-items: center; justify-content: center;"><span>-- OR --</span></div>
-                 
+
+            
+        </div>
+
+
+
+        <div class="checkout-content-paypal">
+            <form class="checkout-form" action="paypal" method="POST">
+                <!-- hack solution to passing data to server -->
+                <input type="text" class="hidden-total" name="total">
+                <input type="text" class="hidden-cart" name="cart">
+
+
+                <div class='form-wrapper-paypal'>
+                    <br><br>
+                    <div>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" class="buyer-fname" name="fname"><br><br>
+                    </div>
+                    <div>
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" class="buyer-lname" name="lname"><br><br>
+                    </div>
+                    <div>
+                        <label for="shippingAddress">Shipping Address</label><br>
+                        <input type="text" class="buyer-shippingAddress" name="shippingAddress"><br><br>
+                    </div>
+                    <div>
+                        <label for="city">Town/City</label><br>
+                        <input type="text" class="buyer-city" name="city"><br><br>
+                    </div>
+                    <div>
+                        <label for="state">State</label><br>
+                    <input type="text" class="buyer-state" name="state"><br><br>
+                    </div>
+                    <div>
+                        <label for="zip">Zipcode</label><br>
+                    <input type="text" class="buyer-zip" name="zip">
+                    </div>
+                    <br><br>
+
+                    <div class="div-checkbox-paypal">
+                        <input 
+                        type="checkbox" 
+                        class="checkout-paypal-box1"
+                        name="checkbox"
+                        onchange="updateCheckout()">
+                        <span class="checkbox-span">This order is for the Charlotte Ingersoll Rand Branch</span>
+                        <br>
+                        <input 
+                        type="checkbox" 
+                        class="checkout-paypal-box2"
+                        onchange="updateCheckout()">
+                        <span class="checkbox-span">I have verified that all of the above information is correct</span>
+                        
+                        <br>
+                        
+                        <!-- <div class="div-promo">
+                            <div>
+                                <input 
+                                type="checkbox" 
+                                class="checkout-box3"
+                                onchange="">
+                                <span class="checkbox-span">Promo code?</span>
+                            </div>
+                            <div>
+                                <input 
+                                type="text" 
+                                class="promocode-text"
+                                onchange="">
+                            </div>
+                            <div>
+                                <input type="button" class="promocode-btn" name="promocode-btn" value="Check">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="checkout-footer">
+                    <h3>Shipping : $ <span class="shipping">0</span></h3>
+                    <h3>Tax : $ <span class="tax">0</span></h3>
+                    <h3>Total : $ <span class="total">0</span></h3>
+                </div>
+                <br>
+            </form>
+
             <div class="status-div">
                 <!-- PayPal Button -->
                 <div style="margin-top: 1rem;" id="smart-button-container">

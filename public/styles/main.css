@@ -349,6 +349,7 @@ body {
     padding: 1.5rem;
     transition: var(--mainTransition);
     transform: translateX(100%);
+    display: grid;
 }
 .checkout h2 {
     text-transform: capitalize;
@@ -362,6 +363,17 @@ body {
 .close-checkout {
     font-size: 1.7rem;
     cursor: pointer;
+}
+.checkout-content-card {
+    grid-column: 1;
+    grid-column: 1;
+    
+    z-index: 200;
+}
+.checkout-content-paypal {
+    grid-column: 1;
+    grid-column: 1;
+    z-index: 100;
 }
 .checkout-form {
     display: grid;
