@@ -314,7 +314,7 @@ class UI {
         })
     }
 
-    setCartValues(cart, freeShipping) {
+    setCartValues(cart) {
         let tempTotal = 0
         let itemsTotal = 0
 
@@ -325,7 +325,7 @@ class UI {
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
 
         // add shipping + tax
-        if((parseFloat(tempTotal).toFixed(2) < 45.00) && !freeShipping) {
+        if(parseFloat(tempTotal).toFixed(2) < 45.00) {
 
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
@@ -351,33 +351,8 @@ class UI {
             displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalPaypalDOM.innerText = displayTotal.toFixed(2)
         }
-        else if((parseFloat(tempTotal).toFixed(2) >= 45.00) && !freeShipping){
+        else if(parseFloat(tempTotal).toFixed(2) >= 45.00){
 
-            // actual amount in pennies
-            let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
-            let tax = Math.round(.0475 * hiddenTotalTemp)
-
-            hiddenTotal.value = hiddenTotalTemp + tax
-
-            
-            
-            // display amount in dollars
-            let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
-            let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
-            
-            // card
-            shippingCostCardDOM.innerText = "0.00"
-            taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
-            let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-            totalCardDOM.innerText = displayTotal.toFixed(2)
-
-            // paypal
-            shippingCostPaypalDOM.innerText = "0.00"
-            taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
-            displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-            totalPaypalDOM.innerText = displayTotal.toFixed(2)
-        }
-        else if(freeShipping) {
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
@@ -447,7 +422,7 @@ class UI {
     setupAPP() {
         // for the cart
         cart = Storage.getCart()
-        this.setCartValues(cart, false)
+        this.setCartValues(cart)
         this.populateCart(cart)
         cartBtn.addEventListener('click', this.showCart)
         closeCartBtn.addEventListener('click', this.hideCart)
@@ -498,7 +473,7 @@ class UI {
                 tempItem.amount = tempItem.amount + 1
                 
                 Storage.saveCart(cart)
-                this.setCartValues(cart, flase)
+                this.setCartValues(cart)
                 addAmount.nextElementSibling.innerText = tempItem.amount
 
                 // update the hidden cart
@@ -511,7 +486,7 @@ class UI {
                 tempItem.amount = tempItem.amount - 1
                 if(tempItem.amount > 0){
                     Storage.saveCart(cart)
-                    this.setCartValues(cart, false)
+                    this.setCartValues(cart)
                     lowerAmount.previousElementSibling.innerText = tempItem.amount
                 }
                 else {
@@ -520,7 +495,7 @@ class UI {
                 }
 
                 Storage.saveCart(cart)
-                this.setCartValues(cart, false)
+                this.setCartValues(cart)
                 addAmount.nextElementSibling.innerText = tempItem.amount
 
                 // update the hidden cart
@@ -541,7 +516,7 @@ class UI {
 
     removeItem(id) {
         cart = cart.filter(item => item.id !== id )
-        this.setCartValues(cart, false)
+        this.setCartValues(cart)
         Storage.saveCart(cart)
         let button = this.getSingleButton(id, 1)
         button.disabled = false
@@ -631,8 +606,33 @@ function showHideCardPromoText(){
 function applyPromo(){
     let code = checkoutCardPromoText.value
     if(code === "FREESHIP"){
-        setCartValues(cart, true)
-        alert("Promotional Code Applied!\nReapply if you add or remove items!")
+
+        // actual amount in pennies
+        let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
+        let tax = Math.round(.0475 * hiddenTotalTemp)
+
+        hiddenTotal.value = hiddenTotalTemp + tax
+
+        
+        
+        // display amount in dollars
+        let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
+        let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
+        
+        // card
+        shippingCostCardDOM.innerText = "0.00"
+        taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
+        let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+        totalCardDOM.innerText = displayTotal.toFixed(2)
+
+        // paypal
+        shippingCostPaypalDOM.innerText = "0.00"
+        taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
+        displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+        totalPaypalDOM.innerText = displayTotal.toFixed(2)
+
+        setCartValues(cart)
+        alert("Promotional Code Applied! Reapply if you add or remove items!")
     } else {
         alert("Incorrect Promotional Code")
     }
