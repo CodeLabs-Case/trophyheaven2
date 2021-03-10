@@ -420,7 +420,13 @@ body {
 .promocode-card-text{
     display: none;
 }
+.promocode-card-btn{
+    display: none;
+}
 .promocode-paypal-text{
+    display: none;
+}
+.promocode-paypal-btn{
     display: none;
 }
 .div-checkbox-card {

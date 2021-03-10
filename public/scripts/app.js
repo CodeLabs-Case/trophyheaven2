@@ -43,10 +43,13 @@ const checkoutCardBox1 = document.querySelector(".checkout-card-box1")
 const checkoutCardBox2 = document.querySelector(".checkout-card-box2")
 const checkoutPaypalBox1 = document.querySelector(".checkout-paypal-box1")
 const checkoutPaypalBox2 = document.querySelector(".checkout-paypal-box2")
+
 const checkoutCardBox3 = document.querySelector(".checkout-card-box3")
 const checkoutPaypalBox3 = document.querySelector(".checkout-paypal-box3")
 const checkoutCardPromoText = document.querySelector(".promocode-card-text")
 const checkoutPaypalPromoText = document.querySelector(".promocode-paypal-text")
+const checkoutCardPromoBtn = document.querySelector(".promocode-card-btn")
+const checkoutPaypalPromoBtn = document.querySelector(".promocode-paypal-btn")
 
 const statusDivCard = document.querySelector('.status-div-card')
 const statusDivPaypal = document.querySelector('.status-div-paypal')
@@ -599,8 +602,10 @@ function updateCheckoutPaypal() {
 function showHideCardPromoText(){
     if(checkoutCardBox3.checked) {
         checkoutCardPromoText.style.display = "unset"
+        checkoutCardPromoBtn.style.display = "unset"
     } else {
         checkoutCardPromoText.style.display = "none"
+        checkoutCardPromoBtn.style.display = "none"
     }    
 }
 function applyPromo(){
