@@ -605,33 +605,33 @@ function showHideCardPromoText(){
 }
 function applyPromo(){
     let code = checkoutCardPromoText.value
-    if(code == "FREESHIP"){
+    if(code === "FREESHIP"){
 
-        // actual amount in pennies
-        let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
-        let tax = Math.round(.0475 * hiddenTotalTemp)
+        // // actual amount in pennies
+        // let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
+        // let tax = Math.round(.0475 * hiddenTotalTemp)
 
-        hiddenTotal.value = hiddenTotalTemp + tax
+        // hiddenTotal.value = hiddenTotalTemp + tax
 
         
         
-        // display amount in dollars
-        let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
-        let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
+        // // display amount in dollars
+        // let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
+        // let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
         
-        // card
-        shippingCostCardDOM.innerText = "0.00"
-        taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
-        let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-        totalCardDOM.innerText = displayTotal.toFixed(2)
+        // // card
+        // shippingCostCardDOM.innerText = "0.00"
+        // taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
+        // let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+        // totalCardDOM.innerText = displayTotal.toFixed(2)
 
-        // paypal
-        shippingCostPaypalDOM.innerText = "0.00"
-        taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
-        displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-        totalPaypalDOM.innerText = displayTotal.toFixed(2)
+        // // paypal
+        // shippingCostPaypalDOM.innerText = "0.00"
+        // taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
+        // displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+        // totalPaypalDOM.innerText = displayTotal.toFixed(2)
 
-        setCartValues(cart)
+        // setCartValues(cart)
         alert("Promotional Code Applied! Reapply if you add or remove items!")
     } else {
         alert("Incorrect Promotional Code")
