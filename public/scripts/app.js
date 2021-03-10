@@ -35,8 +35,10 @@ const totalDOM = document.querySelector('.total')
 // const city = document.getElementsByClassName(".buyer-city")
 // const state = document.getElementsByClassName(".buyer-state")
 // const zip = document.getElementsByClassName(".buyer-zip")
-const checkoutBox1 = document.querySelector(".checkout-box1")
-const checkoutBox2 = document.querySelector(".checkout-box2")
+const checkoutCardBox1 = document.querySelector(".checkout-card-box1")
+const checkoutCardBox2 = document.querySelector(".checkout-paypal-box2")
+const checkoutPaypalBox1 = document.querySelector(".checkout-card-box1")
+const checkoutPaypalBox2 = document.querySelector(".checkout-paypal-box2")
 const statusDiv = document.querySelectorAll('.status-div')
 
 
@@ -546,16 +548,20 @@ class Storage {
 
 // other functions
 function updateCheckout() {
-    if(checkoutBox2.checked){
+    // card
+    if(checkoutCardBox2.checked){
         statusDiv[0].style.pointerEvents = "all"
         statusDiv[0].style.opacity = "1"
-
-        statusDiv[1].style.pointerEvents = "all"
-        statusDiv[1].style.opacity = "1"
     } else {
         statusDiv[0].style.pointerEvents = "none"
         statusDiv[0].style.opacity = "0.5"
+    }
 
+    // paypal
+    if(checkoutPaypalBox2.checked){
+        statusDiv[1].style.pointerEvents = "all"
+        statusDiv[1].style.opacity = "1"
+    } else {
         statusDiv[1].style.pointerEvents = "none"
         statusDiv[1].style.opacity = "0.5"
     }

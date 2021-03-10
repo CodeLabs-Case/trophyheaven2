@@ -379,17 +379,31 @@ body {
 .hidden-cart {
     display: none;
 }
-.form-wrapper {
+.form-wrapper-card {
     width: 100%;
     background-color: #ccc;
     display: grid;
     border: solid 1px var(--primaryColor)
 }
-.form-wrapper div{
+.form-wrapper-paypal {
+    width: 100%;
+    background-color: #ccc;
+    display: grid;
+    border: solid 1px var(--primaryColor)
+}
+.form-wrapper-card div{
     font-family: "Lato", sans-serif;
     justify-self: center;
 }
-.div-checkbox {
+.form-wrappe-paypal div{
+    font-family: "Lato", sans-serif;
+    justify-self: center;
+}
+.div-checkbox-card {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+.div-checkbox-paypal {
     padding: 0.5rem;
     margin: 0.5rem;
 }
