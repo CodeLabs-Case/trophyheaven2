@@ -395,7 +395,12 @@ body {
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
-.status-div {
+.status-div-swipe {
+    pointer-events: none;
+    opacity: 0.5;
+    display: grid;
+}
+.status-div-paypal {
     pointer-events: none;
     opacity: 0.5;
     display: grid;
