@@ -25,7 +25,6 @@
     <!-- paypal -->
     <!-- Trophy Heaven-->
     <!-- <script src="https://www.paypal.com/sdk/js?client-id=AXZZIpFn-xvl4h2NyTF2VsNrRqM7CBM1PMZJslER4Kjh8aGKxcKEnJ-7o7MQh0afATbqJx62qDLYobL8&currency=USD" data-sdk-integration-source="button-factory"></script> -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AXZZIpFn-xvl4h2NyTF2VsNrRqM7CBM1PMZJslER4Kjh8aGKxcKEnJ-7o7MQh0afATbqJx62qDLYobL&disable-funding=credit,card" data-sdk-integration-source="button-factory"></script>
     <!-- <script src="https://www.paypal.com/sdk/js?client-id=AXZZIpFn-xvl4h2NyTF2VsNrRqM7CBM1PMZJslER4Kjh8aGKxcKEnJ-7o7MQh0afATbqJx62qDLYobL8&currency=USD&disable-funding=credit,card" data-sdk-integration-source="button-factory"></script> -->
     <!-- Test -->
     <!-- <script src="https://www.paypal.com/sdk/js?client-id=ATm_KrpmsnaEpFMA33DPAGXJGZVGtC_cvm1nkYXZao5jFVHHZxe6oNCpOahdk3mg9AyHi99xuhfAAcN1&currency=USD" data-sdk-integration-source="button-factory"></script> -->
@@ -246,15 +245,48 @@
                 </div>
             </form>
 
-
             <div style="margin-top: 1em; display: flex; align-items: center; justify-content: center;"><span>-- OR --</span></div>
-
-
-            <div style="margin-top: 1em;" id="smart-button-container">
+            
+            <div style="margin-top: 1rem;" id="smart-button-container">
                 <div style="text-align: center;">
                   <div id="paypal-button-container"></div>
                 </div>
             </div>
+
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&disable-funding=credit,card" data-sdk-integration-source="button-factory"></script>
+            <script>
+              function initPayPalButton() {
+                paypal.Buttons({
+                  style: {
+                    shape: 'rect',
+                    color: 'blue',
+                    layout: 'vertical',
+                    label: 'paypal',
+                    
+                  },
+          
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+                    });
+                  },
+          
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    });
+                  },
+          
+                  onError: function(err) {
+                    console.log(err);
+                  }
+                }).render('#paypal-button-container');
+              }
+              initPayPalButton();
+            </script>
+
+
+            
         </div>
     </div>
     <!-- /checkout -->
