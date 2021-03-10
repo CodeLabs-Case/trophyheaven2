@@ -648,8 +648,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // setup checkout toggle
-    checkoutCardBtn.addEventListener('click', toggleCheckout(1))
-    checkoutPaypalBtn.addEventListener('click', toggleCheckout(2))
+    checkoutCardBtn.addEventListener('click', () => {
+        checkoutCardDOM.style.display = "unset"
+        checkoutCardDOM.style.zIndex = "200"
+
+        checkoutPaypalDOM.style.display = "none"
+        checkoutPaypalDOM.style.zIndex = "100"
+    })
+    checkoutPaypalBtn.addEventListener('click', () => {
+        checkoutPaypalDOM.style.display = "unset"
+        checkoutPaypalDOM.style.zIndex = "200"
+
+        checkoutCardDOM.style.display = "none"
+        checkoutCardDOM.style.zIndex = "100"
+    })
 })
 
 
