@@ -368,6 +368,7 @@ body {
 }
 .ul-payment ul {
     justify-content: center;
+    display: flex;
 }
 .ul-payment ul li {
     display: inline;
