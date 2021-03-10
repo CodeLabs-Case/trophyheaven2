@@ -24,9 +24,9 @@
     <script src="/static/scripts/app.js" defer></script>
     <!-- paypal -->
     <!-- Trophy Heaven-->
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=AXZZIpFn-xvl4h2NyTF2VsNrRqM7CBM1PMZJslER4Kjh8aGKxcKEnJ-7o7MQh0afATbqJx62qDLYobL8&currency=USD" data-sdk-integration-source="button-factory"></script> -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AXZZIpFn-xvl4h2NyTF2VsNrRqM7CBM1PMZJslER4Kjh8aGKxcKEnJ-7o7MQh0afATbqJx62qDLYobL8&currency=USD" data-sdk-integration-source="button-factory"></script>
     <!-- Test -->
-    <script src="https://www.paypal.com/sdk/js?client-id=ATm_KrpmsnaEpFMA33DPAGXJGZVGtC_cvm1nkYXZao5jFVHHZxe6oNCpOahdk3mg9AyHi99xuhfAAcN1&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ATm_KrpmsnaEpFMA33DPAGXJGZVGtC_cvm1nkYXZao5jFVHHZxe6oNCpOahdk3mg9AyHi99xuhfAAcN1&currency=USD" data-sdk-integration-source="button-factory"></script> -->
 </head>
 <body>
     <!-- navbar -->
@@ -248,13 +248,15 @@
             <div style="margin-top: 1em; display: flex; align-items: center; justify-content: center;"><span>-- OR --</span></div>
 
 
-            <!-- <div style="margin-top: 1em;" id="smart-button-container">
+            <div style="margin-top: 1em;" id="smart-button-container">
                 <div style="text-align: center;">
                   <div id="paypal-button-container"></div>
                 </div>
-            </div> -->
+            </div>
+
+
             <!-- <form action=""> -->
-                <div id="smart-button-container">
+                <!-- <div id="smart-button-container">
                     <div style="text-align: center;">
                         <label for="description"> </label>
                         <input type="text" name="descriptionInput" id="description" maxlength="127" value="">
@@ -272,7 +274,7 @@
                     </div>
                     <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
                     <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
-                </div>
+                </div> -->
             <!-- </form> -->
         </div>
     </div>
@@ -287,7 +289,7 @@
 
 
     
-    <script>
+    <!-- <script>
       function initPayPalButton() {
         var description = document.querySelector('#smart-button-container #description');
         var amount = document.querySelector('#smart-button-container #amount');
@@ -384,7 +386,7 @@
         }).render('#paypal-button-container');
       }
       initPayPalButton();
-      </script>
+      </script> -->
 
 
 
