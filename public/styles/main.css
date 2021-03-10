@@ -350,6 +350,8 @@ body {
     transition: var(--mainTransition);
     transform: translateX(100%);
     display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 .checkout h2 {
     text-transform: capitalize;
