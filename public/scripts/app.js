@@ -40,10 +40,10 @@ const checkoutCardBox2 = document.querySelector(".checkout-paypal-box2")
 const checkoutPaypalBox1 = document.querySelector(".checkout-card-box1")
 const checkoutPaypalBox2 = document.querySelector(".checkout-paypal-box2")
 const statusDiv = document.querySelectorAll('.status-div')
-const checkoutCardDOM = querySelector('.checkout-content-card')
-const checkoutPaypalDOM = querySelector('.checkout-content-paypal')
-const checkoutCardBtn = querySelector('.ul-payment-card')
-const checkoutPaypalBtn = querySelector('.ul-payment-paypal')
+const checkoutCardDOM = document.querySelector('.checkout-content-card')
+const checkoutPaypalDOM = document.querySelector('.checkout-content-paypal')
+const checkoutCardBtn = document.querySelector('.ul-payment-card')
+const checkoutPaypalBtn = document.querySelector('.ul-payment-paypal')
 
 
 
