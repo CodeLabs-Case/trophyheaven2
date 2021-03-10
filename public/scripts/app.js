@@ -25,9 +25,13 @@ const hiddenCart = document.querySelector('.hidden-cart')
 const checkoutDOM = document.querySelector('.checkout')
 const checkoutBtn = document.querySelector('.checkout-btn')
 const closeCheckoutBtn = document.querySelector('.close-checkout')
-const shippingCostDOM = document.querySelector('.shipping')
-const taxDOM = document.querySelector('.tax')
-const totalDOM = document.querySelector('.total')
+
+const shippingCostCardDOM = document.querySelector('.shipping-card')
+const taxCardDOM = document.querySelector('.tax-card')
+const totalCardDOM = document.querySelector('.total-card')
+const shippingCostPaypalDOM = document.querySelector('.shipping-paypal')
+const taxPaypalDOM = document.querySelector('.tax-paypal')
+const totalPaypalDOM = document.querySelector('.total-paypal')
 // for checkout form
 // const fname = document.getElementsByClassName(".buyer-fname")
 // const lname = document.getElementsByClassName(".buyer-lname")
@@ -330,10 +334,17 @@ class UI {
             let displayTotalTemp = parseFloat(tempTotal + 5.95).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
-            shippingCostDOM.innerText = "5.95"
-            taxDOM.innerText = parseFloat(displayTax).toFixed(2)
+            // for card
+            shippingCostCardDOM.innerText = "5.95"
+            taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-            totalDOM.innerText = displayTotal.toFixed(2)
+            totalCardDOM.innerText = displayTotal.toFixed(2)
+
+            // for paypal
+            shippingCostPaypalDOM.innerText = "5.95"
+            taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
+            let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+            totalPaypalDOM.innerText = displayTotal.toFixed(2)
         } else {
 
             // actual amount in pennies
@@ -348,10 +359,15 @@ class UI {
             let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
-            shippingCostDOM.innerText = "0.00"
-            taxDOM.innerText = parseFloat(displayTax).toFixed(2)
+            shippingCostCardDOM.innerText = "0.00"
+            taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
-            totalDOM.innerText = displayTotal.toFixed(2)
+            totalCardDOM.innerText = displayTotal.toFixed(2)
+
+            shippingCostPaypalDOM.innerText = "0.00"
+            taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
+            let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+            totalPaypalDOM.innerText = displayTotal.toFixed(2)
         }
         
         cartItems.innerText = itemsTotal
