@@ -37,8 +37,7 @@ const totalDOM = document.querySelector('.total')
 // const zip = document.getElementsByClassName(".buyer-zip")
 const checkoutBox1 = document.querySelector(".checkout-box1")
 const checkoutBox2 = document.querySelector(".checkout-box2")
-const statusDivS = document.querySelector('.status-div-swipe')
-const statusDivP = document.querySelector('.status-div-paypal')
+const statusDiv = document.querySelector('.status-div')
 
 
 
@@ -315,7 +314,7 @@ class UI {
         if(parseFloat(tempTotal).toFixed(2) < 45.00) {
 
             // actual amount in pennies
-            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 0).toFixed(2)) * 100)
+            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
             
             hiddenTotal.value = hiddenTotalTemp + tax
@@ -323,10 +322,10 @@ class UI {
             
             
             // display amount in dollars
-            let displayTotalTemp = parseFloat(tempTotal + 0).toFixed(2)
+            let displayTotalTemp = parseFloat(tempTotal + 5.95).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
-            shippingCostDOM.innerText = "0"
+            shippingCostDOM.innerText = "5.95"
             taxDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalDOM.innerText = displayTotal.toFixed(2)
@@ -548,17 +547,11 @@ class Storage {
 // other functions
 function updateCheckout() {
     if(checkoutBox2.checked){
-        statusDivS.style.pointerEvents = "all"
-        statusDivS.style.opacity = "1"
-
-        statusDivP.style.pointerEvents = "all"
-        statusDivP.style.opacity = "1"
+        statusDiv.style.pointerEvents = "all"
+        statusDiv.style.opacity = "1"
     } else {
-        statusDivS.style.pointerEvents = "none"
-        statusDivS.style.opacity = "0.5"
-
-        statusDivP.style.pointerEvents = "none"
-        statusDivP.style.opacity = "0.5"
+        statusDiv.style.pointerEvents = "none"
+        statusDiv.style.opacity = "0.5"
     }
 }
 
