@@ -366,8 +366,10 @@ body {
 .ul-payment {
     display: block;
 }
+.ul-payment ul {
+    justify-content: center;
+}
 .ul-payment ul li {
-    justify-self: center;
     display: inline;
 }
 .checkout-content-card {
