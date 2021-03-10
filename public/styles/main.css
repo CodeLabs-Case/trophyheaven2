@@ -365,10 +365,11 @@ body {
 }
 .checkout-content-card {
     z-index: 200;
-    display: none;
+    
 }
 .checkout-content-paypal {
     z-index: 100;
+    display: none;
 }
 .checkout-form {
     display: grid;
