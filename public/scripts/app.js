@@ -646,7 +646,7 @@ function applyPromo(){
         
         cartItems.innerText = itemsTotal
 
-        alert("Promotional Code Applied! Reapply if you add or remove items!")
+        alert("Promotional Code Applied!\nRemember to reapply if you add or remove items!")
     } else {
         alert("Incorrect Promotional Code")
     }
