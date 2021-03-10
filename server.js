@@ -1,4 +1,3 @@
-// These will be set inside the hosting environment in Amazon Web Services in the production application
 require('dotenv')
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
@@ -63,7 +62,9 @@ app.post('/payment', function(req, res){
             </div>
         `
     });
-      
+
+
+
     // Buyer information
     var fname = req.body.fname
     fname = fname.toString()
@@ -122,12 +123,14 @@ app.post('/payment', function(req, res){
         res.render('/var/app/current/views/error.ejs') // If some error occurs
     });
     
-    
 
 
     var contents = fs.readFileSync('/var/app/current/public/scripts/confirmation.json')
     var confirmationJSON = JSON.parse(contents)
     var confirmationNumber = confirmationJSON.confirmationNumber
+
+
+
     // email sent to buyer
     var mailOptionsBuyer = {
         from: 'trophyheavenllc@gmail.com',
@@ -158,7 +161,6 @@ app.post('/payment', function(req, res){
             </div>
             `
     };
-      
     transporter.sendMail(mailOptionsBuyer, function(error, info){
         if (error) {
           console.log(error);
@@ -166,7 +168,6 @@ app.post('/payment', function(req, res){
           console.log('Email sent: ' + info.response);
         }
     })
-
     // email sent to seller
     var mailOptionsSeller = {
         from: 'trophyheavenllc@gmail.com',
@@ -200,7 +201,6 @@ app.post('/payment', function(req, res){
             </div>
             `
     };
-    
     transporter.sendMail(mailOptionsSeller, function(error, info){
         if (error) {
           console.log(error);
@@ -208,6 +208,8 @@ app.post('/payment', function(req, res){
           console.log('Email sent: ' + info.response);
         }
     })
+
+
 
     // Update the confirmation number
     confirmationJSON.confirmationNumber = confirmationJSON.confirmationNumber + 1

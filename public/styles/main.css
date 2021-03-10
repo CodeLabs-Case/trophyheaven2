@@ -18,6 +18,16 @@ body {
     background: var(--mainWhite);
     font-family: "Lato", sans-serif;
 }
+@media screen and (min-width: 768px) {
+    .cart {
+        width: 30vw;
+        min-width: 450px;
+    }
+    .checkout {
+        width: 30vw;
+        min-width: 450px;
+    }
+}
 
 
 
@@ -267,51 +277,14 @@ body {
 .showCart {
     transform: translateX(0);
 }
-.checkout {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    z-index: 5;
-    background: rgb(231, 226, 221);
-    padding: 1.5rem;
-    transition: var(--mainTransition);
-    transform: translateX(100%);
-}
-.showCheckout {
-    transform: translateX(0);
-}
 .transparentBcg {
     visibility: visible;
 }
-@media screen and (min-width: 768px) {
-    .cart {
-        width: 30vw;
-        min-width: 450px;
-    }
-    .checkout {
-        width: 30vw;
-        min-width: 450px;
-    }
-}
-
 .close-cart {
     font-size: 1.7rem;
     cursor: pointer;
 }
-.close-checkout {
-    font-size: 1.7rem;
-    cursor: pointer;
-}
 .cart h2 {
-    text-transform: capitalize;
-    text-align: center;
-    letter-spacing: var(--mainSpacing);
-    margin-bottom: 2rem;
-}
-.checkout h2 {
     text-transform: capitalize;
     text-align: center;
     letter-spacing: var(--mainSpacing);
@@ -323,25 +296,6 @@ body {
 .checkout-btn {
     margin-top: 1em;
     width: 14em;
-}
-.checkout-form {
-    display: grid;
-}
-.form-wrapper div{
-    font-family: "Lato", sans-serif;
-    justify-self: center;
-}
-.form-wrapper {
-    width: 100%;
-    background-color: #ccc;
-    display: grid;
-    border: solid 1px var(--primaryColor)
-}
-.hidden-total {
-    display: none;
-}
-.hidden-cart {
-    display: none;
 }
 
 
@@ -392,8 +346,52 @@ body {
 
 
 
-
 /* Checkout */
+.checkout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 5;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+.checkout h2 {
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
+}
+.showCheckout {
+    transform: translateX(0);
+}
+.close-checkout {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.checkout-form {
+    display: grid;
+}
+.hidden-total {
+    display: none;
+}
+.hidden-cart {
+    display: none;
+}
+.form-wrapper {
+    width: 100%;
+    background-color: #ccc;
+    display: grid;
+    border: solid 1px var(--primaryColor)
+}
+.form-wrapper div{
+    font-family: "Lato", sans-serif;
+    justify-self: center;
+}
 .div-checkbox {
     padding: 0.5rem;
     margin: 0.5rem;
