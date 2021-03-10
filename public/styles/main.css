@@ -363,6 +363,9 @@ body {
     font-size: 1.7rem;
     cursor: pointer;
 }
+.ul-payment li {
+    float: left;
+}
 .checkout-content-card {
     z-index: 200;
     
