@@ -358,8 +358,7 @@
               invoiceidError.style.visibility = "hidden";
             }
     
-            //description.value
-            purchase_units[0].description = "{item: id, price: price}";
+            purchase_units[0].description = description.value;
             purchase_units[0].amount.value = amount.value;
     
             if(invoiceid.value !== '') {
