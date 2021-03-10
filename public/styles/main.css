@@ -363,6 +363,9 @@ body {
     font-size: 1.7rem;
     cursor: pointer;
 }
+.ul-payment {
+    display: block;
+}
 .ul-payment li {
     float: left;
 }
