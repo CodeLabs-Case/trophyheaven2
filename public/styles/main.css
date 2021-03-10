@@ -417,6 +417,12 @@ body {
     font-family: "Lato", sans-serif;
     justify-self: center;
 }
+.promocode-card-text{
+    display: none;
+}
+.promocode-paypal-text{
+    display: none;
+}
 .div-checkbox-card {
     padding: 0.5rem;
     margin: 0.5rem;

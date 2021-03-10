@@ -43,6 +43,11 @@ const checkoutCardBox1 = document.querySelector(".checkout-card-box1")
 const checkoutCardBox2 = document.querySelector(".checkout-card-box2")
 const checkoutPaypalBox1 = document.querySelector(".checkout-paypal-box1")
 const checkoutPaypalBox2 = document.querySelector(".checkout-paypal-box2")
+const checkoutCardBox3 = document.querySelector(".checkout-card-box3")
+const checkoutPaypalBox3 = document.querySelector(".checkout-paypal-box3")
+const checkoutCardPromoText = document.querySelector(".promocode-card-text")
+const checkoutPaypalPromoText = document.querySelector(".promocode-paypal-text")
+
 const statusDivCard = document.querySelector('.status-div-card')
 const statusDivPaypal = document.querySelector('.status-div-paypal')
 const checkoutCardDOM = document.querySelector('.checkout-content-card')
@@ -309,7 +314,7 @@ class UI {
         })
     }
 
-    setCartValues(cart) {
+    setCartValues(cart, freeShipping) {
         let tempTotal = 0
         let itemsTotal = 0
 
@@ -320,10 +325,10 @@ class UI {
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
 
         // add shipping + tax
-        if(parseFloat(tempTotal).toFixed(2) < 45.00) {
+        if((parseFloat(tempTotal).toFixed(2) < 45.00) && !freeShipping) {
 
             // actual amount in pennies
-            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 0).toFixed(2)) * 100)
+            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
             
             hiddenTotal.value = hiddenTotalTemp + tax
@@ -331,22 +336,48 @@ class UI {
             
             
             // display amount in dollars
-            let displayTotalTemp = parseFloat(tempTotal + 0).toFixed(2)
+            let displayTotalTemp = parseFloat(tempTotal + 5.95).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
             // for card
-            shippingCostCardDOM.innerText = "0"
+            shippingCostCardDOM.innerText = "5.95"
             taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalCardDOM.innerText = displayTotal.toFixed(2)
 
             // for paypal
-            shippingCostPaypalDOM.innerText = "0"
+            shippingCostPaypalDOM.innerText = "5.95"
             taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
             displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalPaypalDOM.innerText = displayTotal.toFixed(2)
-        } else {
+        }
+        else if((parseFloat(tempTotal).toFixed(2) >= 45.00) && !freeShipping){
 
+            // actual amount in pennies
+            let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
+            let tax = Math.round(.0475 * hiddenTotalTemp)
+
+            hiddenTotal.value = hiddenTotalTemp + tax
+
+            
+            
+            // display amount in dollars
+            let displayTotalTemp = parseFloat(tempTotal).toFixed(2)
+            let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
+            
+            // card
+            shippingCostCardDOM.innerText = "0.00"
+            taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
+            let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+            totalCardDOM.innerText = displayTotal.toFixed(2)
+
+            // paypal
+            shippingCostPaypalDOM.innerText = "0.00"
+            taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
+            displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
+            totalPaypalDOM.innerText = displayTotal.toFixed(2)
+        }
+        else if(freeShipping) {
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
@@ -588,6 +619,13 @@ function updateCheckoutPaypal() {
         statusDivPaypal.style.opacity = "0.5"
     }
 }
+function showHideCardPromoText(){
+    if(checkoutCardBox3.checked) {
+        checkoutCardPromoText.style.display = "unset"
+    } else {
+        checkoutCardPromoText.style.display = "none"
+    }    
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
@@ -615,9 +653,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ui.cartLogic()
         checkoutCardBox1.checked = false
         checkoutCardBox2.checked = false
+        checkoutCardBox3.checked = false
 
         checkoutPaypalBox1.checked = false
         checkoutPaypalBox2.checked = false
+        checkoutPaypalBox3.checked = false
     })
     
     // Make the SHOP NOW button jump the page
