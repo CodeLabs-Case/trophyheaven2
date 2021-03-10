@@ -639,11 +639,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // setup checkout toggle
-    checkoutCardBtn.style.color = "var(--mainWhite)"
+    checkoutCardBtn.style.color = "var(--primaryColor)"
     checkoutCardBtn.addEventListener('click', () => {
         checkoutCardDOM.style.display = "unset"
         checkoutCardDOM.style.zIndex = "200"
-        checkoutCardBtn.style.color = "var(--mainWhite)"
+        checkoutCardBtn.style.color = "var(--primaryColor)"
 
         checkoutPaypalDOM.style.display = "none"
         checkoutPaypalDOM.style.zIndex = "100"
@@ -652,7 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
     checkoutPaypalBtn.addEventListener('click', () => {
         checkoutPaypalDOM.style.display = "unset"
         checkoutPaypalDOM.style.zIndex = "200"
-        checkoutPaypalBtn.style.color = "var(--mainWhite)"
+        checkoutPaypalBtn.style.color = "var(--primaryColor)"
 
         checkoutCardDOM.style.display = "none"
         checkoutCardDOM.style.zIndex = "100"
