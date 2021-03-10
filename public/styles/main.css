@@ -367,6 +367,7 @@ body {
     display: block;
 }
 .ul-payment ul li {
+    display: inline;
 }
 .checkout-content-card {
     z-index: 200;
