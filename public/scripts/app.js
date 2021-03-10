@@ -639,27 +639,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // setup checkout toggle
+    checkoutCardBtn.style.color = "var(--mainWhite)"
     checkoutCardBtn.addEventListener('click', () => {
         checkoutCardDOM.style.display = "unset"
         checkoutCardDOM.style.zIndex = "200"
         checkoutCardBtn.style.color = "var(--mainWhite)"
-        checkoutCardBtn.style.fontSize = "20px"
 
         checkoutPaypalDOM.style.display = "none"
         checkoutPaypalDOM.style.zIndex = "100"
         checkoutPaypalBtn.style.color = "#000"
-        checkoutPaypalBtn.style.fontSize = "18px"
     })
     checkoutPaypalBtn.addEventListener('click', () => {
         checkoutPaypalDOM.style.display = "unset"
         checkoutPaypalDOM.style.zIndex = "200"
         checkoutPaypalBtn.style.color = "var(--mainWhite)"
-        checkoutPaypalBtn.style.fontSize = "20px"
 
         checkoutCardDOM.style.display = "none"
         checkoutCardDOM.style.zIndex = "100"
         checkoutCardBtn.style.color = "#000"
-        checkoutCardBtn.style.fontSize = "18px"
     })
 })
 
