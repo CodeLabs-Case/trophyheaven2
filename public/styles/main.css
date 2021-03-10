@@ -366,6 +366,9 @@ body {
 .ul-payment {
     display: block;
 }
+.ul-payment ul{
+    justify-self: center;
+}
 .ul-payment ul li {
     display: inline;
 }
