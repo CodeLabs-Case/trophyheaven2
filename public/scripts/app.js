@@ -296,7 +296,7 @@ class UI {
                 // save cart in local storage
                 Storage.saveCart(cart)
                 // set cart values
-                this.setCartValues(cart)
+                this.setCartValues(cart, false)
                 // display cart item
                 this.addCartItem(cartItem)
                 // wait until you load the next products to show the cart
@@ -447,7 +447,7 @@ class UI {
     setupAPP() {
         // for the cart
         cart = Storage.getCart()
-        this.setCartValues(cart)
+        this.setCartValues(cart, false)
         this.populateCart(cart)
         cartBtn.addEventListener('click', this.showCart)
         closeCartBtn.addEventListener('click', this.hideCart)
@@ -498,7 +498,7 @@ class UI {
                 tempItem.amount = tempItem.amount + 1
                 
                 Storage.saveCart(cart)
-                this.setCartValues(cart)
+                this.setCartValues(cart, flase)
                 addAmount.nextElementSibling.innerText = tempItem.amount
 
                 // update the hidden cart
@@ -511,7 +511,7 @@ class UI {
                 tempItem.amount = tempItem.amount - 1
                 if(tempItem.amount > 0){
                     Storage.saveCart(cart)
-                    this.setCartValues(cart)
+                    this.setCartValues(cart, false)
                     lowerAmount.previousElementSibling.innerText = tempItem.amount
                 }
                 else {
@@ -520,7 +520,7 @@ class UI {
                 }
 
                 Storage.saveCart(cart)
-                this.setCartValues(cart)
+                this.setCartValues(cart, false)
                 addAmount.nextElementSibling.innerText = tempItem.amount
 
                 // update the hidden cart
@@ -541,7 +541,7 @@ class UI {
 
     removeItem(id) {
         cart = cart.filter(item => item.id !== id )
-        this.setCartValues(cart)
+        this.setCartValues(cart, false)
         Storage.saveCart(cart)
         let button = this.getSingleButton(id, 1)
         button.disabled = false
@@ -619,12 +619,23 @@ function updateCheckoutPaypal() {
         statusDivPaypal.style.opacity = "0.5"
     }
 }
+
+// promotional code
 function showHideCardPromoText(){
     if(checkoutCardBox3.checked) {
         checkoutCardPromoText.style.display = "unset"
     } else {
         checkoutCardPromoText.style.display = "none"
     }    
+}
+function applyPromo(){
+    let code = checkoutCardPromoText.value
+    if(code === "FREESHIP"){
+        setCartValues(cart, true)
+        alert("Promotional Code Applied!\nReapply if you add or remove items!")
+    } else {
+        alert("Incorrect Promotional Code")
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
