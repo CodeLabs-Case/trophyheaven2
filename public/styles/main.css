@@ -372,6 +372,12 @@ body {
 }
 .ul-payment ul li {
     display: inline;
+    margin: 1rem;
+    transition: var(--mainTransition);
+}
+.ul-payment ul li:hover {
+    color: var(--mainWhite);
+    cursor: pointer;
 }
 .checkout-content-card {
     z-index: 200;
