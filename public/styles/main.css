@@ -425,6 +425,6 @@ body {
         min-width: 450px;
     }
 }
-.paypal-button-number-2 {
+.paypal-button .paypal-button-number-2 {
     display: none;
 }
