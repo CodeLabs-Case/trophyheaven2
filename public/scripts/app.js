@@ -40,7 +40,10 @@ const checkoutCardBox2 = document.querySelector(".checkout-paypal-box2")
 const checkoutPaypalBox1 = document.querySelector(".checkout-card-box1")
 const checkoutPaypalBox2 = document.querySelector(".checkout-paypal-box2")
 const statusDiv = document.querySelectorAll('.status-div')
-
+const checkoutCardDOM = querySelector('.checkout-content-card')
+const checkoutPaypalDOM = querySelector('.checkout-content-paypal')
+const checkoutCardBtn = querySelector('.ul-payment-card')
+const checkoutPaypalBtn = querySelector('.ul-payment-paypal')
 
 
 
@@ -567,6 +570,16 @@ function updateCheckout() {
     }
 }
 
+function toggleCheckout(content){
+    if(content === 1) {
+        checkoutCardDOM.style.display = "unset"
+        checkoutPaypalDOM.style.display = "none"
+    } else if (content === 2){
+        checkoutCardDOM.style.display = "none"
+        checkoutPaypalDOM.style.display = "unset"
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
     const ui = new UI()
@@ -630,6 +643,11 @@ document.addEventListener("DOMContentLoaded", () => {
         navSec.classList.remove("showNav")
         navState = false
     })
+
+
+    // setup checkout toggle
+    checkoutCardBtn.addEventListener('click', toggleCheckout(1))
+    checkoutPaypalBtn.addEventListener('click', toggleCheckout(2))
 })
 
 
