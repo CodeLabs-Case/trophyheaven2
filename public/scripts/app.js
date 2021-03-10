@@ -36,10 +36,11 @@ const totalDOM = document.querySelector('.total')
 // const state = document.getElementsByClassName(".buyer-state")
 // const zip = document.getElementsByClassName(".buyer-zip")
 const checkoutCardBox1 = document.querySelector(".checkout-card-box1")
-const checkoutCardBox2 = document.querySelector(".checkout-paypal-box2")
-const checkoutPaypalBox1 = document.querySelector(".checkout-card-box1")
+const checkoutCardBox2 = document.querySelector(".checkout-card-box2")
+const checkoutPaypalBox1 = document.querySelector(".checkout-paypal-box1")
 const checkoutPaypalBox2 = document.querySelector(".checkout-paypal-box2")
-const statusDiv = document.querySelectorAll('.status-div')
+const statusDivCard = document.querySelectorAll('.status-div-card')
+const statusDivPaypal = document.querySelectorAll('.status-div-paypal')
 const checkoutCardDOM = document.querySelector('.checkout-content-card')
 const checkoutPaypalDOM = document.querySelector('.checkout-content-paypal')
 const checkoutCardBtn = document.querySelector('.ul-payment-card')
@@ -549,23 +550,24 @@ class Storage {
 }
 
 // other functions
-function updateCheckout() {
+function updateCheckoutCard() {
     // card
     if(checkoutCardBox2.checked){
-        statusDiv[0].style.pointerEvents = "all"
-        statusDiv[0].style.opacity = "1"
+        statusDivCard.style.pointerEvents = "all"
+        statusDivCard.style.opacity = "1"
     } else {
-        statusDiv[0].style.pointerEvents = "none"
-        statusDiv[0].style.opacity = "0.5"
+        statusDivCard.style.pointerEvents = "none"
+        statusDivCard.style.opacity = "0.5"
     }
-
+}
+function updateCheckoutPaypal() {
     // paypal
     if(checkoutPaypalBox2.checked){
-        statusDiv[1].style.pointerEvents = "all"
-        statusDiv[1].style.opacity = "1"
+        statusDivPaypal.style.pointerEvents = "all"
+        statusDivPaypal.style.opacity = "1"
     } else {
-        statusDiv[1].style.pointerEvents = "none"
-        statusDiv[1].style.opacity = "0.5"
+        statusDivPaypal.style.pointerEvents = "none"
+        statusDivPaypal.style.opacity = "0.5"
     }
 }
 
