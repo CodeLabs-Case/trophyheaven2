@@ -20,8 +20,10 @@ const productsDOM1 = document.querySelector('.products-center1')
 const productsDOM2 = document.querySelector('.products-center2')
 const productsDOM3 = document.querySelector('.products-center3')
 // for checkout
-const hiddenTotal = document.querySelector('.hidden-total')
-const hiddenCart = document.querySelector('.hidden-cart')
+const hiddenTotalCard = document.querySelector('.hidden-total-card')
+const hiddenCartCard = document.querySelector('.hidden-cart-card')
+const hiddenTotalPaypal = document.querySelector('.hidden-total-paypal')
+const hiddenCartPaypal = document.querySelector('.hidden-cart-paypal')
 const checkoutDOM = document.querySelector('.checkout')
 const checkoutBtn = document.querySelector('.checkout-btn')
 const closeCheckoutBtn = document.querySelector('.close-checkout')
@@ -335,7 +337,8 @@ class UI {
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 8.99).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
             
-            hiddenTotal.value = hiddenTotalTemp + tax
+            hiddenTotalCard.value = hiddenTotalTemp + tax
+            hiddenTotalPaypal.value = hiddenTotalTemp + tax
 
             
             
@@ -361,7 +364,8 @@ class UI {
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
 
-            hiddenTotal.value = hiddenTotalTemp + tax
+            hiddenTotalCard.value = hiddenTotalTemp + tax
+            hiddenTotalPaypal.value = hiddenTotalTemp + tax
 
             
             
@@ -630,7 +634,8 @@ function applyPromo(){
         let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
         let tax = Math.round(.0475 * hiddenTotalTemp)
 
-        hiddenTotal.value = hiddenTotalTemp + tax
+        hiddenTotalCard.value = hiddenTotalTemp + tax
+        hiddenTotalPaypal.value = hiddenTotalTemp + tax
 
         
         
