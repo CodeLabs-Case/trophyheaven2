@@ -639,8 +639,9 @@ function applyPromo(){
 
 
 
-    let code = checkoutCardPromoText.value
-    if(code === "FREESHIP"){
+    let codeCard = checkoutCardPromoText.value
+    let codePaypal = checkoutPaypalPromoText.value
+    if(codeCard === "FREESHIP" || codePaypal === "FREESHIP"){
 
         // actual amount in pennies
         let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
