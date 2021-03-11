@@ -785,7 +785,5 @@ function initPayPalButton() {
         console.log(err);
     }
     }).render('#paypal-button-container');
-
-    test()
 }
 initPayPalButton()
