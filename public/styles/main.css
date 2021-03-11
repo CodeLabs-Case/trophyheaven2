@@ -392,10 +392,10 @@ body {
     display: grid;
 }
 [class^="hidden-total"] {
-    display: none;
+    /* display: none; */
 }
 [class^="hidden-cart"] {
-    display: none;
+    /* display: none; */
 }
 .form-wrapper-card {
     width: 100%;
