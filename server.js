@@ -358,5 +358,5 @@ app.post('/paypal', function(req, res){
     fs.writeFileSync('/var/app/current/public/scripts/confirmation.json', JSON.stringify(confirmationJSON))
 
 
-    res.render('/')
+    res.redirect('/')
 })
