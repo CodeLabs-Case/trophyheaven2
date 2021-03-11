@@ -365,7 +365,7 @@ body {
 }
 .ul-payment {
     display: block;
-    display: none;
+    /* display: none; */
 }
 .ul-payment ul {
     justify-content: center;
