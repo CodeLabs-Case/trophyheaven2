@@ -240,6 +240,9 @@ app.post('/paypal', function(req, res){
 
 
     // Buyer information
+    var email = req.body.email
+    email = email.toString()
+
     var fname = req.body.fname
     fname = fname.toString()
     
@@ -276,7 +279,7 @@ app.post('/paypal', function(req, res){
     // email sent to buyer
     var mailOptionsBuyer = {
         from: 'trophyheavenllc@gmail.com',
-        to: `${req.body.stripeEmail}`,
+        to: `${email}`,
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div style="">
@@ -317,7 +320,7 @@ app.post('/paypal', function(req, res){
         subject: `Order Confirmation #${confirmationNumber}`,
         html: `
             <div>
-                <h2 style="color: #f09d51;">Order from ${req.body.stripeEmail} placed!</h2>
+                <h2 style="color: #f09d51;">Order from ${email} placed!</h2>
                 <br>
                 <h3>Order Details:</h3>
                 <br>
