@@ -58,6 +58,7 @@ const checkoutPaypalDOM = document.querySelector('.checkout-content-paypal')
 const checkoutCardBtn = document.querySelector('.ul-payment-card')
 const checkoutPaypalBtn = document.querySelector('.ul-payment-paypal')
 
+const emailBtn = document.querySelector(".email")
 
 
 let cart = []
@@ -776,8 +777,7 @@ function initPayPalButton() {
     onApprove: function(data, actions) {
         return actions.order.capture().then(function(details) {
             alert('Transaction completed by ' + details.payer.name.given_name + '!');
-
-
+            emailBtn.click()
         });
     },
 
