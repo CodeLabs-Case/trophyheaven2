@@ -331,7 +331,7 @@ class UI {
         if(parseFloat(tempTotal).toFixed(2) < 45.00) {
 
             // actual amount in pennies
-            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 5.95).toFixed(2)) * 100)
+            let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 8.99).toFixed(2)) * 100)
             let tax = Math.round(.0475 * hiddenTotalTemp)
             
             hiddenTotal.value = hiddenTotalTemp + tax
@@ -339,17 +339,17 @@ class UI {
             
             
             // display amount in dollars
-            let displayTotalTemp = parseFloat(tempTotal + 5.95).toFixed(2)
+            let displayTotalTemp = parseFloat(tempTotal + 8.99).toFixed(2)
             let displayTax = parseFloat(.0475 * displayTotalTemp).toFixed(2)
             
             // for card
-            shippingCostCardDOM.innerText = "5.95"
+            shippingCostCardDOM.innerText = "8.99"
             taxCardDOM.innerText = parseFloat(displayTax).toFixed(2)
             let displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalCardDOM.innerText = displayTotal.toFixed(2)
 
             // for paypal
-            shippingCostPaypalDOM.innerText = "5.95"
+            shippingCostPaypalDOM.innerText = "8.99"
             taxPaypalDOM.innerText = parseFloat(displayTax).toFixed(2)
             displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalPaypalDOM.innerText = displayTotal.toFixed(2)
