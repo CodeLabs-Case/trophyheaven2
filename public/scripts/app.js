@@ -443,7 +443,8 @@ class UI {
         }
 
         // set the hidden cart
-        hiddenCart.value = JSON.stringify(cart)
+        hiddenCartCard.value = JSON.stringify(cart)
+        hiddenCartPaypal.value = JSON.stringify(cart)
     }
 
     enableCheckout() {
@@ -485,7 +486,8 @@ class UI {
                 addAmount.nextElementSibling.innerText = tempItem.amount
 
                 // update the hidden cart
-                hiddenCart.value = JSON.stringify(cart)
+                hiddenCartCard.value = JSON.stringify(cart)
+                hiddenCartPaypal.value = JSON.stringify(cart)
             }
             else if(event.target.classList.contains('fa-chevron-down')) {
                 let lowerAmount = event.target
@@ -507,7 +509,8 @@ class UI {
                 addAmount.nextElementSibling.innerText = tempItem.amount
 
                 // update the hidden cart
-                hiddenCart.value = JSON.stringify(cart)
+                hiddenCartCard.value = JSON.stringify(cart)
+                hiddenCartPaypal.value = JSON.stringify(cart)
             }
         })
     }
@@ -549,7 +552,8 @@ class UI {
         }
 
         // update the hidden cart
-        hiddenCart.value = JSON.stringify(cart)
+        hiddenCartCard.value = JSON.stringify(cart)
+        hiddenCartPaypal.value = JSON.stringify(cart)
     }
     
     getSingleButton(id, btn) {
@@ -756,12 +760,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-
-function test() {
-    alert(
-        "Test"
-    )
-}
 // PayPal
 function initPayPalButton() {
     paypal.Buttons({
