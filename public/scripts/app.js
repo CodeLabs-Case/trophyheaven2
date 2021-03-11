@@ -751,7 +751,11 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-
+function test() {
+    alert(
+        "Test"
+    )
+}
 // PayPal
 function initPayPalButton() {
     paypal.Buttons({
@@ -782,4 +786,4 @@ function initPayPalButton() {
     }
     }).render('#paypal-button-container');
 }
-initPayPalButton();
+initPayPalButton(), test()
