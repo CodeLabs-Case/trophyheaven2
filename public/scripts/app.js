@@ -615,7 +615,15 @@ function showHideCardPromoText(){
     } else {
         checkoutCardPromoText.style.display = "none"
         checkoutCardPromoBtn.style.display = "none"
-    }    
+    }
+
+    if(checkoutPaypalBox3.checked) {
+        checkoutPayplaPromoText.style.display = "unset"
+        checkoutPayplaPromoBtn.style.display = "unset"
+    } else {
+        checkoutPayplaPromoText.style.display = "none"
+        checkoutPayplaPromoBtn.style.display = "none"
+    }  
 }
 function applyPromo(){
     cart = Storage.getCart()
