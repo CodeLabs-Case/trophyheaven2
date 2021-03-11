@@ -618,11 +618,11 @@ function showHideCardPromoText(){
     }
 
     if(checkoutPaypalBox3.checked) {
-        checkoutPayplaPromoText.style.display = "unset"
-        checkoutPayplaPromoBtn.style.display = "unset"
+        checkoutPaypalPromoText.style.display = "unset"
+        checkoutPaypalPromoBtn.style.display = "unset"
     } else {
-        checkoutPayplaPromoText.style.display = "none"
-        checkoutPayplaPromoBtn.style.display = "none"
+        checkoutPaypalPromoText.style.display = "none"
+        checkoutPaypalPromoBtn.style.display = "none"
     }  
 }
 function applyPromo(){
