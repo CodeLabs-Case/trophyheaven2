@@ -364,8 +364,8 @@ body {
     cursor: pointer;
 }
 .ul-payment {
-    /* display: block; */
-    display: none;
+    display: block;
+    /* display: none; */
 }
 .ul-payment ul {
     justify-content: center;
