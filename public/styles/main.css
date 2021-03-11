@@ -391,10 +391,10 @@ body {
 .checkout-form {
     display: grid;
 }
-.hidden-total {
+[class^="hidden-total"] {
     display: none;
 }
-.hidden-cart {
+[class^="hidden-cart"] {
     display: none;
 }
 .form-wrapper-card {
