@@ -314,8 +314,9 @@ class UI {
                     this.enableCheckout()
                 }
 
-                // update the hidden cart
-                hiddenCart.value = JSON.stringify(cart)
+                // update the hidden carts
+                hiddenCartCard.value = JSON.stringify(cart)
+                hiddenCartPaypal.value = JSON.stringify(cart)
             })
         })
     }
@@ -653,6 +654,8 @@ function applyPromo(){
 
         hiddenTotalCard.value = hiddenTotalTemp + tax
         hiddenTotalPaypal.value = hiddenTotalTemp + tax
+        hiddenCartCard.value = JSON.stringify(cart)
+        hiddenCartPaypal.value = JSON.stringify(cart)
 
         
         
