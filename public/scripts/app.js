@@ -597,6 +597,8 @@ function updateCheckoutCard() {
         statusDivCard.style.opacity = "0.5"
     }
 }
+*/
+///*
 function updateCheckoutPaypal() {
     // paypal
     if(checkoutPaypalBox2.checked){
@@ -607,7 +609,7 @@ function updateCheckoutPaypal() {
         statusDivPaypal.style.opacity = "0.5"
     }
 }
-*/
+//*/
 
 // promotional code
 function showHideCardPromoText(){
