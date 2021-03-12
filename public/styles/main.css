@@ -395,7 +395,7 @@ body {
     display: none;
 }
 [class^="hidden-cart"] {
-    /* display: none; */
+    display: none;
 }
 .form-wrapper-card {
     width: 100%;
