@@ -586,6 +586,7 @@ class Storage {
 }
 
 // other functions
+/*
 function updateCheckoutCard() {
     // card
     if(checkoutCardBox2.checked){
@@ -606,6 +607,7 @@ function updateCheckoutPaypal() {
         statusDivPaypal.style.opacity = "0.5"
     }
 }
+*/
 
 // promotional code
 function showHideCardPromoText(){
