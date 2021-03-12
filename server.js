@@ -219,10 +219,10 @@ app.post('/payment', function(req, res){
 app.post('/paypal', function(req, res){
     
     // Transaction information
-    var total = req.body.total
+    var total = req.body.totalPaypal
     total = parseInt(total, 10)
 
-    var cart = req.body.cart
+    var cart = req.body.cartPaypal
     var cartjson = JSON.parse(cart)
     var cartFormatted = ""
 
