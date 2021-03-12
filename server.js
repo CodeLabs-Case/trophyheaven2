@@ -45,10 +45,10 @@ app.get('/', (req, res) => {
 app.post('/payment', function(req, res){
     
     // Transaction information
-    var total = req.body.total
+    var total = req.body.totalCard
     total = parseInt(total, 10)
 
-    var cart = req.body.cart
+    var cart = req.body.cartCard
     var cartjson = JSON.parse(cart)
     var cartFormatted = ""
 
