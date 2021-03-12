@@ -587,7 +587,7 @@ class Storage {
 }
 
 // other functions
-/*
+///*
 function updateCheckoutCard() {
     // card
     if(checkoutCardBox2.checked){
@@ -598,7 +598,7 @@ function updateCheckoutCard() {
         statusDivCard.style.opacity = "0.5"
     }
 }
-*/
+//*/
 ///*
 function updateCheckoutPaypal() {
     // paypal
