@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.post('/payment', function(req, res){
+app.post('/payment', function(req, res, err){
     
     // Transaction information
     var total = req.body.totalCard
@@ -117,103 +117,100 @@ app.post('/payment', function(req, res){
         }); 
     }) 
     .then((charge) => { 
-        res.render('/var/app/current/views/success.ejs') // If no error occurs 
+        res.render('/var/app/current/views/success.ejs') // If no error occurs
+        var contents = fs.readFileSync('/var/app/current/public/scripts/confirmation.json')
+        var confirmationJSON = JSON.parse(contents)
+        var confirmationNumber = confirmationJSON.confirmationNumber
+
+
+
+        // email sent to buyer
+        var mailOptionsBuyer = {
+            from: 'trophyheavenllc@gmail.com',
+            to: `${req.body.stripeEmail}`,
+            subject: `Order Confirmation #${confirmationNumber}`,
+            html: `
+                <div style="">
+                    <h2 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h2>
+                    <br>
+                    <h3>Order Details:</h3>
+                    <br>
+                    <strong>Name: </strong>${fname} ${lname}
+                    <br>
+                    <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
+                    <br>
+                    <br>
+                    <h3>Products:</h3>${cartFormatted}
+                    <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="">
+                        <span style="color: #f09d51; font-size: 16px;">Trophy Heaven</span><br>
+                        <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
+                    </div>
+                </div>
+                `
+        };
+        transporter.sendMail(mailOptionsBuyer, function(error, info){
+            if (error) {
+            console.log(error);
+            } else {
+            console.log('Email sent: ' + info.response);
+            }
+        })
+        // email sent to seller
+        var mailOptionsSeller = {
+            from: 'trophyheavenllc@gmail.com',
+            to: `trophyheavenllc@gmail.com`,
+            subject: `Order Confirmation #${confirmationNumber}`,
+            html: `
+                <div>
+                    <h2 style="color: #f09d51;">Order from ${req.body.stripeEmail} placed!</h2>
+                    <br>
+                    <h3>Order Details:</h3>
+                    <br>
+                    <strong>Name: </strong>${lname}, ${fname}
+                    <br>
+                    <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
+                    <br>
+                    <br>
+                    <strong>Ingersoll Employee (Charlotte)? </strong>${worksAtIngersoll}
+                    <br>
+                    <br>
+                    <h3>Products:</h3>${cartFormatted}
+                    <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="">
+                        <span style="color: #f09d51; font-size: 16px;">Trophy Heaven</span><br>
+                        <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
+                    </div>
+                </div>
+                `
+        };
+        transporter.sendMail(mailOptionsSeller, function(error, info){
+            if (error) {
+            console.log(error);
+            } else {
+            console.log('Email sent: ' + info.response);
+            }
+        })
+
+
+
+        // Update the confirmation number
+        confirmationJSON.confirmationNumber = confirmationJSON.confirmationNumber + 1
+        fs.writeFileSync('/var/app/current/public/scripts/confirmation.json', JSON.stringify(confirmationJSON))
     }) 
     .catch((err) => { 
         res.render('/var/app/current/views/error.ejs') // If some error occurs
     });
-    
-
-
-    var contents = fs.readFileSync('/var/app/current/public/scripts/confirmation.json')
-    var confirmationJSON = JSON.parse(contents)
-    var confirmationNumber = confirmationJSON.confirmationNumber
-
-
-
-    // email sent to buyer
-    var mailOptionsBuyer = {
-        from: 'trophyheavenllc@gmail.com',
-        to: `${req.body.stripeEmail}`,
-        subject: `Order Confirmation #${confirmationNumber}`,
-        html: `
-            <div style="">
-                <h2 style="color: #f09d51;"> Thank you for your purchase ${fname}! </h2>
-                <br>
-                <h3>Order Details:</h3>
-                <br>
-                <strong>Name: </strong>${fname} ${lname}
-                <br>
-                <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
-                <br>
-                <br>
-                <h3>Products:</h3>${cartFormatted}
-                <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
-
-                <br>
-                <br>
-                <br>
-                <br>
-                <div style="">
-                    <span style="color: #f09d51; font-size: 16px;">Trophy Heaven</span><br>
-                    <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
-                </div>
-            </div>
-            `
-    };
-    transporter.sendMail(mailOptionsBuyer, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-    })
-    // email sent to seller
-    var mailOptionsSeller = {
-        from: 'trophyheavenllc@gmail.com',
-        to: `trophyheavenllc@gmail.com`,
-        subject: `Order Confirmation #${confirmationNumber}`,
-        html: `
-            <div>
-                <h2 style="color: #f09d51;">Order from ${req.body.stripeEmail} placed!</h2>
-                <br>
-                <h3>Order Details:</h3>
-                <br>
-                <strong>Name: </strong>${lname}, ${fname}
-                <br>
-                <strong>Shipping Address: </strong>${shippingAddress}, ${city}, ${state} ${zip}
-                <br>
-                <br>
-                <strong>Ingersoll Employee (Charlotte)? </strong>${worksAtIngersoll}
-                <br>
-                <br>
-                <h3>Products:</h3>${cartFormatted}
-                <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
-
-                <br>
-                <br>
-                <br>
-                <br>
-                <div style="">
-                    <span style="color: #f09d51; font-size: 16px;">Trophy Heaven</span><br>
-                    <span style="color: #f09d51;">200 West Stanly Street, Stanfield, NC 28163</span>
-                </div>
-            </div>
-            `
-    };
-    transporter.sendMail(mailOptionsSeller, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-    })
-
-
-
-    // Update the confirmation number
-    confirmationJSON.confirmationNumber = confirmationJSON.confirmationNumber + 1
-    fs.writeFileSync('/var/app/current/public/scripts/confirmation.json', JSON.stringify(confirmationJSON))
 })
 
 app.post('/paypal', function(req, res){

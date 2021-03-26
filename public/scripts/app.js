@@ -683,6 +683,7 @@ function applyPromo(){
     }
 }
 
+// Main
 document.addEventListener("DOMContentLoaded", () => {
     // instantiate the classes
     const ui = new UI()
