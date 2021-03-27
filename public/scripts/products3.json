@@ -295,7 +295,7 @@
             "fields": {
             "title": "#ST650",
             "description": "Dry-Fit Polo (Black)",
-            "price": 24.99,
+            "price": 2.99,
             "size": "3XL",
             "image": { "fields": { "file": { "url": "/static/images/product-22.jpeg" } } }
             }
