@@ -141,7 +141,6 @@ app.post('/payment', function(req, res, err){
                     <br>
                     <br>
                     <h3>Products:</h3>${cartFormatted}
-                    <strong>Payment Method: </strong>Card
                     <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                     <br>
@@ -182,6 +181,7 @@ app.post('/payment', function(req, res, err){
                     <br>
                     <br>
                     <h3>Products:</h3>${cartFormatted}
+                    <strong>Payment Method: </strong>Card
                     <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                     <br>
