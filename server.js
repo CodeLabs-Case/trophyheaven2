@@ -332,6 +332,7 @@ app.post('/paypal', function(req, res){
                 <br>
                 <h3>Products:</h3>${cartFormatted}
                 <strong>Payment Method: </strong>Paypal
+                <br>
                 <strong>Total: </strong>$${parseFloat(total / 100).toFixed(2)}
 
                 <br>
