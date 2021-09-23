@@ -332,7 +332,7 @@ class UI {
         cartTotal.innerText = parseFloat(tempTotal).toFixed(2)
 
         // add shipping + tax
-        if(parseFloat(tempTotal).toFixed(2) < 45.00) {
+        if(parseFloat(tempTotal).toFixed(2) < 75.00) {
 
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal + 8.99).toFixed(2)) * 100)
@@ -359,7 +359,7 @@ class UI {
             displayTotal = parseFloat(displayTotalTemp) + parseFloat(displayTax)
             totalPaypalDOM.innerText = displayTotal.toFixed(2)
         }
-        else if(parseFloat(tempTotal).toFixed(2) >= 45.00){
+        else if(parseFloat(tempTotal).toFixed(2) >=75.00){
 
             // actual amount in pennies
             let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
