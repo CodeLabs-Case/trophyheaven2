@@ -5,7 +5,7 @@
             "fields": {
             "title": "#VC300",
             "description": "Black",
-            "price": 9.99,
+            "price": 1.99,
             "size": "",
             "image": { "fields": { "file": { "url": "/static/images/product-1.jpeg" } } }
             }
