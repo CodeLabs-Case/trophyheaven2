@@ -27,6 +27,7 @@ const hiddenCartPaypal = document.querySelector('.hidden-cart-paypal')
 const checkoutDOM = document.querySelector('.checkout')
 const checkoutBtn = document.querySelector('.checkout-btn')
 const closeCheckoutBtn = document.querySelector('.close-checkout')
+const ingersollRandChkbx = document.querySelector('.checkout-card-box2')
 
 const shippingCostCardDOM = document.querySelector('.shipping-card')
 const taxCardDOM = document.querySelector('.tax-card')
@@ -646,7 +647,7 @@ function applyPromo(){
 
     let codeCard = checkoutCardPromoText.value
     let codePaypal = checkoutPaypalPromoText.value
-    if(codeCard === "FREESHIP" || codePaypal === "FREESHIP"){
+    if((codeCard === "FREESHIP" || codePaypal === "FREESHIP") && ingersollRandChkbx.checked) {
 
         // actual amount in pennies
         let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
@@ -679,7 +680,7 @@ function applyPromo(){
 
         alert("Promotional Code Applied!\nRemember to reapply if you add or remove items!")
     } else {
-        alert("Incorrect Promotional Code")
+        alert("Incorrect Promotional Code or Not IR Employee")
     }
 }
 
