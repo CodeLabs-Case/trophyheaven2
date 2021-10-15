@@ -647,7 +647,7 @@ function applyPromo(){
 
     let codeCard = checkoutCardPromoText.value
     let codePaypal = checkoutPaypalPromoText.value
-    if((codeCard === "FREESHIP" || codePaypal === "FREESHIP") && ingersollRandChkbx.checked) {
+    if((codeCard === "FREESHIP" || codePaypal === "FREESHIP") && ingersollRandChkbx.checked == true) {
 
         // actual amount in pennies
         let hiddenTotalTemp = Math.round((parseFloat(tempTotal).toFixed(2)) * 100)
