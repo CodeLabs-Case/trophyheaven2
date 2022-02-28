@@ -22,6 +22,16 @@ body {
 
 
 /* Navbar */
+.wrapper-site-down {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+    background-color: red;
+}
+.site-down {
+    grid-column: 2;
+    color: white;
+}
 .navbar {
     position: sticky;
     top: 0;
