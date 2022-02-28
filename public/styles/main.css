@@ -26,6 +26,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
 
+    height: 100px;
+
     background-color: red;
 }
 .site-down {
