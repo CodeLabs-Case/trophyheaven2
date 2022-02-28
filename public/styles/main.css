@@ -23,6 +23,7 @@ body {
 
 /* Navbar */
 .wrapper-site-down {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
 
